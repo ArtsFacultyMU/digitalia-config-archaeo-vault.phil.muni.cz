@@ -99,6 +99,7 @@ module:
   search_api_solr: 0
   serialization: 0
   shortcut: 0
+  simple_block: 0
   sqlite: 0
   syslog: 0
   system: 0
@@ -124,4 +125,6 @@ module:
 theme:
   olivero: 0
   claro: 0
+  bartik: 0
+  islandora_muni: 0
 profile: minimal

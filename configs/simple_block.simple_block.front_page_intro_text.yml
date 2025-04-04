@@ -1,0 +1,11 @@
+uuid: fdf7a8ed-6591-41a6-b7ed-8a348c8000f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: front_page_intro_text
+title: 'Front page intro text'
+content:
+  value: '<p><span lang="CS-CZ">Připravujeme pro vás pilotní archeologický repozitář v prostředí Národní repozitářové platformy (NRP). Cílem je vybudovat důvěryhodný a FAIR oborový repozitář, který bude komplementární k Archeologickému informačnímu systému (AIS ČR), ale na rozdíl od něho zaměřený na neterénní data. Podporováno má být primárně pět typů dat:</span><span>&nbsp;</span></p><ul><li><span lang="CS-CZ">Geodetická data</span></li><li><span lang="CS-CZ">3D modely</span></li><li><span lang="CS-CZ">Materiálová a chemická data</span></li><li><span lang="CS-CZ">Fyzikální data</span></li><li><span lang="CS-CZ">Antropologická data (analýzy DNA, traseologie)</span></li></ul><p><span lang="CS-CZ">Sloužit tak má širokému spektru archeologických výzkumných týmů nejen v ČR.</span></p><h2><span lang="CS-CZ">O nás</span><span>&nbsp;</span></h2><p><span lang="CS-CZ">Na pilotním repozitáři spolupracuje Digitalia MUNI ARTS</span><span> a </span><span lang="CS-CZ">Ústav archeologie a muzeologie FF MU.</span></p><p><span lang="CS-CZ"><strong>Michal Lorenz</strong> - správce repozitáře, </span><a href="mailto:lorenz@phil.muni.cz"><span lang="CS-CZ">lorenz@phil.muni.cz</span></a><span lang="CS-CZ">&nbsp;</span></p><p><span lang="CS-CZ"><strong>Hana Kubelková </strong>- koordinátorka uživatelské komunity, </span><a href="mailto:kubelkova@phil.muni.cz"><span lang="CS-CZ">kubelkova@phil.muni.cz</span></a></p><p><span lang="CS-CZ"><strong>Illyria Brejchová </strong>- programátorka, </span><a href="mailto:brejchova@phil.muni.cz"><span lang="CS-CZ">brejchova@phil.muni.cz</span></a></p><p><span lang="CS-CZ"><strong>Jan Adler</strong> - programátor, </span><a href="mailto:adler@ics.muni.cz"><span lang="CS-CZ">adler@ics.muni.cz</span></a></p>'
+  format: full_html

@@ -203,7 +203,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'No collections have been created.'
+            value: ''
             format: basic_html
           tokenize: false
       sorts:
