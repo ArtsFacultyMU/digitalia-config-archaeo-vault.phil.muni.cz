@@ -7,6 +7,7 @@ dependencies:
   module:
     - islandora
     - simple_block
+    - system
   theme:
     - islandora_muni
 id: islandora_muni_frontpageintrotext
@@ -26,3 +27,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
