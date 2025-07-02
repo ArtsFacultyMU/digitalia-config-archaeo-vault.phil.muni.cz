@@ -1,6 +1,6 @@
 uuid: fdf34ca5-c98a-415c-8297-8f5bb3b3ff44
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - islandora

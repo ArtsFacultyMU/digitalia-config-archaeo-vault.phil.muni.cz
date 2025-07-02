@@ -47,7 +47,9 @@ dependencies:
     - field.field.node.islandora_object.field_subject_general
     - field.field.node.islandora_object.field_subjects_name
     - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_tags
     - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_test_workbench_access
     - field.field.node.islandora_object.field_viewer_override
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
@@ -205,7 +207,9 @@ hidden:
   field_subject_general: true
   field_subjects_name: true
   field_table_of_contents: true
+  field_tags: true
   field_temporal_subject: true
+  field_test_workbench_access: true
   field_viewer_override: true
   field_weight: true
   islandora_fits_checksum: true

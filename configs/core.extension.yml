@@ -12,6 +12,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   citation_select: 0
   ckeditor5: 0
@@ -21,6 +22,7 @@ module:
   config_override_core_fields: 0
   config_update: 0
   contact: 0
+  content_moderation: 0
   context: 0
   context_ui: 0
   contextual: 0
@@ -34,7 +36,24 @@ module:
   dgi_image_discovery: 0
   digitalia_muni_workbench_ingest: 0
   dynamic_page_cache: 0
+  eca: 0
+  eca_access: 0
+  eca_base: 0
+  eca_content: 0
+  eca_endpoint: 0
+  eca_menu: 0
+  eca_migrate: 0
+  eca_misc: 0
+  eca_modeller_bpmn: 0
+  eca_queue: 0
+  eca_render: 0
+  eca_ui: 0
+  eca_user: 0
+  eca_views: 0
+  eca_workflow: 0
   editor: 0
+  entity: 0
+  epp: 0
   eva: 0
   facets: 0
   facets_summary: 0
@@ -47,9 +66,13 @@ module:
   file_replace: 0
   filehash: 0
   filter: 0
+  flexible_permissions: 0
   flysystem: 0
   fpa: 0
   geolocation: 0
+  gnode: 0
+  group: 0
+  group_action: 0
   hal: 0
   help: 0
   history: 0
@@ -96,6 +119,7 @@ module:
   pgsql: 0
   phpass: 0
   prepopulate: 0
+  publishcontent: 0
   rdf: 0
   responsive_image: 0
   rest: 0
@@ -120,10 +144,12 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  view_unpublished: 0
   views_data_export: 0
   views_field_view: 0
   views_nested_details: 0
   views_ui: 0
+  workflows: 0
   pathauto: 1
   content_translation: 10
   views: 10
