@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e280ff4a7ba887c84eb67619ed74584",
+    "content-hash": "16aecd842d273f2d48b0e3dff9ada045",
     "packages": [
         {
             "name": "adci/full-name-parser",
@@ -5645,6 +5645,59 @@
             "homepage": "https://www.drupal.org/project/pdf",
             "support": {
                 "source": "https://git.drupalcode.org/project/pdf"
+            }
+        },
+        {
+            "name": "drupal/persistent_identifiers-persistent_identifiers",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/persistent_identifiers.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/persistent_identifiers-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "84269d29c416ed5919a4ad5edcebfbc6f692038f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1745007395",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Jordan",
+                    "homepage": "https://www.drupal.org/user/3819850",
+                    "email": "mjordan@sfu.ca",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "toamit",
+                    "homepage": "https://www.drupal.org/user/2820523"
+                }
+            ],
+            "description": "Drupal 8 Module that provides a generalized framework for minting and persisting persistent identifiers (DOIs, ARKs, etc.) for Drupal nodes.",
+            "homepage": "https://github.com/mjordan/persistent_identifiers",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/persistent_identifiers"
             }
         },
         {

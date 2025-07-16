@@ -3,9 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.sip
     - node.type.article
     - node.type.islandora_object
     - node.type.page
+    - node.type.test_complex_type
+    - node.type.test_subfield_type
+    - node.type.test_type
+    - rest.resource.ingest_progress
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -14,9 +19,11 @@ dependencies:
     - group
     - help
     - islandora
+    - media
     - node
     - path
     - publishcontent
+    - rest
     - system
     - taxonomy
     - toolbar
@@ -35,14 +42,20 @@ permissions:
   - 'access files overview'
   - 'access group overview'
   - 'access help pages'
+  - 'access media overview'
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
   - 'create islandora_object content'
+  - 'create media'
   - 'create page content'
+  - 'create sip media'
   - 'create terms in tags'
+  - 'create test_complex_type content'
   - 'create test_hierarchy_group group'
+  - 'create test_subfield_type content'
+  - 'create test_type content'
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
@@ -58,6 +71,7 @@ permissions:
   - 'manage members'
   - 'publish editable content'
   - 'publish editable node type islandora_object'
+  - 'restful get ingest_progress'
   - 'revert all revisions'
   - 'revert islandora_object revisions'
   - 'unpublish editable content'
