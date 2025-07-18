@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - eca_access
+    - eca_base
     - eca_content
     - eca_misc
     - eca_views
@@ -30,6 +31,11 @@ conditions:
       negate: false
       operation: view
       entity: current_node
+  Flow_1b683xk:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: current_node_id
 gateways: {  }
 actions:
   Activity_0a8qv2w:
@@ -48,7 +54,7 @@ actions:
     successors:
       -
         id: Activity_05idwdc
-        condition: ''
+        condition: Flow_1b683xk
   Activity_05idwdc:
     plugin: eca_token_load_entity
     label: 'load node'

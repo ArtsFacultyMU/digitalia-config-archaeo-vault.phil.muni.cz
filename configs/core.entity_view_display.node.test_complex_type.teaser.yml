@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.test_complex_type.body
+    - field.field.node.test_complex_type.field_handle
+    - field.field.node.test_complex_type.field_plain_text_long
+    - field.field.node.test_complex_type.field_switch_taxonomy
     - field.field.node.test_complex_type.field_test_subfield
     - field.field.node.test_complex_type.field_test_subfield_2
     - node.type.test_complex_type
@@ -24,6 +27,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -31,6 +39,9 @@ content:
     region: content
 hidden:
   did_image: true
+  field_handle: true
+  field_plain_text_long: true
+  field_switch_taxonomy: true
   field_test_subfield: true
   field_test_subfield_2: true
   langcode: true

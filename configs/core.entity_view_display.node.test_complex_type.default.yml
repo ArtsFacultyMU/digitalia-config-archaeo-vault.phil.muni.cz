@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.test_complex_type.body
+    - field.field.node.test_complex_type.field_handle
+    - field.field.node.test_complex_type.field_plain_text_long
+    - field.field.node.test_complex_type.field_switch_taxonomy
     - field.field.node.test_complex_type.field_test_subfield
     - field.field.node.test_complex_type.field_test_subfield_2
     - node.type.test_complex_type
@@ -21,6 +24,34 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_handle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_plain_text_long:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_switch_taxonomy:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_test_subfield:
     type: entity_reference_entity_view
