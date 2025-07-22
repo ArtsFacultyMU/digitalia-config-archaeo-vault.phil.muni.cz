@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.test_complex_type.body
     - field.field.node.test_complex_type.field_handle
     - field.field.node.test_complex_type.field_plain_text_long
+    - field.field.node.test_complex_type.field_switch_list
     - field.field.node.test_complex_type.field_switch_taxonomy
     - field.field.node.test_complex_type.field_test_subfield
     - field.field.node.test_complex_type.field_test_subfield_2
     - node.type.test_complex_type
   module:
+    - options
     - text
     - user
 id: node.test_complex_type.default
@@ -45,6 +47,13 @@ content:
     third_party_settings: {  }
     weight: 106
     region: content
+  field_switch_list:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
   field_switch_taxonomy:
     type: entity_reference_label
     label: above
@@ -55,7 +64,7 @@ content:
     region: content
   field_test_subfield:
     type: entity_reference_entity_view
-    label: inline
+    label: above
     settings:
       view_mode: default
       link: false
@@ -63,9 +72,10 @@ content:
     weight: 102
     region: content
   field_test_subfield_2:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
+      view_mode: default
       link: true
     third_party_settings: {  }
     weight: 103

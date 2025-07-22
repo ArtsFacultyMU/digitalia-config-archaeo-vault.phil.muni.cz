@@ -1,11 +1,11 @@
-uuid: 4b48fe5f-3797-4e78-904f-39840c36abd3
+uuid: 17b442a0-10d9-4321-b018-d505b3d77dac
 langcode: en
 status: true
 dependencies:
   config:
-    - eca.eca.process_xca2ebs
-id: process_xca2ebs
-label: 'Form alter based on taxonomy'
+    - eca.eca.process_xujqapj
+id: process_xujqapj
+label: 'Form alter based on select lislt'
 tags:
   - ''
 documentation: ''
@@ -13,7 +13,7 @@ filename: ''
 modeldata: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="Process_xCa2EBS" name="Form alter based on taxonomy" isExecutable="true">
+    <bpmn2:process id="Process_xUjQapJ" name="Form alter based on select lislt" isExecutable="true">
       <bpmn2:extensionElements />
       <bpmn2:task id="Activity_15iat7d" name="add ajax handler to switch" camunda:modelerTemplate="org.drupal.action.eca_form_add_ajax">
         <bpmn2:extensionElements>
@@ -21,14 +21,12 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_form_add_ajax" />
           </camunda:properties>
           <camunda:field name="field_name">
-            <camunda:string>field_switch_taxonomy</camunda:string>
+            <camunda:string>field_switch_list</camunda:string>
           </camunda:field>
           <camunda:field name="disable_validation_errors">
             <camunda:string>no</camunda:string>
           </camunda:field>
-          <camunda:field name="validate_fields">
-            <camunda:string>field_switch_taxonomy</camunda:string>
-          </camunda:field>
+          <camunda:field name="validate_fields" />
           <camunda:field name="target" />
         </bpmn2:extensionElements>
         <bpmn2:incoming>Flow_1dnkqk7</bpmn2:incoming>
@@ -88,7 +86,7 @@ modeldata: |
             <camunda:string>value</camunda:string>
           </camunda:field>
           <camunda:field name="field_name">
-            <camunda:string>field_switch_taxonomy</camunda:string>
+            <camunda:string>field_switch_list</camunda:string>
           </camunda:field>
           <camunda:field name="case">
             <camunda:string>no</camunda:string>
@@ -183,7 +181,7 @@ modeldata: |
             <camunda:string>value</camunda:string>
           </camunda:field>
           <camunda:field name="field_name">
-            <camunda:string>field_switch_taxonomy</camunda:string>
+            <camunda:string>field_switch_list</camunda:string>
           </camunda:field>
           <camunda:field name="case">
             <camunda:string>no</camunda:string>
@@ -210,10 +208,10 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_get_field_value" />
           </camunda:properties>
           <camunda:field name="field_name">
-            <camunda:string>field_switch_taxonomy</camunda:string>
+            <camunda:string>field_switch_list</camunda:string>
           </camunda:field>
           <camunda:field name="token_name">
-            <camunda:string>taxonomy_term</camunda:string>
+            <camunda:string>list_value</camunda:string>
           </camunda:field>
           <camunda:field name="object">
             <camunda:string>node</camunda:string>
@@ -228,10 +226,10 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_form_field_get_value" />
           </camunda:properties>
           <camunda:field name="field_name">
-            <camunda:string>field_switch_taxonomy</camunda:string>
+            <camunda:string>field_switch_list</camunda:string>
           </camunda:field>
           <camunda:field name="token_name">
-            <camunda:string>taxonomy_id</camunda:string>
+            <camunda:string>list_value</camunda:string>
           </camunda:field>
           <camunda:field name="strip_tags">
             <camunda:string>yes</camunda:string>
@@ -246,7 +244,7 @@ modeldata: |
         <bpmn2:incoming>Flow_06y1gvx</bpmn2:incoming>
         <bpmn2:outgoing>Flow_1ennj6f</bpmn2:outgoing>
       </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_1ennj6f" sourceRef="Activity_0f8xi3o" targetRef="Activity_1pytngc" />
+      <bpmn2:sequenceFlow id="Flow_1ennj6f" sourceRef="Activity_0f8xi3o" targetRef="Gateway_1ujiy7b" />
       <bpmn2:exclusiveGateway id="Gateway_0m0ivi4">
         <bpmn2:incoming>Flow_17cb0j0</bpmn2:incoming>
         <bpmn2:outgoing>Flow_1fp8s4j</bpmn2:outgoing>
@@ -259,13 +257,13 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_scalar" />
           </camunda:properties>
           <camunda:field name="left">
-            <camunda:string>[taxonomy_term:name]</camunda:string>
+            <camunda:string>[list_value:0:value]</camunda:string>
           </camunda:field>
           <camunda:field name="operator">
             <camunda:string>equal</camunda:string>
           </camunda:field>
           <camunda:field name="right">
-            <camunda:string>success</camunda:string>
+            <camunda:string>case_3</camunda:string>
           </camunda:field>
           <camunda:field name="type">
             <camunda:string>value</camunda:string>
@@ -278,47 +276,9 @@ modeldata: |
           </camunda:field>
         </bpmn2:extensionElements>
       </bpmn2:sequenceFlow>
-      <bpmn2:task id="Activity_1pytngc" name="Load term from id" camunda:modelerTemplate="org.drupal.action.eca_token_load_entity">
-        <bpmn2:extensionElements>
-          <camunda:properties>
-            <camunda:property name="pluginid" value="eca_token_load_entity" />
-          </camunda:properties>
-          <camunda:field name="token_name">
-            <camunda:string>taxonomy_term</camunda:string>
-          </camunda:field>
-          <camunda:field name="from">
-            <camunda:string>id</camunda:string>
-          </camunda:field>
-          <camunda:field name="entity_type">
-            <camunda:string>taxonomy_term</camunda:string>
-          </camunda:field>
-          <camunda:field name="entity_id">
-            <camunda:string>[taxonomy_id:0:target_id]</camunda:string>
-          </camunda:field>
-          <camunda:field name="revision_id">
-            <camunda:string></camunda:string>
-          </camunda:field>
-          <camunda:field name="langcode">
-            <camunda:string>_interface</camunda:string>
-          </camunda:field>
-          <camunda:field name="latest_revision">
-            <camunda:string>yes</camunda:string>
-          </camunda:field>
-          <camunda:field name="unchanged">
-            <camunda:string>no</camunda:string>
-          </camunda:field>
-          <camunda:field name="properties">
-            <camunda:string></camunda:string>
-          </camunda:field>
-          <camunda:field name="object" />
-        </bpmn2:extensionElements>
-        <bpmn2:incoming>Flow_1ennj6f</bpmn2:incoming>
-        <bpmn2:outgoing>Flow_0vphs2f</bpmn2:outgoing>
-      </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_0vphs2f" sourceRef="Activity_1pytngc" targetRef="Gateway_1ujiy7b" />
       <bpmn2:exclusiveGateway id="Gateway_1ujiy7b">
-        <bpmn2:incoming>Flow_0vphs2f</bpmn2:incoming>
         <bpmn2:incoming>Flow_137j2s9</bpmn2:incoming>
+        <bpmn2:incoming>Flow_1ennj6f</bpmn2:incoming>
         <bpmn2:outgoing>Flow_1ous80i</bpmn2:outgoing>
       </bpmn2:exclusiveGateway>
       <bpmn2:textAnnotation id="TextAnnotation_04ns3li">
@@ -326,7 +286,7 @@ modeldata: |
       </bpmn2:textAnnotation>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-444a4a1a-bb5c-415d-b260-8086604b5973">
-      <bpmndi:BPMNPlane id="sid-12480a8b-552b-486a-87bb-e008caf7e9f3" bpmnElement="Process_xCa2EBS">
+      <bpmndi:BPMNPlane id="sid-12480a8b-552b-486a-87bb-e008caf7e9f3" bpmnElement="Process_xUjQapJ">
         <bpmndi:BPMNShape id="Activity_15iat7d_di" bpmnElement="Activity_15iat7d">
           <dc:Bounds x="380" y="280" width="100" height="80" />
           <bpmndi:BPMNLabel />
@@ -358,19 +318,15 @@ modeldata: |
           <dc:Bounds x="920" y="620" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_0f8xi3o_di" bpmnElement="Activity_0f8xi3o">
-          <dc:Bounds x="820" y="460" width="100" height="80" />
-          <bpmndi:BPMNLabel />
-        </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Gateway_0m0ivi4_di" bpmnElement="Gateway_0m0ivi4" isMarkerVisible="true">
           <dc:Bounds x="405" y="475" width="50" height="50" />
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_0vtb1gw_di" bpmnElement="Activity_1pytngc">
-          <dc:Bounds x="1040" y="460" width="100" height="80" />
-          <bpmndi:BPMNLabel />
-        </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Gateway_1ujiy7b_di" bpmnElement="Gateway_1ujiy7b" isMarkerVisible="true">
           <dc:Bounds x="1245" y="475" width="50" height="50" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0f8xi3o_di" bpmnElement="Activity_0f8xi3o">
+          <dc:Bounds x="920" y="460" width="100" height="80" />
+          <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="TextAnnotation_04ns3li_di" bpmnElement="TextAnnotation_04ns3li">
           <dc:Bounds x="335" y="626" width="190" height="68" />
@@ -382,9 +338,9 @@ modeldata: |
         </bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="Flow_06y1gvx_di" bpmnElement="Flow_06y1gvx">
           <di:waypoint x="655" y="500" />
-          <di:waypoint x="820" y="500" />
+          <di:waypoint x="920" y="500" />
           <bpmndi:BPMNLabel>
-            <dc:Bounds x="695" y="450" width="85" height="40" />
+            <dc:Bounds x="745" y="450" width="85" height="40" />
           </bpmndi:BPMNLabel>
         </bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="Flow_0w1zflh_di" bpmnElement="Flow_0w1zflh">
@@ -422,8 +378,8 @@ modeldata: |
           <di:waypoint x="1660" y="500" />
         </bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="Flow_1ennj6f_di" bpmnElement="Flow_1ennj6f">
-          <di:waypoint x="920" y="500" />
-          <di:waypoint x="1040" y="500" />
+          <di:waypoint x="1020" y="500" />
+          <di:waypoint x="1245" y="500" />
         </bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="Flow_1fp8s4j_di" bpmnElement="Flow_1fp8s4j">
           <di:waypoint x="455" y="500" />
@@ -435,10 +391,6 @@ modeldata: |
           <bpmndi:BPMNLabel>
             <dc:Bounds x="1364" y="450" width="78" height="40" />
           </bpmndi:BPMNLabel>
-        </bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="Flow_0vphs2f_di" bpmnElement="Flow_0vphs2f">
-          <di:waypoint x="1140" y="500" />
-          <di:waypoint x="1245" y="500" />
         </bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

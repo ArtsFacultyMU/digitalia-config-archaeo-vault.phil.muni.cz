@@ -1,23 +1,23 @@
-uuid: 4577ae20-d594-4506-9054-679c29099137
+uuid: 6f3de7ee-107d-4d2a-8b4a-883c967feb99
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.test_complex_type.field_handle
     - field.field.node.test_complex_type.field_plain_text_long
-    - field.field.node.test_complex_type.field_switch_taxonomy
+    - field.field.node.test_complex_type.field_switch_list
     - field.field.node.test_complex_type.field_test_subfield
     - field.storage.node.field_handle
     - field.storage.node.field_plain_text_long
-    - field.storage.node.field_switch_taxonomy
+    - field.storage.node.field_switch_list
     - field.storage.node.field_test_subfield
   module:
     - eca_base
     - eca_content
     - eca_form
-id: process_xca2ebs
+id: process_xujqapj
 modeller: bpmn_io
-label: 'Form alter based on taxonomy'
+label: 'Form alter based on select lislt'
 version: ''
 weight: 0
 events:
@@ -39,7 +39,7 @@ conditions:
     configuration:
       case: false
       field_value: ''
-      field_name: field_switch_taxonomy
+      field_name: field_switch_list
       strip_tags: true
       trim: true
       xss_filter: true
@@ -52,7 +52,7 @@ conditions:
       negate: false
       case: false
       field_value: ''
-      field_name: field_switch_taxonomy
+      field_name: field_switch_list
       strip_tags: true
       trim: true
       xss_filter: true
@@ -63,8 +63,8 @@ conditions:
     configuration:
       negate: false
       case: false
-      left: '[taxonomy_term:name]'
-      right: success
+      left: '[list_value:0:value]'
+      right: case_3
       operator: equal
       type: value
 gateways:
@@ -110,9 +110,9 @@ actions:
     label: 'add ajax handler to switch'
     configuration:
       disable_validation_errors: false
-      validate_fields: field_switch_taxonomy
+      validate_fields: ''
       target: ''
-      field_name: field_switch_taxonomy
+      field_name: field_switch_list
     successors: {  }
   Activity_0mh0431:
     plugin: eca_form_field_disable
@@ -139,8 +139,8 @@ actions:
     plugin: eca_get_field_value
     label: 'Load term from entity'
     configuration:
-      field_name: field_switch_taxonomy
-      token_name: taxonomy_term
+      field_name: field_switch_list
+      token_name: list_value
       object: node
     successors:
       -
@@ -150,29 +150,11 @@ actions:
     plugin: eca_form_field_get_value
     label: 'Load term id from form'
     configuration:
-      token_name: taxonomy_id
-      field_name: field_switch_taxonomy
+      token_name: list_value
+      field_name: field_switch_list
       strip_tags: true
       trim: true
       xss_filter: true
-    successors:
-      -
-        id: Activity_1pytngc
-        condition: ''
-  Activity_1pytngc:
-    plugin: eca_token_load_entity
-    label: 'Load term from id'
-    configuration:
-      token_name: taxonomy_term
-      from: id
-      entity_type: taxonomy_term
-      entity_id: '[taxonomy_id:0:target_id]'
-      revision_id: ''
-      properties: ''
-      langcode: _interface
-      latest_revision: true
-      unchanged: false
-      object: ''
     successors:
       -
         id: Gateway_1ujiy7b

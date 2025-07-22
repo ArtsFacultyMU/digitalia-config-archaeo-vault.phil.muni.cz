@@ -2,6 +2,8 @@ uuid: 4f682297-d793-433b-9951-e490ca5790f4
 langcode: en
 status: true
 dependencies:
+  module:
+    - islandora
   theme:
     - islandora_muni
 _core:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

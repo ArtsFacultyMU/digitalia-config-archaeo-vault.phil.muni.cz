@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.test_complex_type.body
     - field.field.node.test_complex_type.field_handle
     - field.field.node.test_complex_type.field_plain_text_long
+    - field.field.node.test_complex_type.field_switch_list
     - field.field.node.test_complex_type.field_switch_taxonomy
     - field.field.node.test_complex_type.field_test_subfield
     - field.field.node.test_complex_type.field_test_subfield_2
@@ -41,6 +42,7 @@ hidden:
   did_image: true
   field_handle: true
   field_plain_text_long: true
+  field_switch_list: true
   field_switch_taxonomy: true
   field_test_subfield: true
   field_test_subfield_2: true
