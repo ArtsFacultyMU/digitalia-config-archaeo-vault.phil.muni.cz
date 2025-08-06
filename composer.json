@@ -51,7 +51,6 @@
         "drupal/hal": "^1.0||^2.0",
         "drupal/islandora": "^2.8.1",
         "drupal/islandora_mirador": "^2",
-        "drupal/miniorange_oauth_client": "^4.0",
         "drupal/openid_connect": "^3.0@alpha",
         "drupal/openseadragon": "^2",
         "drupal/pathauto": "^1.12",

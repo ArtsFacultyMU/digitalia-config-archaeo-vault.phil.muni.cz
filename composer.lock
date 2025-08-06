@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57bbfe1865004d58ca33b6c1d1e4314a",
+    "content-hash": "518ad4e478ea0d9d6cc2d9995501730b",
     "packages": [
         {
             "name": "adci/full-name-parser",
@@ -4638,70 +4638,6 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/migrate_source_csv",
                 "issues": "https://www.drupal.org/project/issues/migrate_source_csv"
-            }
-        },
-        {
-            "name": "drupal/miniorange_oauth_client",
-            "version": "4.0.22",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/miniorange_oauth_client.git",
-                "reference": "4.0.22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/miniorange_oauth_client-4.0.22.zip",
-                "reference": "4.0.22",
-                "shasum": "088ac67c0b61301ddfe0d341f53e2e61b40255ad"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10|| ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.0.22",
-                    "datestamp": "1753250294",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "abhay19",
-                    "homepage": "https://www.drupal.org/user/3549350"
-                },
-                {
-                    "name": "arsh244",
-                    "homepage": "https://www.drupal.org/user/3619504"
-                },
-                {
-                    "name": "gauravsood91",
-                    "homepage": "https://www.drupal.org/user/3288491"
-                },
-                {
-                    "name": "purva_shende",
-                    "homepage": "https://www.drupal.org/user/3723921"
-                },
-                {
-                    "name": "shrishail hiremath",
-                    "homepage": "https://www.drupal.org/user/3669372"
-                },
-                {
-                    "name": "singh_ankit",
-                    "homepage": "https://www.drupal.org/user/3723914"
-                }
-            ],
-            "description": "This module allows you to login in your Drupal site using any OAuth2 or OpenID compliant server.",
-            "homepage": "https://www.drupal.org/project/miniorange_oauth_client",
-            "support": {
-                "source": "https://git.drupalcode.org/project/miniorange_oauth_client"
             }
         },
         {
