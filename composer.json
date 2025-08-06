@@ -146,6 +146,9 @@
             "twistor/flysystem-stream-wrapper": {
                 "PHP 8.2 deprecation warning": "assets/patches/flysystem-stream-wrapper.patch"
             },
+            "drupal/core": {
+                "Fix non-unique savepoint postgresql bug": "./patches/Connection.patch"
+            },
             "drupal/persistent_identifiers-persistent_identifiers": {
 		"Create handle automatically on node save/creation": "./patches/persistent_identifiers.patch",
 		"Reenable qualifier field in configuration": "./patches/hdl.module.patch",
