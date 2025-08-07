@@ -59,6 +59,7 @@
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/islandora": "^2.8.1",
         "drupal/islandora_mirador": "^2",
+        "drupal/openid_connect": "^3.0@alpha",
         "drupal/migrate_tools": "^6.0",
         "drupal/nodeaccess": "^2.0@alpha",
         "drupal/openseadragon": "^2",
