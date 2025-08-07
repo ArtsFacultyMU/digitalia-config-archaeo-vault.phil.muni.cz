@@ -46,7 +46,9 @@ dependencies:
     - field.field.node.islandora_object.field_subject_general
     - field.field.node.islandora_object.field_subjects_name
     - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_tags
     - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_test_workbench_access
     - field.field.node.islandora_object.field_viewer_override
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
@@ -673,9 +675,29 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_temporal_subject:
     type: entity_reference_autocomplete
     weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_test_workbench_access:
+    type: entity_reference_autocomplete
+    weight: 28
     region: content
     settings:
       match_operator: CONTAINS

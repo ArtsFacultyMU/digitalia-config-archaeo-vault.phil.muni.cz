@@ -1,0 +1,179 @@
+uuid: 4577ae20-d594-4506-9054-679c29099137
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_complex_type.field_handle
+    - field.field.node.test_complex_type.field_plain_text_long
+    - field.field.node.test_complex_type.field_switch_taxonomy
+    - field.field.node.test_complex_type.field_test_subfield
+    - field.storage.node.field_handle
+    - field.storage.node.field_plain_text_long
+    - field.storage.node.field_switch_taxonomy
+    - field.storage.node.field_test_subfield
+  module:
+    - eca_base
+    - eca_content
+    - eca_form
+id: process_xca2ebs
+modeller: bpmn_io
+label: 'Form alter based on taxonomy'
+version: ''
+weight: 0
+events:
+  Event_1geuyzw:
+    plugin: 'form:form_build'
+    label: 'Node form is built'
+    configuration:
+      form_id: ''
+      entity_type_id: node
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Gateway_0m0ivi4
+        condition: ''
+conditions:
+  Flow_06y1gvx:
+    plugin: eca_form_field_value
+    configuration:
+      case: false
+      field_value: ''
+      field_name: field_switch_taxonomy
+      strip_tags: true
+      trim: true
+      xss_filter: true
+      operator: equal
+      type: value
+      negate: true
+  Flow_00qus0j:
+    plugin: eca_form_field_value
+    configuration:
+      negate: false
+      case: false
+      field_value: ''
+      field_name: field_switch_taxonomy
+      strip_tags: true
+      trim: true
+      xss_filter: true
+      operator: equal
+      type: value
+  Flow_1ous80i:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[taxonomy_term:name]'
+      right: success
+      operator: equal
+      type: value
+gateways:
+  Gateway_003tfhz:
+    type: 0
+    successors:
+      -
+        id: Activity_0f8xi3o
+        condition: Flow_06y1gvx
+      -
+        id: Activity_0fa3l8l
+        condition: Flow_00qus0j
+  Gateway_1nzhw7p:
+    type: 0
+    successors:
+      -
+        id: Activity_0mh0431
+        condition: ''
+      -
+        id: Activity_0ouosau
+        condition: ''
+      -
+        id: Activity_13smx4a
+        condition: ''
+  Gateway_0m0ivi4:
+    type: 0
+    successors:
+      -
+        id: Activity_15iat7d
+        condition: ''
+      -
+        id: Gateway_003tfhz
+        condition: ''
+  Gateway_1ujiy7b:
+    type: 0
+    successors:
+      -
+        id: Gateway_1nzhw7p
+        condition: Flow_1ous80i
+actions:
+  Activity_15iat7d:
+    plugin: eca_form_add_ajax
+    label: 'add ajax handler to switch'
+    configuration:
+      disable_validation_errors: false
+      validate_fields: field_switch_taxonomy
+      target: ''
+      field_name: field_switch_taxonomy
+    successors: {  }
+  Activity_0mh0431:
+    plugin: eca_form_field_disable
+    label: 'disable handle'
+    configuration:
+      flag: true
+      field_name: field_handle
+    successors: {  }
+  Activity_13smx4a:
+    plugin: eca_form_field_require
+    label: "Make 'field_plain_text_long' required"
+    configuration:
+      flag: true
+      field_name: field_plain_text_long
+    successors: {  }
+  Activity_0ouosau:
+    plugin: eca_form_field_access
+    label: "Hide 'field_test_subfield'"
+    configuration:
+      flag: false
+      field_name: field_test_subfield
+    successors: {  }
+  Activity_0fa3l8l:
+    plugin: eca_get_field_value
+    label: 'Load term from entity'
+    configuration:
+      field_name: field_switch_taxonomy
+      token_name: taxonomy_term
+      object: node
+    successors:
+      -
+        id: Gateway_1ujiy7b
+        condition: ''
+  Activity_0f8xi3o:
+    plugin: eca_form_field_get_value
+    label: 'Load term id from form'
+    configuration:
+      token_name: taxonomy_id
+      field_name: field_switch_taxonomy
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1pytngc
+        condition: ''
+  Activity_1pytngc:
+    plugin: eca_token_load_entity
+    label: 'Load term from id'
+    configuration:
+      token_name: taxonomy_term
+      from: id
+      entity_type: taxonomy_term
+      entity_id: '[taxonomy_id:0:target_id]'
+      revision_id: ''
+      properties: ''
+      langcode: _interface
+      latest_revision: true
+      unchanged: false
+      object: ''
+    successors:
+      -
+        id: Gateway_1ujiy7b
+        condition: ''

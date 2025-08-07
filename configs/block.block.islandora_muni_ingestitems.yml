@@ -1,0 +1,34 @@
+uuid: e0ade119-f403-49a1-8301-2e207ee8a94b
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_workbench_ingest
+    - islandora
+    - media
+  theme:
+    - islandora_muni
+id: islandora_muni_ingestitems
+theme: islandora_muni
+region: sidebar_first
+weight: 0
+provider: null
+plugin: digitalia_muni_ingest_items
+settings:
+  id: digitalia_muni_ingest_items
+  label: 'Ingest items.'
+  label_display: visible
+  provider: digitalia_muni_workbench_ingest
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  'entity_bundle:media':
+    id: 'entity_bundle:media'
+    negate: false
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+    bundles:
+      sip: sip

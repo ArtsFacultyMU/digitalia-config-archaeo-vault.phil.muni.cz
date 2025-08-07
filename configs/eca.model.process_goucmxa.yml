@@ -1,0 +1,68 @@
+uuid: 2e4ef2d1-4a9a-45c3-be2d-887af493a369
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_goucmxa
+id: process_goucmxa
+label: 'Form alter prefill test'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_goucmXA" name="Form alter prefill test" isExecutable="true">
+      <bpmn2:sequenceFlow id="Flow_1vt4e1h" sourceRef="Event_0rwwchl" targetRef="Activity_0298g1i" />
+      <bpmn2:task id="Activity_0298g1i" name="disable field" camunda:modelerTemplate="org.drupal.action.eca_form_field_disable">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_disable" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_test_subfield[inline_entity_form.field_integer]</camunda:string>
+          </camunda:field>
+          <camunda:field name="flag">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1vt4e1h</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:startEvent id="Event_0rwwchl" name="Node form is built&#10;" camunda:modelerTemplate="org.drupal.event.form:form_process">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_process" />
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1vt4e1h</bpmn2:outgoing>
+      </bpmn2:startEvent>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-39319592-cf31-4097-adbd-da075bdd96c2">
+      <bpmndi:BPMNPlane id="sid-4f6eea00-5e8b-49ff-88b0-b6a1124ba4e9" bpmnElement="Process_goucmXA">
+        <bpmndi:BPMNShape id="Activity_1hegi2s_di" bpmnElement="Activity_0298g1i">
+          <dc:Bounds x="760" y="270" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Event_1fai3ce_di" bpmnElement="Event_0rwwchl">
+          <dc:Bounds x="442" y="292" width="36" height="36" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1vt4e1h_di" bpmnElement="Flow_1vt4e1h">
+          <di:waypoint x="478" y="310" />
+          <di:waypoint x="760" y="310" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

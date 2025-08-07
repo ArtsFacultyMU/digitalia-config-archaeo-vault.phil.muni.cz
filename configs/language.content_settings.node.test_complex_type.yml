@@ -1,0 +1,11 @@
+uuid: b86d6115-51a3-42ef-b408-2e0f833b6569
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_complex_type
+id: node.test_complex_type
+target_entity_type_id: node
+target_bundle: test_complex_type
+default_langcode: site_default
+language_alterable: false

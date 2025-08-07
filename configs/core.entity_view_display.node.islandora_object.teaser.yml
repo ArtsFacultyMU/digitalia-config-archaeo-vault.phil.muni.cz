@@ -47,7 +47,9 @@ dependencies:
     - field.field.node.islandora_object.field_subject_general
     - field.field.node.islandora_object.field_subjects_name
     - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_tags
     - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_test_workbench_access
     - field.field.node.islandora_object.field_viewer_override
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
@@ -116,6 +118,14 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
@@ -172,6 +182,7 @@ hidden:
   field_subjects_name: true
   field_table_of_contents: true
   field_temporal_subject: true
+  field_test_workbench_access: true
   field_viewer_override: true
   field_weight: true
   langcode: true

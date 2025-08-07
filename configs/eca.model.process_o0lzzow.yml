@@ -1,0 +1,361 @@
+uuid: cdc3a447-fef4-4844-b5b6-9bdec7b2f25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_o0lzzow
+id: process_o0lzzow
+label: 'Disallow adding children'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_o0LZzOW" name="Disallow adding children" isExecutable="false">
+      <bpmn2:task id="Activity_1eg214r" name="disable &quot;field_member_of&quot;" camunda:modelerTemplate="org.drupal.action.eca_form_field_disable">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_disable"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_member_of</camunda:string>
+          </camunda:field>
+          <camunda:field name="flag">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0tljry9</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_14ts2ab" sourceRef="Event_0neqvz3" targetRef="Activity_0bywbxv"/>
+      <bpmn2:task id="Activity_0bywbxv" name="switch user" camunda:modelerTemplate="org.drupal.action.eca_switch_service_account">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_switch_service_account"/>
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_14ts2ab</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0tljry9</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0tljry9" sourceRef="Activity_0bywbxv" targetRef="Activity_1eg214r"/>
+      <bpmn2:startEvent id="Event_0neqvz3" name="node creation form" camunda:modelerTemplate="org.drupal.event.form:form_process">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_process"/>
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string/>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_14ts2ab</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:startEvent id="Event_183jws4" name="validate full title" camunda:modelerTemplate="org.drupal.event.form:form_validate">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_validate"/>
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string>default, edit</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1idc7ix</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_1me312f" name="build form" camunda:modelerTemplate="org.drupal.action.eca_form_build_entity">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_build_entity"/>
+          </camunda:properties>
+          <camunda:field name="token_name">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1idc7ix</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0kcp8oe</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0kcp8oe" name="Full title empty?" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value_empty" sourceRef="Activity_1me312f" targetRef="Activity_1t8qgoh">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_entity_field_value_empty"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_full_title</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:task id="Activity_1whqda2" name="Set form validation error" camunda:modelerTemplate="org.drupal.action.eca_form_field_set_error">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_set_error"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_full_title</camunda:string>
+          </camunda:field>
+          <camunda:field name="message">
+            <camunda:string>Field "Full Title" should not be empty when publishing</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0wh2d1e</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:task id="Activity_1t8qgoh" name="AND" camunda:modelerTemplate="org.drupal.action.eca_void_and_condition">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_void_and_condition"/>
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0kcp8oe</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0wh2d1e</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0wh2d1e" name="Is published?" camunda:modelerTemplate="org.drupal.condition.eca_form_field_value" sourceRef="Activity_1t8qgoh" targetRef="Activity_1whqda2">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_value"/>
+          </camunda:properties>
+          <camunda:field name="operator">
+            <camunda:string>equal</camunda:string>
+          </camunda:field>
+          <camunda:field name="field_value">
+            <camunda:string>1</camunda:string>
+          </camunda:field>
+          <camunda:field name="type">
+            <camunda:string>value</camunda:string>
+          </camunda:field>
+          <camunda:field name="field_name">
+            <camunda:string>status</camunda:string>
+          </camunda:field>
+          <camunda:field name="case">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="xss_filter">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:startEvent id="Event_0dz9jjo" name="validate full title without form" camunda:modelerTemplate="org.drupal.event.content_entity:validate">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="content_entity:validate"/>
+          </camunda:properties>
+          <camunda:field name="type">
+            <camunda:string>node _all</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0lng3fo</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0886rbm" name="AND" camunda:modelerTemplate="org.drupal.action.eca_void_and_condition">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_void_and_condition"/>
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0lng3fo</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0oj15fb</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:task id="Activity_0m4g5kf" name="Set validation error" camunda:modelerTemplate="org.drupal.action.eca_content_validation_error">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_content_validation_error"/>
+          </camunda:properties>
+          <camunda:field name="message">
+            <camunda:string>Field "Full Title" should not be empty when publishing</camunda:string>
+          </camunda:field>
+          <camunda:field name="property">
+            <camunda:string/>
+          </camunda:field>
+          <camunda:field name="object">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0oj15fb</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0oj15fb" name="Is published?" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value" sourceRef="Activity_0886rbm" targetRef="Activity_0m4g5kf">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_entity_field_value"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>status</camunda:string>
+          </camunda:field>
+          <camunda:field name="operator">
+            <camunda:string>equal</camunda:string>
+          </camunda:field>
+          <camunda:field name="expected_value">
+            <camunda:string>1</camunda:string>
+          </camunda:field>
+          <camunda:field name="type">
+            <camunda:string>value</camunda:string>
+          </camunda:field>
+          <camunda:field name="case">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:sequenceFlow id="Flow_0lng3fo" name="Full title empty?" camunda:modelerTemplate="org.drupal.condition.eca_entity_field_value_empty" sourceRef="Event_0dz9jjo" targetRef="Activity_0886rbm">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_entity_field_value_empty"/>
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_full_title</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:sequenceFlow id="Flow_1idc7ix" sourceRef="Event_183jws4" targetRef="Activity_1me312f"/>
+      <bpmn2:textAnnotation id="TextAnnotation_11y78lw">
+        <bpmn2:text>Form validation</bpmn2:text>
+      </bpmn2:textAnnotation>
+      <bpmn2:association id="Association_131m2wc" associationDirection="None" sourceRef="Event_183jws4" targetRef="TextAnnotation_11y78lw"/>
+      <bpmn2:textAnnotation id="TextAnnotation_0ns36ju">
+        <bpmn2:text>Entity validation</bpmn2:text>
+      </bpmn2:textAnnotation>
+      <bpmn2:association id="Association_0s2cs3p" associationDirection="None" sourceRef="Event_0dz9jjo" targetRef="TextAnnotation_0ns36ju"/>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-a3b8f122-81f8-4119-a06f-b9e8ba262531">
+      <bpmndi:BPMNPlane id="sid-4b28e46f-6cf2-4ad8-a089-5bfbb0db516c" bpmnElement="Process_o0LZzOW">
+        <bpmndi:BPMNShape id="Activity_1eg214r_di" bpmnElement="Activity_1eg214r">
+          <dc:Bounds x="990" y="210" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0bywbxv_di" bpmnElement="Activity_0bywbxv">
+          <dc:Bounds x="850" y="210" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Event_1s6n5jx_di" bpmnElement="Event_0neqvz3">
+          <dc:Bounds x="482" y="232" width="36" height="36"/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Event_183jws4_di" bpmnElement="Event_183jws4">
+          <dc:Bounds x="482" y="452" width="36" height="36"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="462" y="495" width="76" height="14"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1me312f_di" bpmnElement="Activity_1me312f">
+          <dc:Bounds x="570" y="430" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1whqda2_di" bpmnElement="Activity_1whqda2">
+          <dc:Bounds x="1180" y="430" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1t8qgoh_di" bpmnElement="Activity_1t8qgoh">
+          <dc:Bounds x="910" y="430" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Event_0dz9jjo_di" bpmnElement="Event_0dz9jjo">
+          <dc:Bounds x="482" y="592" width="36" height="36"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="462" y="635" width="76" height="27"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0886rbm_di" bpmnElement="Activity_0886rbm">
+          <dc:Bounds x="910" y="570" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0m4g5kf_di" bpmnElement="Activity_0m4g5kf">
+          <dc:Bounds x="1180" y="570" width="100" height="80"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Association_131m2wc_di" bpmnElement="Association_131m2wc">
+          <di:waypoint x="482" y="470"/>
+          <di:waypoint x="410" y="470"/>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Association_0s2cs3p_di" bpmnElement="Association_0s2cs3p">
+          <di:waypoint x="482" y="610"/>
+          <di:waypoint x="410" y="610"/>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_14ts2ab_di" bpmnElement="Flow_14ts2ab">
+          <di:waypoint x="518" y="250"/>
+          <di:waypoint x="850" y="250"/>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0tljry9_di" bpmnElement="Flow_0tljry9">
+          <di:waypoint x="950" y="250"/>
+          <di:waypoint x="990" y="250"/>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0kcp8oe_di" bpmnElement="Flow_0kcp8oe">
+          <di:waypoint x="670" y="470"/>
+          <di:waypoint x="910" y="470"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="795" y="452" width="78" height="14"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0wh2d1e_di" bpmnElement="Flow_0wh2d1e">
+          <di:waypoint x="1010" y="470"/>
+          <di:waypoint x="1180" y="470"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="1062" y="452" width="66" height="14"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0oj15fb_di" bpmnElement="Flow_0oj15fb">
+          <di:waypoint x="1010" y="610"/>
+          <di:waypoint x="1180" y="610"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="1065" y="592" width="66" height="14"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0lng3fo_di" bpmnElement="Flow_0lng3fo">
+          <di:waypoint x="518" y="610"/>
+          <di:waypoint x="910" y="610"/>
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="675" y="592" width="78" height="14"/>
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="TextAnnotation_11y78lw_di" bpmnElement="TextAnnotation_11y78lw">
+          <dc:Bounds x="310" y="455" width="100" height="29.999998092651367"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="TextAnnotation_0ns36ju_di" bpmnElement="TextAnnotation_0ns36ju">
+          <dc:Bounds x="310" y="595" width="100" height="29.999998092651367"/>
+          <bpmndi:BPMNLabel/>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1idc7ix_di" bpmnElement="Flow_1idc7ix">
+          <di:waypoint x="518" y="470"/>
+          <di:waypoint x="570" y="470"/>
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

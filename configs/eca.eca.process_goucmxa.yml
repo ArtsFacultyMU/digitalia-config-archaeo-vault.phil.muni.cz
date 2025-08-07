@@ -1,0 +1,38 @@
+uuid: 47c19a84-bed2-4273-9410-4efc2b8ca187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_subfield_type.field_integer
+    - field.storage.node.field_integer
+  module:
+    - eca_form
+id: process_goucmxa
+modeller: bpmn_io
+label: 'Form alter prefill test'
+version: ''
+weight: 0
+events:
+  Event_0rwwchl:
+    plugin: 'form:form_process'
+    label: |
+      Node form is built
+    configuration:
+      form_id: ''
+      entity_type_id: node
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0298g1i
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0298g1i:
+    plugin: eca_form_field_disable
+    label: 'disable field'
+    configuration:
+      flag: true
+      field_name: 'field_test_subfield[inline_entity_form.field_integer]'
+    successors: {  }

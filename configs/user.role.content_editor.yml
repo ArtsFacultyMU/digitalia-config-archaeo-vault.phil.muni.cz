@@ -3,20 +3,32 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.sip
     - node.type.article
+    - node.type.islandora_object
     - node.type.page
+    - node.type.test_complex_type
+    - node.type.test_subfield_type
+    - node.type.test_type
+    - rest.resource.ingest_progress
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
     - file
+    - group
     - help
+    - islandora
+    - media
     - node
     - path
+    - publishcontent
+    - rest
     - system
     - taxonomy
     - toolbar
     - tour
+    - view_unpublished
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
 id: content_editor
@@ -28,23 +40,45 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access group overview'
   - 'access help pages'
+  - 'access media overview'
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
   - 'create article content'
+  - 'create islandora_object content'
+  - 'create media'
   - 'create page content'
+  - 'create sip media'
   - 'create terms in tags'
+  - 'create test_complex_type content'
+  - 'create test_hierarchy_group group'
+  - 'create test_subfield_type content'
+  - 'create test_type content'
   - 'create url aliases'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any islandora_object content'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own islandora_object content'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'manage media'
+  - 'manage members'
+  - 'publish editable content'
+  - 'publish editable node type islandora_object'
+  - 'restful get ingest_progress'
   - 'revert all revisions'
+  - 'revert islandora_object revisions'
+  - 'unpublish editable content'
+  - 'unpublish editable node type islandora_object'
   - 'view all revisions'
+  - 'view any unpublished islandora_object content'
+  - 'view checksums'
+  - 'view islandora_object revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
