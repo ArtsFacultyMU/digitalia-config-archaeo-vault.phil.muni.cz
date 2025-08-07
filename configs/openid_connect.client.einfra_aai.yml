@@ -1,0 +1,19 @@
+uuid: ff6b6b87-4927-4f09-aee7-69b4b998210f
+langcode: en
+status: true
+dependencies: {  }
+id: einfra_aai
+label: 'e-INFRA AAI'
+plugin: generic
+settings:
+  client_id: c024ba8e-8e60-492a-8b02-d1ff4b4e9a41
+  client_secret: a5ddd0ca-ba44-4f4f-b060-b47f3c0a29e0826d901d-dbb6-4421-96ab-7773773e89e6
+  iss_allowed_domains: isle-demo-nrp.dyn.cloud.e-infra.cz
+  issuer_url: ''
+  authorization_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/authorize'
+  token_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/token'
+  userinfo_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/userinfo'
+  end_session_endpoint: ''
+  scopes:
+    - openid
+    - email
