@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.file_download
+    - field.field.media.audio.field_description
     - field.field.media.audio.field_file_size
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_media_of
@@ -32,6 +33,7 @@ content:
     region: content
 hidden:
   created: true
+  field_description: true
   field_file_size: true
   field_gemini_uri: true
   field_media_of: true

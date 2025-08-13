@@ -1,0 +1,65 @@
+uuid: 81c0d0b2-b351-4b40-95e1-7e728d578631
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.dataset.body
+    - field.field.node.dataset.field_abstract
+    - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_license
+    - field.field.node.dataset.field_member_of
+    - field.field.node.dataset.field_methods
+    - field.field.node.dataset.field_model
+    - field.field.node.dataset.field_series_information
+    - field.field.node.dataset.field_subtitle
+    - field.field.node.dataset.field_table_of_contents
+    - field.field.node.dataset.field_technical_info
+    - node.type.dataset
+  module:
+    - text
+    - user
+id: node.dataset.search_result
+targetEntityType: node
+bundle: dataset
+mode: search_result
+content:
+  field_abstract:
+    type: text_trimmed
+    label: inline
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  islandora_fits_checksum:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  did_image: true
+  field_alternative_title: true
+  field_license: true
+  field_methods: true
+  field_model: true
+  field_series_information: true
+  field_subtitle: true
+  field_table_of_contents: true
+  field_technical_info: true
+  langcode: true
+  search_api_excerpt: true
