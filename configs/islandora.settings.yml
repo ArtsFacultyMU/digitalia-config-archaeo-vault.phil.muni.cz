@@ -14,3 +14,4 @@ gemini_pseudo_bundles:
   'image:media': 'image:media'
   'video:media': 'video:media'
 gemini_url: ''
+allow_header_links: true
