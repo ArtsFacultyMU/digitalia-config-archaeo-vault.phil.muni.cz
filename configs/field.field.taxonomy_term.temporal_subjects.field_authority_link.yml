@@ -21,7 +21,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   authority_sources:
-    lcsh: 'Library of Congress Subject Headings'
+    ais: 'Archaeological Information System of the Czech Republic'
     other: Other
   title: 1
   link_type: 16

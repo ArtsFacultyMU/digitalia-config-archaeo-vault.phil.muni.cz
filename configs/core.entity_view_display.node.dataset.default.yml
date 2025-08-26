@@ -6,6 +6,16 @@ dependencies:
     - field.field.node.dataset.body
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_date_accepted
+    - field.field.node.dataset.field_date_available
+    - field.field.node.dataset.field_date_issued
+    - field.field.node.dataset.field_date_submitted
+    - field.field.node.dataset.field_date_updated
+    - field.field.node.dataset.field_date_valid
+    - field.field.node.dataset.field_date_withdrawn
+    - field.field.node.dataset.field_edtf_date_collected
+    - field.field.node.dataset.field_edtf_date_coverage
+    - field.field.node.dataset.field_edtf_date_created
     - field.field.node.dataset.field_license
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
@@ -14,8 +24,11 @@ dependencies:
     - field.field.node.dataset.field_subtitle
     - field.field.node.dataset.field_table_of_contents
     - field.field.node.dataset.field_technical_info
+    - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
   module:
+    - controlled_access_terms
+    - datetime
     - field_group
     - text
     - user
@@ -24,17 +37,17 @@ third_party_settings:
     group_description:
       children:
         - field_subtitle
-        - field_alternative_title
         - field_abstract
+        - field_alternative_title
         - field_methods
         - field_series_information
         - field_table_of_contents
-        - field_technical_info
         - body
+        - field_technical_info
       label: Description
       parent_name: ''
       region: content
-      weight: 2
+      weight: 0
       format_type: fieldset
       format_settings:
         classes: ''
@@ -44,6 +57,30 @@ third_party_settings:
         description: ''
         required_fields: false
         open: false
+    group_time_reference:
+      children:
+        - field_temporal_subject
+        - field_edtf_date_coverage
+        - field_edtf_date_collected
+        - field_edtf_date_created
+        - field_date_submitted
+        - field_date_accepted
+        - field_date_issued
+        - field_date_available
+        - field_date_updated
+        - field_date_valid
+        - field_date_withdrawn
+      label: 'Time Reference'
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
@@ -70,13 +107,155 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_date_accepted:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_date_available:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_date_issued:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_date_submitted:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_date_updated:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_date_valid:
+    type: edtf_default
+    label: inline
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_date_withdrawn:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_edtf_date_collected:
+    type: edtf_default
+    label: above
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_edtf_date_coverage:
+    type: edtf_default
+    label: above
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_edtf_date_created:
+    type: edtf_default
+    label: inline
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 21
+    region: content
   field_license:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   field_member_of:
     type: entity_reference_label
@@ -84,7 +263,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_methods:
     type: text_default
@@ -122,15 +301,23 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_temporal_subject:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
 hidden:
   did_image: true
