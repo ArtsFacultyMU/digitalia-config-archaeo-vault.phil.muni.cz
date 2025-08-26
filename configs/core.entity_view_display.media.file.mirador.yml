@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.mirador
+    - field.field.media.file.field_description
     - field.field.media.file.field_file_size
     - field.field.media.file.field_height
     - field.field.media.file.field_media_file
@@ -103,6 +104,7 @@ content:
     region: content
 hidden:
   created: true
+  field_description: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true
