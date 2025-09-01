@@ -33,6 +33,7 @@ content:
     region: content
 hidden:
   created: true
+  field_description: true
   field_file_size: true
   field_gemini_uri: true
   field_media_audio_file: true
