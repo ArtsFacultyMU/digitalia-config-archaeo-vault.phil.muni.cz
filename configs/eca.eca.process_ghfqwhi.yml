@@ -1,6 +1,6 @@
 uuid: 915f9ff8-95a1-4fe6-888f-993b034a67ca
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - node.type.test_complex_type

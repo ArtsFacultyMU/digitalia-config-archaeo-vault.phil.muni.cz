@@ -18,6 +18,7 @@ mode: media_library
 content: {  }
 hidden:
   created: true
+  field_description: true
   field_file_size: true
   field_media_document: true
   field_media_of: true

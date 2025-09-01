@@ -7,13 +7,13 @@ label: 'e-INFRA AAI'
 plugin: generic
 settings:
   client_id: c024ba8e-8e60-492a-8b02-d1ff4b4e9a41
-  client_secret: null
+  client_secret: b10eadac-b212-4f5f-b355-f73448c2e84834fa6f0d-e421-4ea2-b190-9bea2ec57a82
   iss_allowed_domains: isle-demo-nrp.dyn.cloud.e-infra.cz
   issuer_url: ''
-  authorization_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/authorize'
-  token_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/token'
-  userinfo_endpoint: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/oauth2/userinfo'
-  end_session_endpoint: ''
+  authorization_endpoint: 'https://login.e-infra.cz/oidc/authorize'
+  token_endpoint: 'https://login.e-infra.cz/oidc/token'
+  userinfo_endpoint: 'https://login.e-infra.cz/oidc/userinfo'
+  end_session_endpoint: 'https://login.e-infra.cz/oidc/endsession'
   scopes:
     - openid
     - email
