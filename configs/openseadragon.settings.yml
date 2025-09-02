@@ -122,7 +122,7 @@ default_options:
   crossOriginPolicy: false
   ajaxWithCredentials: false
   tileSize: 256
-iiif_server: 'https://isle-demo-nrp.dyn.cloud.e-infra.cz/iiif/2'
+iiif_server: null
 manifest_view: iiif_manifest
 viewer_options:
   fit_to_aspect_ratio: 0
