@@ -13,7 +13,7 @@ id: node.dataset.field_technical_info
 field_name: field_technical_info
 entity_type: node
 bundle: dataset
-label: 'Technical info'
+label: 'Technical Information'
 description: 'Detailed information that may be associated with design, implementation, operation, use, and/or maintenance of a process, system, or instrument.'
 required: false
 translatable: false

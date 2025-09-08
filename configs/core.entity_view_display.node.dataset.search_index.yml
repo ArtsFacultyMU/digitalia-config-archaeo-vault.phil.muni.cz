@@ -7,6 +7,16 @@ dependencies:
     - field.field.node.dataset.body
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_date_accepted
+    - field.field.node.dataset.field_date_available
+    - field.field.node.dataset.field_date_issued
+    - field.field.node.dataset.field_date_submitted
+    - field.field.node.dataset.field_date_updated
+    - field.field.node.dataset.field_date_valid
+    - field.field.node.dataset.field_date_withdrawn
+    - field.field.node.dataset.field_edtf_date_collected
+    - field.field.node.dataset.field_edtf_date_coverage
+    - field.field.node.dataset.field_edtf_date_created
     - field.field.node.dataset.field_license
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
@@ -15,8 +25,10 @@ dependencies:
     - field.field.node.dataset.field_subtitle
     - field.field.node.dataset.field_table_of_contents
     - field.field.node.dataset.field_technical_info
+    - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
   module:
+    - controlled_access_terms
     - text
     - user
 id: node.dataset.search_index
@@ -30,6 +42,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 17
+    region: content
+  field_date_valid:
+    type: edtf_default
+    label: above
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_edtf_date_created:
+    type: edtf_default
+    label: above
+    settings:
+      date_separator: dash
+      date_order: big_endian
+      month_format: mm
+      day_format: dd
+      year_format: 'y'
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_member_of:
     type: entity_reference_label
@@ -46,6 +82,14 @@ content:
     third_party_settings: {  }
     weight: 18
     region: content
+  field_temporal_subject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
@@ -60,6 +104,14 @@ hidden:
   body: true
   did_image: true
   field_alternative_title: true
+  field_date_accepted: true
+  field_date_available: true
+  field_date_issued: true
+  field_date_submitted: true
+  field_date_updated: true
+  field_date_withdrawn: true
+  field_edtf_date_collected: true
+  field_edtf_date_coverage: true
   field_license: true
   field_methods: true
   field_model: true
