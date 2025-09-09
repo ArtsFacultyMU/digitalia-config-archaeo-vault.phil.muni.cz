@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "136ddfc78eef8ed3ee1d4d3bb90170a9",
+    "content-hash": "d9d2e1fb9cbc5fae9b020414a0d009ef",
     "packages": [
         {
             "name": "adci/full-name-parser",
@@ -3001,6 +3001,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/csv_serialization",
                 "issues": "https://www.drupal.org/project/issues/csv_serialization"
+            }
+        },
+        {
+            "name": "drupal/csvfile_formatter",
+            "version": "1.0.26",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/csvfile_formatter.git",
+                "reference": "1.0.26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/csvfile_formatter-1.0.26.zip",
+                "reference": "1.0.26",
+                "shasum": "4fc081eddb238e3b57b2b8e003d798da6f7140ce"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.26",
+                    "datestamp": "1746167775",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jmdeleon",
+                    "homepage": "https://www.drupal.org/user/531108"
+                }
+            ],
+            "description": "A file field formatter that renders CSV files as HTML tables.",
+            "homepage": "https://www.drupal.org/project/csvfile_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/csvfile_formatter"
             }
         },
         {
