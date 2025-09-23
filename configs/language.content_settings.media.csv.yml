@@ -1,0 +1,11 @@
+uuid: 46ad1dda-2467-4394-af15-ac129c08752a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.csv
+id: media.csv
+target_entity_type_id: media
+target_bundle: csv
+default_langcode: site_default
+language_alterable: false

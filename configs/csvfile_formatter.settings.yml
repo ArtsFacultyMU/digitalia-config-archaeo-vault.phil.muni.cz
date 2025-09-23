@@ -6,11 +6,12 @@ dataTableSettings:
   deferRender: false
   info: false
   lengthChange: false
-  ordering: true
+  ordering: false
   paging: true
   processing: true
-  searching: true
+  searching: false
   stateSave: false
   scrollX: -1
   scrollY: -1
   pageLength: 25
+  bundle: csv
