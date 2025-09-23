@@ -44,6 +44,7 @@
         "drupal/controlled_access_terms": "^2",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
+        "drupal/csvfile_formatter": "^1.0",
         "drupal/eca": "^2.1",
         "drupal/eca_content_access": "^2.0",
         "drupal/epp": "^1.7",
@@ -51,6 +52,7 @@
         "drupal/field_group": "^3",
         "drupal/field_permissions": "^1",
         "drupal/field_report": "^2.1",
+        "drupal/file_delete": "^3.0",
         "drupal/flysystem": "^2.2@alpha",
         "drupal/fpa": "^4.0",
         "drupal/group": "^3.3",
@@ -59,9 +61,9 @@
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/islandora": "^2.8.1",
         "drupal/islandora_mirador": "^2",
-        "drupal/openid_connect": "^3.0@alpha",
         "drupal/migrate_tools": "^6.0",
         "drupal/nodeaccess": "^2.0@alpha",
+        "drupal/openid_connect": "^3.0@alpha",
         "drupal/openseadragon": "^2",
         "drupal/pathauto": "^1.12",
         "drupal/pdf": "^1.1",
@@ -155,6 +157,10 @@
 		"Change handle format": "./patches/Hdl.patch",
 		"Fix interaction with ECA DOI": "./patches/MintDataCiteDoiAction.patch",
 		"Fix interaction with ECA Handle": "./patches/MintHdlAction.patch"
+            },
+            "drupal/csvfile_formatter": {
+                "Add dynamic csv file parameters": "./patches/CSVFileFormatter.patch",
+                "Add dynamic csv file parameters 2": "./patches/DataTablesSettingsForm.patch"
             }
         }
     },
