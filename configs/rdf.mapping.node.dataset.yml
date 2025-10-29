@@ -10,102 +10,102 @@ id: node.dataset
 targetEntityType: node
 bundle: dataset
 types:
-  - "dcat:Dataset"
+  - 'dcat:Dataset'
 fieldMappings:
   field_abstract:
     properties:
-      - "datacite:description" #'dcterms:abstract'
+      - 'datacite:description'
   field_alternative_title:
     properties:
-      - "dcterms:alternative"
+      - 'dcterms:alternative'
   field_date_accepted:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
   field_date_available:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
   field_edtf_date_collected:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_copyright_date:
     properties:
-      - "ccmm:hasTimeReference" # "dcterms:dateCopyrighted"
+      - 'ccmm:hasTimeReference'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_coverage:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_created:
     properties:
-      - "ccmm:hasTimeReference" #"dcterms:created"
+      - 'ccmm:hasTimeReference'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_date_issued:
     properties:
-      - "ccmm:hasTimeReference" #"dcterms:issued"
+      - 'ccmm:hasTimeReference'
   field_date_submitted:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
   field_date_updated:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
   field_date_valid:
     properties:
-      - "ccmm:hasTimeReference" #"dcterms:valid"
+      - 'ccmm:hasTimeReference'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_date_withdrawn:
     properties:
-      - "ccmm:hasTimeReference"
+      - 'ccmm:hasTimeReference'
   field_license:
     properties:
-      - "dcat:rights"
+      - 'dcat:rights'
   field_member_of:
     properties:
-      - "pcdm:memberOf"
+      - 'pcdm:memberOf'
     mapping_type: rel
   field_methods:
     properties:
-      - "datacite:hasDescription"
+      - 'datacite:hasDescription'
   field_note:
     properties:
-      - "skos:note"
+      - 'skos:note'
   field_series_information:
     properties:
-      - "datacite:hasDescription"
+      - 'datacite:hasDescription'
   field_geographic_subject:
     properties:
-      - "dcterms:spatial"
+      - 'dcterms:spatial'
   field_temporal_subject:
     properties:
-      - "dcterms:temporal"
+      - 'dcterms:temporal'
   field_subtitle:
     properties:
-      - "ccmm:hasAlternateTitle"
+      - 'ccmm:hasAlternateTitle'
   field_table_of_contents:
     properties:
-      - "datacite:hasDescription"
+      - 'datacite:hasDescription'
   field_technical_info:
     properties:
-      - "datacite:hasDescription"
+      - 'datacite:hasDescription'
   title:
     properties:
-      - "dcterms:title"
+      - 'dcterms:title'
   created:
     properties:
-      - "schema:dateCreated"
+      - 'schema:dateCreated'
     datatype_callback:
       callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
   changed:
     properties:
-      - "schema:dateModified"
+      - 'schema:dateModified'
     datatype_callback:
       callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
   uid:
     properties:
-      - "schema:author"
+      - 'schema:author'
     mapping_type: rel

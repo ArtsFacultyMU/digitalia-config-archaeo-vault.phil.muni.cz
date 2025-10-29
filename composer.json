@@ -55,6 +55,7 @@
         "drupal/file_delete": "^3.0",
         "drupal/flysystem": "^2.2@alpha",
         "drupal/fpa": "^4.0",
+        "drupal/gcontent_moderation": "^3.0@beta",
         "drupal/group": "^3.3",
         "drupal/group_action": "^1.2",
         "drupal/hal": "^1.0||^2.0",

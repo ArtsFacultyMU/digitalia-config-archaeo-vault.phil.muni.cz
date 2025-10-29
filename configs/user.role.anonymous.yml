@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - node.type.dataset
     - rest.resource.oai_pmh
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - rest
     - system
 _core:
@@ -24,4 +26,5 @@ permissions:
   - 'access site-wide contact form'
   - 'restful get oai_pmh'
   - 'use text format restricted_html'
+  - 'view dataset revisions'
   - 'view media'

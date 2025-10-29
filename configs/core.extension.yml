@@ -23,7 +23,6 @@ module:
   config_override_core_fields: 0
   config_update: 0
   contact: 0
-  content_access: 0
   content_moderation: 0
   context: 0
   context_ui: 0
@@ -44,7 +43,6 @@ module:
   eca_base: 0
   eca_config: 0
   eca_content: 0
-  eca_content_access: 0
   eca_endpoint: 0
   eca_file: 0
   eca_menu: 0
@@ -76,8 +74,10 @@ module:
   flexible_permissions: 0
   flysystem: 0
   fpa: 0
+  gcontent_moderation: 0
   geolocation: 0
   gnode: 0
+  grequest: 0
   group: 0
   group_action: 0
   hal: 0
@@ -130,7 +130,6 @@ module:
   pgsql: 0
   phpass: 0
   prepopulate: 0
-  publishcontent: 0
   rdf: 0
   responsive_image: 0
   rest: 0
@@ -142,6 +141,7 @@ module:
   shortcut: 0
   simple_block: 0
   sqlite: 0
+  state_machine: 0
   syslog: 0
   system: 0
   taxonomy: 0
