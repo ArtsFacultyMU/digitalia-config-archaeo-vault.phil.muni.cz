@@ -2,8 +2,6 @@ uuid: 717b552c-01f8-47bb-b960-ed0818b07f62
 langcode: en
 status: true
 dependencies:
-  config:
-    - group.type.research_group
   module:
     - content_moderation
 id: research_group_workflow
@@ -52,7 +50,5 @@ type_settings:
         - published
       to: draft
       weight: 5
-  entity_types:
-    group:
-      - research_group
+  entity_types: {  }
   default_moderation_state: requested
