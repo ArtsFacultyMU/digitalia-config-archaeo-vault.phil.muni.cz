@@ -5,11 +5,14 @@ dependencies:
   config:
     - node.type.dataset
     - node.type.page
+    - user.role.authenticated
+    - user.role.contributor
     - workflows.workflow.dataset_workflow
     - workflows.workflow.research_group_workflow
   module:
     - content_moderation
     - group
+    - masquerade
     - node
     - persistent_identifiers
     - system
@@ -33,6 +36,8 @@ permissions:
   - 'edit any page content'
   - 'edit own dataset content'
   - 'edit own page content'
+  - 'masquerade as authenticated'
+  - 'masquerade as contributor'
   - 'mint persistent identifiers'
   - 'revert dataset revisions'
   - 'revert page revisions'
