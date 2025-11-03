@@ -159,6 +159,10 @@
 		"Fix interaction with ECA DOI": "./patches/MintDataCiteDoiAction.patch",
 		"Fix interaction with ECA Handle": "./patches/MintHdlAction.patch"
             },
+            "drupal/openid_connect": {
+		"Use 'eduperson_entitlement' as source for group mappings": "./patches/OpenIDConnect.patch",
+		"textfield -> textarea": "./patches/OpenIDConnectSettingsForm.patch"
+            },
             "drupal/csvfile_formatter": {
                 "Add dynamic csv file parameters": "./patches/CSVFileFormatter.patch",
                 "Add dynamic csv file parameters 2": "./patches/DataTablesSettingsForm.patch"

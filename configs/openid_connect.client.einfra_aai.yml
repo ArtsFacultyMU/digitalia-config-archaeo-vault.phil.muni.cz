@@ -17,3 +17,4 @@ settings:
   scopes:
     - openid
     - email
+    - eduperson_entitlement

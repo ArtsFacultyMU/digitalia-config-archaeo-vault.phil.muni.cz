@@ -3,10 +3,25 @@ _core:
 always_save_userinfo: true
 connect_existing_users: false
 override_registration_settings: true
-end_session_enabled: true
+end_session_enabled: false
 user_login_display: replace
 redirect_login: user
 redirect_logout: ''
 userinfo_mappings:
   timezone: zoneinfo
-role_mappings: {  }
+  user_picture: picture
+role_mappings:
+  content_editor:
+    - nic
+  administrator:
+    - nic
+    - 'urn:geant:cesnet.cz:group:VO_digitalia:lindat%20islandora%20admins#perun.cesnet.cz'
+  fedoraadmin:
+    - nic
+    - 'urn:geant:cesnet.cz:group:VO_digitalia:lindat%20islandora%20admins#perun.cesnet.cz'
+  content_editor_junior:
+    - nic
+  data_curator:
+    - nic
+  contributor:
+    - nic
