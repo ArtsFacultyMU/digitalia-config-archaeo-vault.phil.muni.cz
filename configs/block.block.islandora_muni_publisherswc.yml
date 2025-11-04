@@ -7,7 +7,6 @@ dependencies:
   module:
     - context
     - facets
-    - islandora
   theme:
     - islandora_muni
 id: islandora_muni_publisherswc
@@ -28,8 +27,3 @@ visibility:
     id: context_all
     negate: false
     values: collection
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

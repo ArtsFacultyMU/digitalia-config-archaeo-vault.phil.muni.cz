@@ -6,7 +6,6 @@ dependencies:
     - views.view.solr_search_content
   module:
     - context
-    - islandora
     - views
   theme:
     - islandora_muni
@@ -39,8 +38,3 @@ visibility:
     id: context_all
     negate: null
     values: collection
-  media_source_mimetype:
-    id: media_source_mimetype
-    negate: false
-    context_mapping: {  }
-    mimetype: ''

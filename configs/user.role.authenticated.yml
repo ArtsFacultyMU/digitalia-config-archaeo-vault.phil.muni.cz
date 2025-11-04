@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.dataset
     - rest.resource.oai_pmh
   module:
     - comment
     - contact
     - filter
     - media
+    - node
     - rest
     - shortcut
     - system
@@ -28,4 +30,5 @@ permissions:
   - 'restful get oai_pmh'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view dataset revisions'
   - 'view media'
