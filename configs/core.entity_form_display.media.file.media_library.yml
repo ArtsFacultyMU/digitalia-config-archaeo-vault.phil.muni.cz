@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.file.field_description
     - field.field.media.file.field_file_size
+    - field.field.media.file.field_fits_file
     - field.field.media.file.field_height
     - field.field.media.file.field_media_file
     - field.field.media.file.field_media_of
@@ -22,6 +24,7 @@ hidden:
   created: true
   field_description: true
   field_file_size: true
+  field_fits_file: true
   field_height: true
   field_media_file: true
   field_media_of: true

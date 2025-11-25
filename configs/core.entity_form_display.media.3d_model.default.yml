@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.3d_model.field_description
+    - field.field.media.3d_model.field_fits_file
     - field.field.media.3d_model.field_media_file
     - media.type.3d_model
   module:
@@ -74,4 +75,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_fits_file: true
