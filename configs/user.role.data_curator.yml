@@ -27,6 +27,7 @@ permissions:
   - 'access group overview'
   - 'access site in maintenance mode'
   - 'access toolbar'
+  - 'access user profiles'
   - 'create dataset content'
   - 'create research_group group'
   - 'delete any dataset content'
