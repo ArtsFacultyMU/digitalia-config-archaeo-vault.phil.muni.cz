@@ -11,7 +11,7 @@ bundle: 3d_model
 label: Published
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

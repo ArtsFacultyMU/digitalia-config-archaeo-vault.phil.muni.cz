@@ -5,25 +5,18 @@ dependencies:
   config:
     - field.storage.node.field_model
     - node.type.dataset
-    - taxonomy.vocabulary.islandora_models
 id: node.dataset.field_model
 field_name: field_model
 entity_type: node
 bundle: dataset
-label: Model
+label: 'Record Type'
 description: 'The internal category of the resource. Affects how the item is displayed/viewed in the repository.'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:filter_existing_terms'
+  handler: eca
   handler_settings:
-    target_bundles:
-      islandora_models: islandora_models
-    sort:
-      field: name
-      direction: asc
-    auto_create: false
-    auto_create_bundle: ''
+    field_name: field_model
 field_type: entity_reference

@@ -10,7 +10,7 @@ field_name: field_date_accepted
 entity_type: node
 bundle: dataset
 label: 'Date Accepted'
-description: ''
+description: 'The date that the publisher accepted the resource into their system. To indicate the start of an embargo period, use Accepted or Submitted, as appropriate.'
 required: false
 translatable: false
 default_value: {  }

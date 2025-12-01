@@ -6,18 +6,12 @@ dependencies:
     - field.storage.media.field_media_file
     - media.type.sip
   module:
-    - content_translation
     - file
     - filehash
 third_party_settings:
   filehash:
     dedupe: 0
     dedupe_original: false
-  content_translation:
-    translation_sync:
-      target_id: target_id
-      display: display
-      description: description
 id: media.sip.field_media_file
 field_name: field_media_file
 entity_type: media
@@ -25,7 +19,7 @@ bundle: sip
 label: File
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

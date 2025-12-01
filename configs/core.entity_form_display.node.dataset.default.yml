@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.dataset.body
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_assessment_type
+    - field.field.node.dataset.field_data_service
     - field.field.node.dataset.field_date_accepted
     - field.field.node.dataset.field_date_available
     - field.field.node.dataset.field_date_issued
@@ -16,20 +18,31 @@ dependencies:
     - field.field.node.dataset.field_edtf_date_collected
     - field.field.node.dataset.field_edtf_date_coverage
     - field.field.node.dataset.field_edtf_date_created
+    - field.field.node.dataset.field_feature_specification
+    - field.field.node.dataset.field_feature_type
+    - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
     - field.field.node.dataset.field_model
+    - field.field.node.dataset.field_object_specification
+    - field.field.node.dataset.field_object_type
+    - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_series_information
     - field.field.node.dataset.field_subtitle
     - field.field.node.dataset.field_table_of_contents
+    - field.field.node.dataset.field_tags
     - field.field.node.dataset.field_technical_info
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
+    - workflows.workflow.dataset_workflow
   module:
+    - content_moderation
     - controlled_access_terms
     - datetime
     - field_group
+    - inline_entity_form
+    - link
     - text
 third_party_settings:
   field_group:
@@ -43,7 +56,7 @@ third_party_settings:
       label: Description
       region: content
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         classes: ''
@@ -69,7 +82,7 @@ third_party_settings:
       label: 'Time Reference'
       region: content
       parent_name: ''
-      weight: 15
+      weight: 8
       format_type: details
       format_settings:
         classes: ''
@@ -79,6 +92,27 @@ third_party_settings:
         open: false
         description: 'All dates related to the dataset'
         required_fields: true
+    group_subject:
+      children:
+        - field_tags
+        - field_assessment_type
+        - field_feature_type
+        - field_feature_specification
+        - field_object_type
+        - field_object_specification
+      label: Subject
+      region: content
+      parent_name: ''
+      weight: 14
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: field_group_subject
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: node.dataset.default
 targetEntityType: node
 bundle: dataset
@@ -86,7 +120,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -105,6 +139,24 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_assessment_type:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_service:
+    type: link_default
+    weight: 15
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_date_accepted:
     type: datetime_timestamp
@@ -178,7 +230,27 @@ content:
       intervals: false
       sets: false
     third_party_settings: {  }
-  field_license:
+  field_feature_specification:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_feature_type:
+    type: entity_reference_autocomplete
+    weight: 18
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_language:
     type: entity_reference_autocomplete
     weight: 13
     region: content
@@ -188,9 +260,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_license:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_member_of:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 0
     region: content
     settings:
       match_operator: CONTAINS
@@ -211,6 +293,39 @@ content:
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_object_specification:
+    type: entity_reference_autocomplete
+    weight: 21
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_object_type:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_related_resource:
+    type: inline_entity_form_simple
+    weight: 27
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
     third_party_settings: {  }
   field_series_information:
     type: text_textarea
@@ -236,6 +351,16 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_technical_info:
     type: text_textarea
     weight: 11
@@ -256,27 +381,20 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 5
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: -1
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 8
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -291,7 +409,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -303,3 +421,4 @@ hidden:
   body: true
   path: true
   promote: true
+  sticky: true

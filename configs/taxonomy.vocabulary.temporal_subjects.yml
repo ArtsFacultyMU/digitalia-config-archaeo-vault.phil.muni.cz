@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 _core:
   default_config_hash: IaNlO4qrmB2pECrwmlQdDhh7SOdOqVoO_QGwGXALAe0
-name: 'Temporal Subjects'
+name: 'Time Period'
 vid: temporal_subjects
-description: 'Subject terms expressing periods of time'
+description: 'Subject terms expressing periods of time. AIS CR vocabulary "obdobi"'
 weight: 0
 new_revision: true

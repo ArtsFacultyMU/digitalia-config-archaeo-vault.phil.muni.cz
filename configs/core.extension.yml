@@ -22,6 +22,7 @@ module:
   conditional_fields: 0
   config: 0
   config_override_core_fields: 0
+  config_translation: 0
   config_update: 0
   contact: 0
   content_moderation: 0
@@ -36,6 +37,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  devel_generate: 0
   dgi_image_discovery: 0
   digitalia_muni_entity: 0
   digitalia_muni_workbench_ingest: 0
@@ -111,6 +113,7 @@ module:
   key: 0
   language: 0
   link: 0
+  locale: 0
   masquerade: 0
   media: 0
   media_library: 0
@@ -151,6 +154,7 @@ module:
   system: 0
   taxonomy: 0
   taxonomy_manager: 0
+  taxonomy_manager_merge: 0
   term_merge: 0
   term_reference_change: 0
   text: 0

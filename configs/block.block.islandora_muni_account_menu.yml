@@ -12,8 +12,8 @@ _core:
   default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
 id: islandora_muni_account_menu
 theme: islandora_muni
-region: secondary_menu
-weight: -4
+region: header
+weight: 3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

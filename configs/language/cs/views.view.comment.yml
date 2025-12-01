@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      fields:
+        subject:
+          label: Předmět
+      filters:
+        subject:
+          expose:
+            label: Předmět
+  page_unapproved:
+    display_options:
+      fields:
+        subject:
+          label: Předmět
+      filters:
+        subject:
+          expose:
+            label: Předmět
