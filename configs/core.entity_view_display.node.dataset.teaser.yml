@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.dataset.body
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_assessment_type
+    - field.field.node.dataset.field_data_service
     - field.field.node.dataset.field_date_accepted
     - field.field.node.dataset.field_date_available
     - field.field.node.dataset.field_date_issued
@@ -14,16 +16,24 @@ dependencies:
     - field.field.node.dataset.field_date_updated
     - field.field.node.dataset.field_date_valid
     - field.field.node.dataset.field_date_withdrawn
+    - field.field.node.dataset.field_doi
     - field.field.node.dataset.field_edtf_date_collected
     - field.field.node.dataset.field_edtf_date_coverage
     - field.field.node.dataset.field_edtf_date_created
+    - field.field.node.dataset.field_feature_specification
+    - field.field.node.dataset.field_feature_type
+    - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
     - field.field.node.dataset.field_model
+    - field.field.node.dataset.field_object_specification
+    - field.field.node.dataset.field_object_type
+    - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_series_information
     - field.field.node.dataset.field_subtitle
     - field.field.node.dataset.field_table_of_contents
+    - field.field.node.dataset.field_tags
     - field.field.node.dataset.field_technical_info
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
@@ -44,6 +54,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_abstract:
     type: solr_highlighted_text_default
     label: inline
@@ -53,6 +68,11 @@ content:
       strict: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_gemini_uri:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
   field_member_of:
     type: entity_reference_label
@@ -70,6 +90,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
@@ -83,6 +111,8 @@ content:
 hidden:
   did_image: true
   field_alternative_title: true
+  field_assessment_type: true
+  field_data_service: true
   field_date_accepted: true
   field_date_available: true
   field_date_issued: true
@@ -90,11 +120,18 @@ hidden:
   field_date_updated: true
   field_date_valid: true
   field_date_withdrawn: true
+  field_doi: true
   field_edtf_date_collected: true
   field_edtf_date_coverage: true
   field_edtf_date_created: true
+  field_feature_specification: true
+  field_feature_type: true
+  field_language: true
   field_license: true
   field_methods: true
+  field_object_specification: true
+  field_object_type: true
+  field_related_resource: true
   field_series_information: true
   field_subtitle: true
   field_table_of_contents: true

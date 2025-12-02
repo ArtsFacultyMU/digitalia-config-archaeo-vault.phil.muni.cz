@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - node.type.test_complex_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '1'
 id: node.test_complex_type
 target_entity_type_id: node
 target_bundle: test_complex_type

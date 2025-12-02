@@ -15,11 +15,11 @@ bundle: extracted_text
 label: 'Media Use'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       islandora_media_use: islandora_media_use

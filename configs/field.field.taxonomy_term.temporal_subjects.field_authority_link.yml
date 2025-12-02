@@ -16,12 +16,14 @@ bundle: temporal_subjects
 label: 'Authority Sources'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   authority_sources:
-    ais: 'Archaeological Information System of the Czech Republic'
+    aiscr: 'Archaeological Information System of the Czech Republic'
+    aat: 'Art & Architecture Thesaurus'
+    wiki: Wikidata
     other: Other
   title: 1
   link_type: 16

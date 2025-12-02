@@ -10,20 +10,20 @@ id: node.dataset.field_temporal_subject
 field_name: field_temporal_subject
 entity_type: node
 bundle: dataset
-label: 'Subject (Temporal)'
+label: 'Time Period'
 description: 'The time periods the dataset covers.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:filter_existing_terms'
+  handler: eca
   handler_settings:
     target_bundles:
       temporal_subjects: temporal_subjects
     sort:
       field: name
       direction: asc
-    auto_create: true
+    auto_create: 1
     auto_create_bundle: ''
 field_type: entity_reference
