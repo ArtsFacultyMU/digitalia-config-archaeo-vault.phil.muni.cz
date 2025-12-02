@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_model
     - node.type.dataset
+    - taxonomy.vocabulary.islandora_models
 id: node.dataset.field_model
 field_name: field_model
 entity_type: node
@@ -16,7 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: eca
+  handler: 'default:filter_existing_terms'
   handler_settings:
-    field_name: field_model
+    target_bundles:
+      islandora_models: islandora_models
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

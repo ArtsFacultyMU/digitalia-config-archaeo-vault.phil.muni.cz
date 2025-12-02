@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.dataset.field_date_updated
     - field.field.node.dataset.field_date_valid
     - field.field.node.dataset.field_date_withdrawn
+    - field.field.node.dataset.field_doi
     - field.field.node.dataset.field_edtf_date_collected
     - field.field.node.dataset.field_edtf_date_coverage
     - field.field.node.dataset.field_edtf_date_created
@@ -139,6 +140,7 @@ hidden:
   field_date_submitted: true
   field_date_updated: true
   field_date_withdrawn: true
+  field_doi: true
   field_edtf_date_collected: true
   field_edtf_date_coverage: true
   field_feature_specification: true

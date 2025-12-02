@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.dataset.field_date_updated
     - field.field.node.dataset.field_date_valid
     - field.field.node.dataset.field_date_withdrawn
+    - field.field.node.dataset.field_doi
     - field.field.node.dataset.field_edtf_date_collected
     - field.field.node.dataset.field_edtf_date_coverage
     - field.field.node.dataset.field_edtf_date_created
@@ -35,7 +36,6 @@ dependencies:
     - field.field.node.dataset.field_technical_info
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
-    - workflows.workflow.dataset_workflow
   module:
     - content_moderation
     - controlled_access_terms
@@ -202,6 +202,14 @@ content:
     weight: 23
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_doi:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_edtf_date_collected:
     type: edtf_default
