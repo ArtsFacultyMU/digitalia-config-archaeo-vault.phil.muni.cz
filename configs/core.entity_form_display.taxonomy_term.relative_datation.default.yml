@@ -1,17 +1,17 @@
-uuid: 97a164d0-2374-48ae-8da9-5b19d55a69e3
+uuid: 418677a7-f9a7-4c2d-89af-41fc9f1b50c0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.object_specification.field_authority_link
-    - taxonomy.vocabulary.object_specification
+    - field.field.taxonomy_term.relative_datation.field_external_uri
+    - taxonomy.vocabulary.relative_datation
   module:
-    - controlled_access_terms
+    - link
     - path
     - text
-id: taxonomy_term.object_specification.default
+id: taxonomy_term.relative_datation.default
 targetEntityType: taxonomy_term
-bundle: object_specification
+bundle: relative_datation
 mode: default
 content:
   description:
@@ -22,9 +22,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_authority_link:
-    type: authority_link_default
-    weight: 3
+  field_external_uri:
+    type: link_default
+    weight: 2
     region: content
     settings:
       placeholder_url: ''

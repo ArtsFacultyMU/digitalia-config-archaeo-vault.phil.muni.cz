@@ -4,7 +4,7 @@ doi_datacite_api_endpoint: 'https://api.test.datacite.org/dois'
 doi_datacite_prefix: '10.80626'
 doi_datacite_suffix_source: uuid
 doi_datacite_username: UPWJ.PYRXWM
-doi_datacite_password: ''
+doi_datacite_password: null
 doi_datacite_creators_mapping: ''
 doi_datacite_publisher_mapping: ''
 doi_datacite_publicationyear_mapping: field_edtf_date_issued

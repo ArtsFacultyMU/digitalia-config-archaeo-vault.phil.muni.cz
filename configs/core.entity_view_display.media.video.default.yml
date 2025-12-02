@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.media.video.field_description
     - field.field.media.video.field_file_size
+    - field.field.media.video.field_fits_file
     - field.field.media.video.field_media_of
     - field.field.media.video.field_media_use
     - field.field.media.video.field_media_video_file
@@ -13,6 +14,7 @@ dependencies:
     - field.field.media.video.field_track
     - media.type.video
   module:
+    - islandora_fits
     - islandora_video
     - text
 _core:
@@ -36,12 +38,19 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_fits_file:
+    type: fits_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_gemini_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
   field_media_of:
     type: entity_reference_label
@@ -49,7 +58,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_media_use:
     type: entity_reference_label
@@ -57,7 +66,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_media_video_file:
     type: islandora_file_video
@@ -71,7 +80,7 @@ content:
       width: 640
       height: 480
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_mime_type:
     type: string
@@ -79,14 +88,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_original_name:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 8
     region: content
   name:
     type: string
