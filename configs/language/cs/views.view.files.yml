@@ -1,0 +1,9 @@
+display:
+  default:
+    display_title: Default
+    display_options:
+      fields:
+        filename:
+          label: Name
+        count:
+          format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz

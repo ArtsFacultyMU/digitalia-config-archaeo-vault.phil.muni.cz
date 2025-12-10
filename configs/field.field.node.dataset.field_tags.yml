@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_tags
     - node.type.dataset
+    - taxonomy.vocabulary.tags
 id: node.dataset.field_tags
 field_name: field_tags
 entity_type: node
@@ -16,7 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: eca
+  handler: 'default:filter_existing_terms'
   handler_settings:
-    field_name: field_tags
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference
