@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_assessment_type
     - node.type.dataset
+    - taxonomy.vocabulary.assessment_type
 id: node.dataset.field_assessment_type
 field_name: field_assessment_type
 entity_type: node
@@ -16,7 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: eca
+  handler: 'default:filter_existing_terms'
   handler_settings:
-    field_name: field_assessment_type
+    target_bundles:
+      assessment_type: assessment_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference
