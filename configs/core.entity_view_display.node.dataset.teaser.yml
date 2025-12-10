@@ -52,12 +52,7 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 101
-    region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
+    weight: 7
     region: content
   field_abstract:
     type: solr_highlighted_text_default
@@ -67,12 +62,12 @@ content:
       suffix: '</strong>'
       strict: false
     third_party_settings: {  }
-    weight: 5
+    weight: 1
     region: content
   field_gemini_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
   field_member_of:
     type: entity_reference_label
@@ -80,7 +75,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 2
     region: content
   field_model:
     type: entity_reference_label
@@ -96,19 +91,20 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 6
     region: content
 hidden:
+  content_moderation_control: true
   did_image: true
   field_alternative_title: true
   field_assessment_type: true

@@ -1,0 +1,29 @@
+display:
+  default:
+    display_title: Default
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Name
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Name
+      header:
+        display_link_table:
+          label: Table
+  widget_table:
+    display_options:
+      fields:
+        name:
+          label: Name
+      filters:
+        name:
+          expose:
+            label: Name
+      header:
+        display_link_table:
+          label: Table

@@ -14,6 +14,8 @@ module:
   block_content: 0
   bpmn_io: 0
   breakpoint: 0
+  chosen: 0
+  chosen_lib: 0
   citation_select: 0
   ckeditor5: 0
   coi: 0
@@ -65,6 +67,9 @@ module:
   epp: 0
   eva: 0
   facets: 0
+  facets_exposed_filters: 0
+  facets_rest: 0
+  facets_searchbox_widget: 0
   facets_summary: 0
   field: 0
   field_group: 0
