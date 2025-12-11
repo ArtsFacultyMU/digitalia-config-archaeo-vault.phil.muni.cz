@@ -2,11 +2,9 @@ display:
   default:
     display_options:
       fields:
-        name:
-          label: Name
-        id:
-          label: ID
+        title:
+          label: Nadpis
       arguments:
-        gid:
+        field_member_of_target_id:
           exception:
             title: Vše

@@ -1,6 +1,5 @@
 display:
   default:
-    display_title: Default
     display_options:
       fields:
         title:
@@ -8,6 +7,10 @@ display:
       exposed_form:
         options:
           submit_button: Filtr
+      arguments:
+        gid:
+          exception:
+            title: Vše
       filters:
         title:
           expose:

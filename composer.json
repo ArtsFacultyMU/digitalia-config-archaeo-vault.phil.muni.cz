@@ -74,6 +74,7 @@
         "drupal/group": "^3.3",
         "drupal/group_action": "^1.2",
         "drupal/hal": "^1.0||^2.0",
+        "drupal/ief_table_view_mode": "^3.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/islandora": "^2.8.1",
         "drupal/islandora_mirador": "^2",

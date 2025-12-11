@@ -5,3 +5,14 @@ display:
       fields:
         name:
           label: Username
+        status:
+          label: Stav
+        roles_target_id:
+          label: Role
+      exposed_form:
+        options:
+          submit_button: Filtr
+      filters:
+        status:
+          group_info:
+            label: Stav

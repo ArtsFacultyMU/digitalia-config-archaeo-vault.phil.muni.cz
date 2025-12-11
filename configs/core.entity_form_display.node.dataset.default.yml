@@ -36,12 +36,13 @@ dependencies:
     - field.field.node.dataset.field_technical_info
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
+    - workflows.workflow.dataset_workflow
   module:
     - content_moderation
     - controlled_access_terms
     - datetime
     - field_group
-    - inline_entity_form
+    - ief_table_view_mode
     - link
     - text
 third_party_settings:
@@ -323,17 +324,22 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_related_resource:
-    type: inline_entity_form_simple
+    type: inline_entity_form_complex_table_view_mode
     weight: 27
     region: content
     settings:
       form_mode: default
-      override_labels: false
+      override_labels: true
       label_singular: ''
       label_plural: ''
-      collapsible: false
-      collapsed: false
-      revision: false
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: true
+      collapsed: true
+      revision: true
+      removed_reference: delete
     third_party_settings: {  }
   field_series_information:
     type: text_textarea
