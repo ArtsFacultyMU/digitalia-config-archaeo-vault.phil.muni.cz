@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed6586881a138f1078386c4acd653756",
+    "content-hash": "051a8f1c5728af3689e30c196b17571e",
     "packages": [
         {
             "name": "adci/full-name-parser",
@@ -4342,6 +4342,58 @@
             }
         },
         {
+            "name": "drupal/field_validation",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_validation.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_validation-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "c9998e29523373aac43095632b2b2b0992bc497b"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1690428219",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "abhisekmazumdar",
+                    "homepage": "https://www.drupal.org/user/3557964"
+                },
+                {
+                    "name": "g089h515r806",
+                    "homepage": "https://www.drupal.org/user/174740"
+                },
+                {
+                    "name": "manuel.adan",
+                    "homepage": "https://www.drupal.org/user/516420"
+                }
+            ],
+            "description": "Provides customizable field validation rules.",
+            "homepage": "https://www.drupal.org/project/field_validation",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_validation"
+            }
+        },
+        {
             "name": "drupal/file_delete",
             "version": "3.0.0",
             "source": {
@@ -5187,6 +5239,51 @@
             "homepage": "https://www.drupal.org/project/hal",
             "support": {
                 "source": "https://git.drupalcode.org/project/hal"
+            }
+        },
+        {
+            "name": "drupal/ief_table_view_mode",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ief_table_view_mode.git",
+                "reference": "3.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ief_table_view_mode-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "db19f8e9a5a0d345194ac13404785017cce06146"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/inline_entity_form": "^1.0 || ^2.0 || ^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.1",
+                    "datestamp": "1723221603",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mnico",
+                    "homepage": "https://www.drupal.org/user/1119544"
+                }
+            ],
+            "description": "Defines a view mode to set up the columns of the table for the Inline Entity Form widget.",
+            "homepage": "https://www.drupal.org/project/ief_table_view_mode",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ief_table_view_mode"
             }
         },
         {

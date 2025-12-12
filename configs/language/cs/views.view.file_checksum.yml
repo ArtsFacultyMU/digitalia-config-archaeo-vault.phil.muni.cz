@@ -1,12 +1,7 @@
 display:
   default:
     display_options:
-      fields:
-        name:
-          label: Name
-        id:
-          label: ID
       arguments:
-        gid:
+        fid:
           exception:
             title: Vše

@@ -3,5 +3,11 @@ display:
     display_title: Default
     display_options:
       fields:
+        timestamp:
+          label: Čas
         message:
           label: Zpráva
+      filters:
+        timestamp_1:
+          expose:
+            label: Komu
