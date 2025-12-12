@@ -65,6 +65,7 @@
         "drupal/field_group": "^3",
         "drupal/field_permissions": "^1",
         "drupal/field_report": "^2.1",
+        "drupal/field_validation": "^1.1",
         "drupal/file_delete": "^3.0",
         "drupal/flysystem": "^2.2@alpha",
         "drupal/fpa": "^4.0",
