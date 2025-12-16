@@ -174,7 +174,6 @@
                 "Fix non-unique savepoint postgresql bug": "./patches/Connection.patch"
             },
             "drupal/persistent_identifiers-persistent_identifiers": {
-		"Create handle automatically on node save/creation": "./patches/persistent_identifiers.patch",
 		"Reenable qualifier field in configuration": "./patches/hdl.module.patch",
 		"Change handle format": "./patches/Hdl.patch",
 		"Fix interaction with ECA DOI": "./patches/MintDataCiteDoiAction.patch",
