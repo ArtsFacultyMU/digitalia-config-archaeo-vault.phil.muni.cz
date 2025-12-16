@@ -38,7 +38,6 @@ dependencies:
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
   module:
-    - search_api_solr
     - text
     - user
 id: node.dataset.teaser
@@ -46,28 +45,21 @@ targetEntityType: node
 bundle: dataset
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_abstract:
+    type: text_trimmed
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 7
+    weight: 2
     region: content
-  field_abstract:
-    type: solr_highlighted_text_default
-    label: inline
+  field_doi:
+    type: string
+    label: hidden
     settings:
-      prefix: '<strong>'
-      suffix: '</strong>'
-      strict: false
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_gemini_uri:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_member_of:
     type: entity_reference_label
@@ -75,13 +67,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_model:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -93,17 +93,8 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  islandora_fits_checksum:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
 hidden:
+  body: true
   content_moderation_control: true
   did_image: true
   field_alternative_title: true
@@ -116,12 +107,12 @@ hidden:
   field_date_updated: true
   field_date_valid: true
   field_date_withdrawn: true
-  field_doi: true
   field_edtf_date_collected: true
   field_edtf_date_coverage: true
   field_edtf_date_created: true
   field_feature_specification: true
   field_feature_type: true
+  field_gemini_uri: true
   field_language: true
   field_license: true
   field_methods: true
@@ -129,9 +120,10 @@ hidden:
   field_object_type: true
   field_related_resource: true
   field_series_information: true
-  field_subtitle: true
   field_table_of_contents: true
   field_technical_info: true
   field_temporal_subject: true
+  islandora_fits_checksum: true
   langcode: true
+  links: true
   search_api_excerpt: true

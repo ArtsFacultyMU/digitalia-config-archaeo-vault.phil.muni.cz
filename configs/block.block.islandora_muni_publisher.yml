@@ -12,7 +12,7 @@ dependencies:
 id: islandora_muni_publisher
 theme: islandora_muni
 region: header
-weight: -17
+weight: -16
 provider: null
 plugin: 'facet_block:publisher'
 settings:
