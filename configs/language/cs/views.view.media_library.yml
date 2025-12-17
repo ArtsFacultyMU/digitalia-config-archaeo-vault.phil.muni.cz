@@ -1,15 +1,10 @@
 display:
   default:
-    display_title: Default
     display_options:
       title: Média
       fields:
         media_bulk_form:
           action_title: Akce
-      filters:
-        name:
-          expose:
-            label: Name
   page:
     display_options:
       fields:
@@ -23,28 +18,12 @@ display:
         bundle:
           exception:
             title: Vše
-      filters:
-        name:
-          expose:
-            label: Name
-      header:
-        display_link_table:
-          label: Table
   widget_table:
     display_options:
       fields:
         thumbnail__target_id:
           label: Náhled
-        name:
-          label: Name
       arguments:
         bundle:
           exception:
             title: Vše
-      filters:
-        name:
-          expose:
-            label: Name
-      header:
-        display_link_table:
-          label: Table

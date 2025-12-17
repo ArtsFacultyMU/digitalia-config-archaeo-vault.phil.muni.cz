@@ -1,7 +1,6 @@
 label: Média
 display:
   default:
-    display_title: Default
     display_options:
       title: Média
       fields:

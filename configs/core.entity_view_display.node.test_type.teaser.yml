@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.test_type.body
+    - field.field.node.test_type.field_test_geo
+    - field.field.node.test_type.field_test_geometry
     - node.type.test_type
   module:
     - text
@@ -29,5 +31,7 @@ content:
     region: content
 hidden:
   did_image: true
+  field_test_geo: true
+  field_test_geometry: true
   langcode: true
   search_api_excerpt: true

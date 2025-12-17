@@ -1,9 +1,6 @@
 display:
   default:
     display_options:
-      fields:
-        name:
-          label: Name
       arguments:
         field_media_of_target_id:
           exception:
@@ -15,10 +12,3 @@ display:
       fields:
         media_bulk_form:
           action_title: Akce
-        name:
-          label: Name
-  rest_export_1:
-    display_options:
-      fields:
-        name:
-          label: Name

@@ -10,7 +10,7 @@ dependencies:
 id: islandora_muni_pronominfo
 theme: islandora_muni
 region: featured_bottom_first
-weight: 0
+weight: -21
 provider: null
 plugin: digitalia_muni_fits_pronom_info
 settings:

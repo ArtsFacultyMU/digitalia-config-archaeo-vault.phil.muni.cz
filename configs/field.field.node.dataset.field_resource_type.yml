@@ -1,0 +1,22 @@
+uuid: fc874006-0b78-47c1-918d-4c2ddafe78c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_type
+    - node.type.dataset
+id: node.dataset.field_resource_type
+field_name: field_resource_type
+entity_type: node
+bundle: dataset
+label: Type
+description: 'The general nature or genre of the content of the resource.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: eca
+  handler_settings:
+    field_name: field_resource_type
+field_type: entity_reference

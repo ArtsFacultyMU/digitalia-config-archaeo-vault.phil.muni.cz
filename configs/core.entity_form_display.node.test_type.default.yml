@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.test_type.body
+    - field.field.node.test_type.field_test_geo
+    - field.field.node.test_type.field_test_geometry
     - node.type.test_type
   module:
+    - content_moderation
+    - geolocation
+    - geolocation_geometry
     - path
     - text
 id: node.test_type.default
@@ -26,6 +31,18 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_test_geo:
+    type: geolocation_latlng
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_test_geometry:
+    type: geolocation_geometry_wkt
+    weight: 123
     region: content
     settings: {  }
     third_party_settings: {  }

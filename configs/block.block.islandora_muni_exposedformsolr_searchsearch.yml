@@ -12,7 +12,7 @@ dependencies:
 id: islandora_muni_exposedformsolr_searchsearch
 theme: islandora_muni
 region: sidebar_first
-weight: 0
+weight: -22
 provider: null
 plugin: 'views_exposed_filter_block:solr_search-search'
 settings:

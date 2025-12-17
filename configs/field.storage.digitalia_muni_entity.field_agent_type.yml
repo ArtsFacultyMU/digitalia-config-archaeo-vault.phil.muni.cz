@@ -15,8 +15,8 @@ settings:
       value: person
       label: Person
     -
-      value: coorprate_agent
-      label: 'Corporate Agent'
+      value: organization
+      label: Organization
   allowed_values_function: ''
 module: options
 locked: false
