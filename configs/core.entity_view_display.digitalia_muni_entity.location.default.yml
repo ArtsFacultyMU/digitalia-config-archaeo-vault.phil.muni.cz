@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - digitalia_muni_entity.digitalia_muni_entity_type.location
-    - field.field.digitalia_muni_entity.location.field_geolocation_multipolygon
     - field.field.digitalia_muni_entity.location.field_location_relation
   module:
     - geolocation_geometry
@@ -14,13 +13,6 @@ targetEntityType: digitalia_muni_entity
 bundle: location
 mode: default
 content:
-  field_geolocation_multipolygon:
-    type: geolocation_geometry_wkt
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_location_relation:
     type: list_default
     label: above

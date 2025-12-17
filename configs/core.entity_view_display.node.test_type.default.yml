@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.test_type.body
     - field.field.node.test_type.field_test_geo
-    - field.field.node.test_type.field_test_geometry
     - node.type.test_type
   module:
     - geolocation
@@ -30,13 +29,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 102
-    region: content
-  field_test_geometry:
-    type: geolocation_geometry_wkt
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 103
     region: content
   links:
     settings: {  }
