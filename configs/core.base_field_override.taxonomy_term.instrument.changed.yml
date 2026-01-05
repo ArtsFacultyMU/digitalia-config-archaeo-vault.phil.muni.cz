@@ -1,17 +1,17 @@
-uuid: 700cbe58-fecc-42f3-be54-51970bd87e56
+uuid: a4fb1084-fd24-40d0-9e27-cd3800364f76
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.license
-id: taxonomy_term.license.changed
+    - taxonomy.vocabulary.instrument
+id: taxonomy_term.instrument.changed
 field_name: changed
 entity_type: taxonomy_term
-bundle: license
+bundle: instrument
 label: Changed
 description: 'The time that the term was last edited.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

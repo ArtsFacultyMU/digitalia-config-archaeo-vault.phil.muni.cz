@@ -1,19 +1,19 @@
-uuid: 635132c9-399f-42c9-981f-d5dc8fecd03b
+uuid: d7f397c3-ec5f-4cb2-8a8f-d27044ee0852
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.license
+    - taxonomy.vocabulary.instrument
   module:
     - path
-id: taxonomy_term.license.path
+id: taxonomy_term.instrument.path
 field_name: path
 entity_type: taxonomy_term
-bundle: license
+bundle: instrument
 label: 'URL alias'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

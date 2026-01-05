@@ -4,11 +4,29 @@ status: true
 dependencies:
   config:
     - digitalia_muni_entity.digitalia_muni_entity_type.test
+    - field.field.digitalia_muni_entity.test.field_polygon
+    - field.field.digitalia_muni_entity.test.field_test_collection_01
+  module:
+    - geolocation_geometry
 id: digitalia_muni_entity.test.default
 targetEntityType: digitalia_muni_entity
 bundle: test
 mode: default
 content:
+  field_polygon:
+    type: geolocation_geometry_wkt
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_test_collection_01:
+    type: geolocation_geometry_wkt
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_test_polygon_01:
     type: geolocation_geometry_wkt
     label: above

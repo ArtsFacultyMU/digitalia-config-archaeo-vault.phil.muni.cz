@@ -1,9 +1,9 @@
-uuid: 16262b97-18bc-41bf-88a0-9caf8daae54e
+uuid: b2e66327-470b-455c-8d83-d5c20d70048f
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.instrument
+    - digitalia_muni_entity.digitalia_muni_entity_type.funding_reference
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.instrument
-target_entity_type_id: taxonomy_term
-target_bundle: instrument
+id: digitalia_muni_entity.funding_reference
+target_entity_type_id: digitalia_muni_entity
+target_bundle: funding_reference
 default_langcode: site_default
 language_alterable: false

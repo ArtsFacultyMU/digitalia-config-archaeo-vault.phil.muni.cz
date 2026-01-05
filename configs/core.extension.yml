@@ -87,6 +87,7 @@ module:
   flysystem: 0
   fpa: 0
   gcontent_moderation: 0
+  geofield: 0
   geolocation: 0
   geolocation_geometry: 0
   geolocation_leaflet: 0
@@ -122,6 +123,7 @@ module:
   jwt: 0
   key: 0
   language: 0
+  leaflet: 0
   link: 0
   locale: 0
   masquerade: 0

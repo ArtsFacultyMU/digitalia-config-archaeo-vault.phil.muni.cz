@@ -1,17 +1,17 @@
-uuid: 61c8c00a-a783-4b95-932e-e382373b0802
+uuid: 8cda60a2-c522-41eb-899d-02bc6ecbba48
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.license
-id: taxonomy_term.license.status
+    - taxonomy.vocabulary.instrument
+id: taxonomy_term.instrument.status
 field_name: status
 entity_type: taxonomy_term
-bundle: license
+bundle: instrument
 label: Published
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 1
