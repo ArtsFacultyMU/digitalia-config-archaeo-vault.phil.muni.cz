@@ -10,7 +10,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://ArchaeoVault.png'
+  path: themes/custom/islandora_muni/platform_specific/images/ArchaeoVault.png
   use_default: false
 third_party_settings:
   shortcut:
