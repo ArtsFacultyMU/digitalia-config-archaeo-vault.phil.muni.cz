@@ -14,7 +14,7 @@ bundle: license
 label: 'License text'
 description: 'The full text of the license'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: ''

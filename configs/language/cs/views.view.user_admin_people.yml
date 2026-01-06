@@ -1,10 +1,7 @@
 display:
   default:
-    display_title: Default
     display_options:
       fields:
-        name:
-          label: Username
         status:
           label: Stav
         roles_target_id:

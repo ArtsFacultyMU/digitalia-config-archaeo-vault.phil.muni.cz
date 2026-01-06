@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.field.node.dataset.body
     - field.field.node.dataset.field_abstract
+    - field.field.node.dataset.field_agent_relationship
     - field.field.node.dataset.field_alternative_title
     - field.field.node.dataset.field_assessment_type
     - field.field.node.dataset.field_data_service
@@ -22,6 +23,8 @@ dependencies:
     - field.field.node.dataset.field_edtf_date_created
     - field.field.node.dataset.field_feature_specification
     - field.field.node.dataset.field_feature_type
+    - field.field.node.dataset.field_funding_reference
+    - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
     - field.field.node.dataset.field_member_of
@@ -30,6 +33,7 @@ dependencies:
     - field.field.node.dataset.field_object_specification
     - field.field.node.dataset.field_object_type
     - field.field.node.dataset.field_related_resource
+    - field.field.node.dataset.field_resource_type
     - field.field.node.dataset.field_series_information
     - field.field.node.dataset.field_subtitle
     - field.field.node.dataset.field_table_of_contents
@@ -318,6 +322,14 @@ content:
     third_party_settings: {  }
     weight: 27
     region: content
+  field_resource_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
   field_series_information:
     type: text_default
     label: hidden
@@ -366,7 +378,10 @@ content:
 hidden:
   content_moderation_control: true
   did_image: true
+  field_agent_relationship: true
+  field_funding_reference: true
   field_gemini_uri: true
+  field_instrument: true
   islandora_fits_checksum: true
   langcode: true
   links: true

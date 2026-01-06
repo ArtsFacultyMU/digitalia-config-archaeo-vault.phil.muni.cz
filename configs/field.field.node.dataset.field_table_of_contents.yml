@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_table_of_contents
+    - filter.format.basic_html
     - filter.format.plain_text
     - filter.format.restricted_html
     - node.type.dataset
@@ -21,6 +22,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
+    - basic_html
     - restricted_html
     - plain_text
 field_type: text_long

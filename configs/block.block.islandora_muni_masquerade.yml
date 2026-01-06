@@ -10,7 +10,7 @@ dependencies:
 id: islandora_muni_masquerade
 theme: islandora_muni
 region: featured_bottom_first
-weight: 0
+weight: -22
 provider: null
 plugin: masquerade
 settings:
