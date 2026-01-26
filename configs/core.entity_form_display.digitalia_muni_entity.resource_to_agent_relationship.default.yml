@@ -54,9 +54,9 @@ content:
     region: content
     settings:
       form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: ' '
+      label_plural: ' '
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
@@ -80,9 +80,9 @@ content:
     region: content
     settings:
       form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: ' '
+      label_plural: ' '
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
@@ -93,17 +93,22 @@ content:
       removed_reference: keep
     third_party_settings: {  }
   field_person_name:
-    type: inline_entity_form_simple
+    type: inline_entity_form_complex
     weight: 3
     region: content
     settings:
       form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: '  '
+      label_plural: '  '
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
       collapsible: false
       collapsed: false
       revision: false
+      removed_reference: delete
     third_party_settings: {  }
 hidden:
   langcode: true
