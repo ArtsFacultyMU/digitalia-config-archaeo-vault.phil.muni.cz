@@ -93,6 +93,7 @@
         "drupal/rest_oai_pmh": "^2.0@beta",
         "drupal/search_api_solr": "^4.2",
         "drupal/simple_block": "^1.7",
+        "drupal/superfish": "^1.13",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/term_merge": "^2.0@beta",
         "drupal/twig_tweak": "^3.2",

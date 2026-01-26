@@ -35,7 +35,7 @@ content:
     weight: 2
     region: content
   field_resource_url:
-    type: link
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
