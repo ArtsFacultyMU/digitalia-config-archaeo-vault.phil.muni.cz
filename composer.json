@@ -58,6 +58,7 @@
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/csvfile_formatter": "^1.0",
+        "drupal/download_file": "^2.0",
         "drupal/eca": "^2.1",
         "drupal/eca_content_access": "^2.0",
         "drupal/epp": "^1.7",
