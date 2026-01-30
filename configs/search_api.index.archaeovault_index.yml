@@ -377,6 +377,14 @@ field_settings:
         'entity:node':
           ':default': search_index
           dataset: ':default'
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
   type:
     label: 'Content type'
     datasource_id: 'entity:node'

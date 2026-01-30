@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.csv.field_has_header
     - field.field.media.csv.field_media_file
     - field.field.media.csv.field_media_of
+    - field.field.media.csv.field_media_use
     - field.field.media.csv.field_mime_type
     - field.field.media.csv.field_separator
     - media.type.csv
@@ -63,6 +64,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_media_use:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_mime_type:
     type: string_textfield
