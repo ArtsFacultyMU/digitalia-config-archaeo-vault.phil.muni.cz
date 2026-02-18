@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="https://webcentrum.muni.cz/media/3830724/seda_eosc-safespace-15.png" alt="EOSC CZ Logo" height="150">
+</p>
+
 # digitalia-config-archaeo-vault.phil.muni.cz
 
 This repository holds the configuration, composer files (with information about installed modules and their versions), and test data for ArchaeoVault, a pilot NRP repository.
