@@ -6,6 +6,8 @@ dependencies:
     - field.field.media.3d_model.field_description
     - field.field.media.3d_model.field_fits_file
     - field.field.media.3d_model.field_media_file
+    - field.field.media.3d_model.field_media_of
+    - field.field.media.3d_model.field_media_use
     - media.type.3d_model
   module:
     - file
@@ -36,6 +38,22 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_media_of:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_use:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
