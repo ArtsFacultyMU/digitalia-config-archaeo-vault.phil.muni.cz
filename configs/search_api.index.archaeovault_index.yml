@@ -409,7 +409,9 @@ processor_settings:
   custom_value: {  }
   dgi_image_discovery: {  }
   edtf_date_processor:
-    fields: {  }
+    fields:
+      node|field_edtf_date_coverage: node|field_edtf_date_coverage
+      node|field_edtf_date_created: node|field_edtf_date_created
     open_start_year: '0'
     open_end_year: ''
     spring_date: '3'

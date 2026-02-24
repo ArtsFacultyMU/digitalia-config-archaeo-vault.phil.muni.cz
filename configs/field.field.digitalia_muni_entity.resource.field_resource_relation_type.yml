@@ -10,7 +10,7 @@ id: digitalia_muni_entity.resource.field_resource_relation_type
 field_name: field_resource_relation_type
 entity_type: digitalia_muni_entity
 bundle: resource
-label: 'Resource Relation Type'
+label: 'Relation Type'
 description: ''
 required: true
 translatable: false

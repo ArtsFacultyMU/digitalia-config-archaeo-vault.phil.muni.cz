@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.csv.field_enclosure
     - field.field.media.csv.field_file_size
     - field.field.media.csv.field_has_header
+    - field.field.media.csv.field_is_derived_from
     - field.field.media.csv.field_media_file
     - field.field.media.csv.field_media_of
     - field.field.media.csv.field_media_use
@@ -25,7 +26,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_file_size:
     type: number_integer
@@ -34,7 +35,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_has_header:
     type: boolean
@@ -44,7 +45,15 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 6
+    region: content
+  field_is_derived_from:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_media_file:
     type: csvfile_formatter
@@ -64,7 +73,7 @@ content:
       csvfile_formatter_sticky_headers: 0
       csvfile_formatter_smart_urls: 0
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_media_of:
     type: entity_reference_label
@@ -72,15 +81,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_media_use:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_mime_type:
     type: string
@@ -88,7 +97,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_separator:
     type: string
@@ -96,12 +105,19 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
+    region: content
+  name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true
   langcode: true
-  name: true
   search_api_excerpt: true
   thumbnail: true
   uid: true

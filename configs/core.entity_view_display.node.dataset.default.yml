@@ -370,7 +370,7 @@ content:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 14
     region: content
@@ -435,7 +435,7 @@ content:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 4
     region: content

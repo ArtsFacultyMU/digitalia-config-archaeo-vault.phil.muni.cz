@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.csv.field_enclosure
     - field.field.media.csv.field_file_size
     - field.field.media.csv.field_has_header
+    - field.field.media.csv.field_is_derived_from
     - field.field.media.csv.field_media_file
     - field.field.media.csv.field_media_of
     - field.field.media.csv.field_media_use
@@ -37,6 +38,7 @@ hidden:
   field_enclosure: true
   field_file_size: true
   field_has_header: true
+  field_is_derived_from: true
   field_media_file: true
   field_media_of: true
   field_media_use: true
