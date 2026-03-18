@@ -44,7 +44,6 @@ dependencies:
     - field.storage.node.field_tags
     - field.storage.node.field_technical_info
     - field.storage.node.field_temporal_subject
-    - field.storage.taxonomy_term.field_authority_link
     - field.storage.taxonomy_term.field_external_uri
     - search_api.server.default_solr_server
   module:

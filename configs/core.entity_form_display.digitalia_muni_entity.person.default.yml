@@ -14,7 +14,6 @@ dependencies:
     - field.field.digitalia_muni_entity.person.field_orcid
     - field.field.digitalia_muni_entity.person.field_ror
   module:
-    - digitalia_muni_autocomplete_remote
     - link
 id: digitalia_muni_entity.person.default
 targetEntityType: digitalia_muni_entity

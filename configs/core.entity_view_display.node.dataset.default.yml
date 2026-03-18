@@ -552,12 +552,12 @@ content:
     region: content
   field_publication_year:
     type: number_integer
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 10
+    weight: 29
     region: content
   field_related_people:
     type: entity_reference_entity_view
