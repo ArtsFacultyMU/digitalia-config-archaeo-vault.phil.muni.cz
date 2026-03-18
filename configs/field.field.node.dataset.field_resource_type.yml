@@ -6,28 +6,24 @@ dependencies:
     - field.storage.node.field_resource_type
     - node.type.dataset
     - taxonomy.vocabulary.resource_types_coar
-  content:
-    - 'taxonomy_term:resource_types_coar:d943fdb6-5d4f-451a-9ad7-41e2f8da5f92'
 id: node.dataset.field_resource_type
 field_name: field_resource_type
 entity_type: node
 bundle: dataset
-label: Type
+label: 'Resource type'
 description: 'The general nature or genre of the content of the resource.'
 required: true
 translatable: false
-default_value:
-  -
-    target_uuid: d943fdb6-5d4f-451a-9ad7-41e2f8da5f92
+default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:filter_existing_terms'
+  handler: eca
   handler_settings:
     target_bundles:
       resource_types_coar: resource_types_coar
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: 0
     auto_create_bundle: ''
 field_type: entity_reference

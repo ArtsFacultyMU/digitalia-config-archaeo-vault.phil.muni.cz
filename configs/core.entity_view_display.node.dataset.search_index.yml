@@ -33,6 +33,7 @@ dependencies:
     - field.field.node.dataset.field_model
     - field.field.node.dataset.field_object_specification
     - field.field.node.dataset.field_object_type
+    - field.field.node.dataset.field_publication_year
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_resource_type
@@ -377,6 +378,11 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  media_of_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   content_moderation_control: true
   did_image: true
@@ -385,6 +391,7 @@ hidden:
   field_funding_reference: true
   field_gemini_uri: true
   field_instrument: true
+  field_publication_year: true
   field_related_people: true
   islandora_fits_checksum: true
   langcode: true

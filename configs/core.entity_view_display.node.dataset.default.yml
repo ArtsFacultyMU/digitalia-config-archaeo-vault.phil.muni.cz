@@ -32,6 +32,7 @@ dependencies:
     - field.field.node.dataset.field_model
     - field.field.node.dataset.field_object_specification
     - field.field.node.dataset.field_object_type
+    - field.field.node.dataset.field_publication_year
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_resource_type
@@ -412,6 +413,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 11
+    region: content
+  field_publication_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 29
     region: content
   field_related_people:
     type: entity_reference_entity_view
