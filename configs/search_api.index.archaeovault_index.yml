@@ -44,6 +44,7 @@ dependencies:
     - field.storage.node.field_tags
     - field.storage.node.field_technical_info
     - field.storage.node.field_temporal_subject
+    - field.storage.taxonomy_term.field_authority_link
     - field.storage.taxonomy_term.field_external_uri
     - search_api.server.default_solr_server
   module:
@@ -122,28 +123,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_alternative_title
-  field_authority_link:
-    label: 'Resource type » Taxonomy term » Authority sources'
-    datasource_id: 'entity:node'
-    property_path: 'field_resource_type:entity:field_authority_link'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_resource_type
-        - field.storage.taxonomy_term.field_authority_link
-      module:
-        - taxonomy
-  field_authority_link_1:
-    label: 'Frascati Subject Category » Taxonomy term » Authority sources'
-    datasource_id: 'entity:node'
-    property_path: 'field_frascati_subject_category:entity:field_authority_link'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_frascati_subject_category
-        - field.storage.taxonomy_term.field_authority_link
-      module:
-        - taxonomy
   field_contact:
     label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » Contact'
     datasource_id: 'entity:node'
