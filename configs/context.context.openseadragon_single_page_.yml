@@ -22,6 +22,7 @@ conditions:
       node: '@node.node_route_context:node'
     uri: 'http://openseadragon.github.io'
     logic: and
+    naive_references: false
 reactions:
   blocks:
     id: blocks
@@ -37,6 +38,22 @@ reactions:
         weight: '0'
         custom_id: views_block_media_display_blocks_openseadragon
         theme: olivero
+        css_class: ''
+        unique: 0
+        context_id: openseadragon_single_page_
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+      5c24f6ad-2b13-4a6a-b725-bb96c174c78a:
+        uuid: 5c24f6ad-2b13-4a6a-b725-bb96c174c78a
+        id: 'views_block:media_display_blocks-openseadragon_original'
+        label: ''
+        provider: views
+        label_display: visible
+        region: content
+        custom_id: views_block_media_display_blocks_openseadragon_original
+        theme: islandora_muni
         css_class: ''
         unique: 0
         context_id: openseadragon_single_page_

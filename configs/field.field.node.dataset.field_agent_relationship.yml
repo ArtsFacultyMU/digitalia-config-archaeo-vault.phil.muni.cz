@@ -10,7 +10,7 @@ id: node.dataset.field_agent_relationship
 field_name: field_agent_relationship
 entity_type: node
 bundle: dataset
-label: 'Creators and Contributors'
+label: Depracted
 description: ''
 required: true
 translatable: false
