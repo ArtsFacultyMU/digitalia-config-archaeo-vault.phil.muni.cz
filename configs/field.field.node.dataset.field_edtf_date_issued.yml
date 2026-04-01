@@ -1,0 +1,21 @@
+uuid: e9bef46d-df87-4ae0-b71d-d6e355a0936e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edtf_date_issued
+    - node.type.dataset
+  module:
+    - controlled_access_terms
+id: node.dataset.field_edtf_date_issued
+field_name: field_edtf_date_issued
+entity_type: node
+bundle: dataset
+label: 'Date Issued'
+description: 'The date that the resource is published or distributed, e.g., to a data centre.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: edtf
