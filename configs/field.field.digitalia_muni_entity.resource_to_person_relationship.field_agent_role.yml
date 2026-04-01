@@ -6,8 +6,6 @@ dependencies:
     - digitalia_muni_entity.digitalia_muni_entity_type.resource_to_person_relationship
     - field.storage.digitalia_muni_entity.field_agent_role
     - taxonomy.vocabulary.agent_role
-  content:
-    - 'taxonomy_term:agent_role:a0ca890c-d18f-4482-8df4-0f9b99d61e1e'
 id: digitalia_muni_entity.resource_to_person_relationship.field_agent_role
 field_name: field_agent_role
 entity_type: digitalia_muni_entity
@@ -16,9 +14,7 @@ label: Role
 description: ''
 required: true
 translatable: false
-default_value:
-  -
-    target_uuid: a0ca890c-d18f-4482-8df4-0f9b99d61e1e
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:filter_existing_terms'
