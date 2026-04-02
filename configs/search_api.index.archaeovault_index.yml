@@ -28,6 +28,7 @@ dependencies:
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_feature_specification
     - field.storage.node.field_feature_type
+    - field.storage.node.field_frascati_subject_category
     - field.storage.node.field_language
     - field.storage.node.field_license
     - field.storage.node.field_methods
@@ -36,6 +37,7 @@ dependencies:
     - field.storage.node.field_object_type
     - field.storage.node.field_related_people
     - field.storage.node.field_related_resource
+    - field.storage.node.field_resource_type
     - field.storage.node.field_series_information
     - field.storage.node.field_subtitle
     - field.storage.node.field_table_of_contents
@@ -121,6 +123,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_alternative_title
+  field_authority_link:
+    label: 'Resource type » Taxonomy term » Authority sources'
+    datasource_id: 'entity:node'
+    property_path: 'field_resource_type:entity:field_authority_link'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_resource_type
+        - field.storage.taxonomy_term.field_authority_link
+      module:
+        - taxonomy
+  field_authority_link_1:
+    label: 'Frascati Subject Category » Taxonomy term » Authority sources'
+    datasource_id: 'entity:node'
+    property_path: 'field_frascati_subject_category:entity:field_authority_link'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_frascati_subject_category
+        - field.storage.taxonomy_term.field_authority_link
+      module:
+        - taxonomy
   field_contact:
     label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » Contact'
     datasource_id: 'entity:node'
@@ -362,6 +386,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_related_resource
+  field_related_resource:
+    label: 'Related Resource'
+    datasource_id: 'entity:node'
+    property_path: field_related_resource
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_related_resource
   field_ror:
     label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » ROR'
     datasource_id: 'entity:node'
@@ -529,7 +561,8 @@ processor_settings:
     ignore_open_start: null
     ignore_open_end: null
   edtf_year_only:
-    fields: {  }
+    fields:
+      node|dataset|field_edtf_date_created: node|dataset|field_edtf_date_created
     ignore_undated: 1
     ignore_open_start: 0
     open_start_year: '0'
