@@ -63,7 +63,7 @@
         "drupal/eca_content_access": "^2.0",
         "drupal/epp": "^1.7",
         "drupal/facets": "^3.0",
-        "drupal/field_group": "^3",
+        "drupal/field_group": "^4",
         "drupal/field_permissions": "^1",
         "drupal/field_report": "^2.1",
         "drupal/field_validation": "^1.1",
