@@ -7,5 +7,5 @@ dependencies:
 id: login_info
 title: 'Login info'
 content:
-  value: '<p>Select your institution and you will be redirected to your institutional login page. If your institution is not available via e-INFRA login, you can use ORCID or Google login. If it is your first time logging in, the ArchaeoVault team will first need to approve your application.</p>'
+  value: '<p>Select your institution and you will be redirected to your institutional login page. If your institution is not available via e-INFRA login, you can use ORCID or Google login. If it is your first time logging in, the repository team will need to manually approve your application. In case of doubt, <a href="https://artsfacultymu.github.io/digitalia-documentation/000_General/Login-instructions">reference this tutorial</a>.</p>'
   format: basic_html

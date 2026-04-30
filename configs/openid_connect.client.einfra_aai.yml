@@ -18,3 +18,5 @@ settings:
     - openid
     - email
     - eduperson_entitlement
+  prompt:
+    - login
