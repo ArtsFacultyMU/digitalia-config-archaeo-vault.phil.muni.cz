@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_frascati_subject_category
     - node.type.dataset
     - taxonomy.vocabulary.frascati_subject_category
+  content:
+    - 'taxonomy_term:frascati_subject_category:9c310f24-7d4e-444e-aa8d-49ba42f45e1b'
 id: node.dataset.field_frascati_subject_category
 field_name: field_frascati_subject_category
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Frascati Subject Category'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 9c310f24-7d4e-444e-aa8d-49ba42f45e1b
 default_value_callback: ''
 settings:
   handler: 'default:filter_existing_terms'
