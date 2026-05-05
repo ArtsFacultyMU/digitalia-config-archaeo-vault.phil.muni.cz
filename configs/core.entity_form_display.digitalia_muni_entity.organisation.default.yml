@@ -10,6 +10,7 @@ dependencies:
     - field.field.digitalia_muni_entity.organisation.field_link
     - field.field.digitalia_muni_entity.organisation.field_ror
   module:
+    - digitalia_muni_autocomplete_remote
     - link
 id: digitalia_muni_entity.organisation.default
 targetEntityType: digitalia_muni_entity
@@ -49,12 +50,11 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_ror:
-    type: string_textfield
+    type: ror_widget
     weight: 2
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      org_name: field_corporate_body_name
     third_party_settings: {  }
 hidden:
   langcode: true
