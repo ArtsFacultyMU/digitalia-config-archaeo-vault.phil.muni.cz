@@ -1,21 +1,21 @@
-uuid: 8b06e771-c333-45cc-826f-bbcb7bc34ef9
+uuid: 7ce54edc-599c-4097-9bcb-db057a2db0b8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_methods
+    - field.storage.node.field_appropriate_reuse
     - filter.format.basic_html
     - node.type.dataset
   module:
     - text
-id: node.dataset.field_methods
-field_name: field_methods
+id: node.dataset.field_appropriate_reuse
+field_name: field_appropriate_reuse
 entity_type: node
 bundle: dataset
-label: Methods
-description: 'The methodology employed for the study or research.'
-required: true
-translatable: true
+label: 'Appropriate Reuse'
+description: ''
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -22,7 +22,7 @@ display:
             offset_label: Posun
       fields:
         title:
-          label: Nadpis
+          label: Název
           separator: ', '
       arguments:
         field_member_of_target_id:

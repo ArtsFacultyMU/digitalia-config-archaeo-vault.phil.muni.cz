@@ -11,8 +11,8 @@ field_name: field_assessment_type
 entity_type: node
 bundle: dataset
 label: 'Typ posudku'
-description: ''
-required: false
+description: 'Select the best fitting term.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

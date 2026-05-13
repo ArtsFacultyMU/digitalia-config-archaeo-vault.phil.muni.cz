@@ -7,10 +7,10 @@ display:
       title: Obsah
       fields:
         title:
-          label: Nadpis
         type:
           label: 'Typ obsahu'
           separator: ', '
+          label: Název
         name:
           label: Autor
         status:
@@ -42,10 +42,10 @@ display:
       filters:
         title:
           expose:
-            label: Nadpis
         type:
           expose:
             label: 'Typ obsahu'
+            label: Název
         status:
           expose:
             label: Stav

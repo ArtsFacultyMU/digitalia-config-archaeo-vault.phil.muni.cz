@@ -7,7 +7,7 @@ display:
         nid:
           separator: ', '
         title:
-          label: Nadpis
+          label: Název
           separator: ', '
         type:
           label: 'Typ obsahu'
@@ -47,7 +47,7 @@ display:
       filters:
         title:
           expose:
-            label: Nadpis
+            label: Název
         type:
           expose:
             label: 'Typ obsahu'
