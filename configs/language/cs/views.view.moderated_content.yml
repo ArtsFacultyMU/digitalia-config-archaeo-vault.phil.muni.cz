@@ -6,7 +6,7 @@ display:
       title: 'Moderovaný obsah'
       fields:
         title:
-          label: Nadpis
+          label: Název
           separator: ', '
         type:
           label: 'Typ obsahu'
@@ -45,7 +45,7 @@ display:
             label: Nadpis
         type:
           expose:
-            label: 'Typ obsahu'
+            label: Název
         langcode:
           expose:
             label: Jazyk

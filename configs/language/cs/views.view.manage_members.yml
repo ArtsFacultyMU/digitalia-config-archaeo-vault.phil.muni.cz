@@ -6,7 +6,7 @@ display:
         node_bulk_form:
           action_title: Akce
         title:
-          label: Nadpis
+          label: Název
           separator: ', '
         operations:
           label: 'Odkazy na operace'
