@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_agent_relationship
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_appropriate_reuse
     - field.field.node.dataset.field_assessment_type
     - field.field.node.dataset.field_creators_and_contributors
     - field.field.node.dataset.field_data_service
@@ -24,6 +25,7 @@ dependencies:
     - field.field.node.dataset.field_feature_specification
     - field.field.node.dataset.field_feature_type
     - field.field.node.dataset.field_funding_reference
+    - field.field.node.dataset.field_inappropriate_reuse
     - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
@@ -35,6 +37,8 @@ dependencies:
     - field.field.node.dataset.field_publication_year
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
+    - field.field.node.dataset.field_research_methods
+    - field.field.node.dataset.field_research_questions
     - field.field.node.dataset.field_resource_type
     - field.field.node.dataset.field_series_information
     - field.field.node.dataset.field_subtitle
@@ -153,6 +157,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_appropriate_reuse:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
     region: content
   field_assessment_type:
     type: entity_reference_label
@@ -358,6 +369,13 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  field_inappropriate_reuse:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
   field_instrument:
     type: entity_reference_entity_view
     label: inline
@@ -440,6 +458,21 @@ content:
       link: false
     third_party_settings: {  }
     weight: 15
+    region: content
+  field_research_methods:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_research_questions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
     region: content
   field_resource_type:
     type: entity_reference_label

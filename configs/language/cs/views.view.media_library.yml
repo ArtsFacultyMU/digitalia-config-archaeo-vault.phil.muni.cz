@@ -9,6 +9,9 @@ display:
         name:
           expose:
             label: Název
+        langcode:
+          expose:
+            label: Jazyk
   page:
     display_options:
       fields:
@@ -33,6 +36,8 @@ display:
           label: Náhled
         name:
           label: Název
+        uid:
+          label: Autor
       arguments:
         bundle:
           exception:

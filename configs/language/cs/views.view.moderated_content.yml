@@ -3,11 +3,16 @@ display:
     display_options:
       fields:
         title:
-          label: Nadpis
+          label: Název
+        name:
+          label: Autor
       exposed_form:
         options:
           submit_button: Filtr
       filters:
         title:
           expose:
-            label: Nadpis
+            label: Název
+        langcode:
+          expose:
+            label: Jazyk

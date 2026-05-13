@@ -3,4 +3,6 @@ display:
     display_options:
       fields:
         title:
-          label: Nadpis
+          label: Název
+        name:
+          label: Autor

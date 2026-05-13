@@ -3,7 +3,7 @@ display:
     display_options:
       fields:
         title:
-          label: Nadpis
+          label: Název
       arguments:
         field_member_of_target_id:
           exception:

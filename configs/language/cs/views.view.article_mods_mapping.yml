@@ -3,7 +3,7 @@ display:
     display_options:
       fields:
         title:
-          label: nadpis
+          label: název
       arguments:
         nid:
           exception:

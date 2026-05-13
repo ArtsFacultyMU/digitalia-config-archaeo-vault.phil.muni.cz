@@ -9,7 +9,7 @@ id: node.dataset.field_member_of
 field_name: field_member_of
 entity_type: node
 bundle: dataset
-label: 'Member of'
+label: 'Is Part of Dataset Collection'
 description: "This item's parent item. Usually this will be a collection or compound object."
 required: false
 translatable: false

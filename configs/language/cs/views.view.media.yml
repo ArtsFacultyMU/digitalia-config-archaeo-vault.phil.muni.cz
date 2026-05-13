@@ -12,6 +12,8 @@ display:
           label: 'Název media'
         bundle:
           label: Typ
+        uid:
+          label: Autor
         status:
           label: Stav
       exposed_form:
@@ -24,6 +26,9 @@ display:
         bundle:
           expose:
             label: Typ
+        langcode:
+          expose:
+            label: Jazyk
   media_page_list:
     display_title: Média
     display_options:

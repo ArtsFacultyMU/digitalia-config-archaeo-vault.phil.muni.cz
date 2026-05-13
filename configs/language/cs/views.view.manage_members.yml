@@ -5,7 +5,7 @@ display:
         node_bulk_form:
           action_title: Akce
         title:
-          label: Nadpis
+          label: Název
       arguments:
         field_member_of_target_id:
           exception:

@@ -1,4 +1,6 @@
 label: Překlad
 tips:
+  locale-language:
+    label: 'Jazyk překladu'
   locale-translate:
     label: Přeložit

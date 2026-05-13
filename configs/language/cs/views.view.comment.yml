@@ -6,6 +6,8 @@ display:
           action_title: Akce
         subject:
           label: Předmět
+        name:
+          label: Autor
       exposed_form:
         options:
           submit_button: Filtr
@@ -13,6 +15,9 @@ display:
         subject:
           expose:
             label: Předmět
+        langcode:
+          expose:
+            label: Jazyk
   page_unapproved:
     display_options:
       fields:
@@ -20,7 +25,12 @@ display:
           action_title: Akce
         subject:
           label: Předmět
+        name:
+          label: Autor
       filters:
         subject:
           expose:
             label: Předmět
+        langcode:
+          expose:
+            label: Jazyk

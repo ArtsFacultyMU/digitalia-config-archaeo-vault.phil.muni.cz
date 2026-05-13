@@ -1,0 +1,9 @@
+uuid: dfeaee4e-d509-43c7-bd14-7c870dcab339
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research methods'
+vid: research_methods
+description: null
+weight: 0
+new_revision: false

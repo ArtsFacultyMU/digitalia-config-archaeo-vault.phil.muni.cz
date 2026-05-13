@@ -3,7 +3,7 @@ display:
     display_options:
       fields:
         title:
-          label: Nadpis
+          label: Název
         status:
           label: Stav
       arguments:

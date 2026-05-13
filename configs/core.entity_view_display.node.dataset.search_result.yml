@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.dataset.field_abstract
     - field.field.node.dataset.field_agent_relationship
     - field.field.node.dataset.field_alternative_title
+    - field.field.node.dataset.field_appropriate_reuse
     - field.field.node.dataset.field_assessment_type
     - field.field.node.dataset.field_creators_and_contributors
     - field.field.node.dataset.field_data_service
@@ -25,6 +26,7 @@ dependencies:
     - field.field.node.dataset.field_feature_specification
     - field.field.node.dataset.field_feature_type
     - field.field.node.dataset.field_funding_reference
+    - field.field.node.dataset.field_inappropriate_reuse
     - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
@@ -36,6 +38,8 @@ dependencies:
     - field.field.node.dataset.field_publication_year
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
+    - field.field.node.dataset.field_research_methods
+    - field.field.node.dataset.field_research_questions
     - field.field.node.dataset.field_resource_type
     - field.field.node.dataset.field_series_information
     - field.field.node.dataset.field_subtitle
@@ -119,6 +123,7 @@ hidden:
   did_image: true
   field_agent_relationship: true
   field_alternative_title: true
+  field_appropriate_reuse: true
   field_assessment_type: true
   field_creators_and_contributors: true
   field_data_service: true
@@ -135,6 +140,7 @@ hidden:
   field_feature_specification: true
   field_feature_type: true
   field_funding_reference: true
+  field_inappropriate_reuse: true
   field_instrument: true
   field_language: true
   field_license: true
@@ -145,6 +151,8 @@ hidden:
   field_publication_year: true
   field_related_people: true
   field_related_resource: true
+  field_research_methods: true
+  field_research_questions: true
   field_series_information: true
   field_subtitle: true
   field_table_of_contents: true
