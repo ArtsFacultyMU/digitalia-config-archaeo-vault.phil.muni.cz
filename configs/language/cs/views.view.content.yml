@@ -7,9 +7,6 @@ display:
       title: Obsah
       fields:
         title:
-        type:
-          label: 'Typ obsahu'
-          separator: ', '
           label: Název
         name:
           label: Autor
@@ -42,27 +39,10 @@ display:
       filters:
         title:
           expose:
-        type:
-          expose:
-            label: 'Typ obsahu'
             label: Název
         status:
           expose:
             label: Stav
-          group_info:
-            label: 'Status zveřejnění'
-            group_items:
-              1:
-                title: Zveřejněno
-              2:
-                title: Skryto
         langcode:
           expose:
             label: Jazyk
-  page_1:
-    display_title: Stránka
-    display_options:
-      menu:
-        title: Obsah
-      tab_options:
-        title: Obsah

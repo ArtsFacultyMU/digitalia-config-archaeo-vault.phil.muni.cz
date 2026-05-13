@@ -15,10 +15,8 @@ display:
           separator: ', '
         bundle:
           label: Typ
-          separator: ', '
         uid:
           label: Autor
-          separator: ', '
         status:
           label: Stav
           settings:
@@ -55,16 +53,6 @@ display:
         bundle:
           expose:
             label: Typ
-        status:
-          expose:
-            label: 'Pravda (True)'
-          group_info:
-            label: 'Status zveřejnění'
-            group_items:
-              1:
-                title: Zveřejněno
-              2:
-                title: Skryto
         langcode:
           expose:
             label: Jazyk

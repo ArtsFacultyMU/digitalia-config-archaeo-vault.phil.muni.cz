@@ -11,11 +11,6 @@ display:
           sort_desc_label: Sestupně
       fields:
         title:
-          separator: ', '
-        body:
-          separator: ', '
-        field_tags:
-          separator: ', '
           label: název
       arguments:
         nid:

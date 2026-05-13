@@ -23,7 +23,6 @@ display:
       fields:
         title:
           label: Název
-          separator: ', '
       arguments:
         field_member_of_target_id:
           exception:
