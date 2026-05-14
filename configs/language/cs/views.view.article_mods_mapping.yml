@@ -11,12 +11,12 @@ display:
           sort_desc_label: Sestupně
       fields:
         title:
+          label: název
           separator: ', '
         body:
           separator: ', '
         field_tags:
           separator: ', '
-          label: název
       arguments:
         nid:
           exception:

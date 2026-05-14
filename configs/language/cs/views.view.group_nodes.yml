@@ -5,11 +5,11 @@ display:
       title: Uzly
       fields:
         title:
+          label: Název
           separator: ', '
         type:
           label: 'Typ obsahu'
           separator: ', '
-          label: Název
         status:
           label: Stav
           settings:

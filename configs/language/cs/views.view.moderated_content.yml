@@ -42,10 +42,10 @@ display:
       filters:
         title:
           expose:
-            label: Nadpis
+            label: Název
         type:
           expose:
-            label: Název
+            label: Typ
         langcode:
           expose:
             label: Jazyk

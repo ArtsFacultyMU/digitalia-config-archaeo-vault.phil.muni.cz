@@ -94,6 +94,7 @@ third_party_settings:
     group_time_reference:
       children:
         - field_date_accepted
+<<<<<<< HEAD
         - field_edtf_date_accepted
         - field_date_available
         - field_edtf_date_available
@@ -104,7 +105,8 @@ third_party_settings:
         - field_edtf_date_updated
         - field_date_valid
         - field_date_withdrawn
-        - field_edtf_date_withdrawn
+        - field_date_valid
+        - field_date_withdrawn
         - field_edtf_date_created
         - field_temporal_subject
         - field_edtf_date_coverage
@@ -355,6 +357,14 @@ content:
       revision: true
       removed_reference: keep
     third_party_settings: {  }
+  field_inappropriate_reuse:
+    type: text_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_instrument:
     type: inline_entity_form_complex_table_view_mode
     weight: 9
@@ -375,19 +385,29 @@ content:
     third_party_settings: {  }
   field_language:
     type: options_select
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_license:
     type: options_select
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_member_of:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_methods:
     type: text_textarea
-    weight: 9
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -395,19 +415,19 @@ content:
     third_party_settings: {  }
   field_object_specification:
     type: options_select
-    weight: 22
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_object_type:
     type: options_select
-    weight: 21
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   field_publication_year:
     type: number
-    weight: 28
+    weight: 17
     region: content
     settings:
       placeholder: ''
@@ -448,15 +468,27 @@ content:
       revision: true
       removed_reference: keep
     third_party_settings: {  }
-  field_resource_type:
-    type: options_select
-    weight: 1
+  field_research_questions:
+    type: text_textarea
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_resource_type:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_series_information:
     type: text_textarea
-    weight: 10
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -472,7 +504,7 @@ content:
     third_party_settings: {  }
   field_table_of_contents:
     type: text_textarea
-    weight: 11
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -480,7 +512,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 23
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -490,7 +522,7 @@ content:
     third_party_settings: {  }
   field_technical_info:
     type: text_textarea
-    weight: 12
+    weight: 7
     region: content
     settings:
       rows: 5
@@ -498,20 +530,20 @@ content:
     third_party_settings: {  }
   field_temporal_subject:
     type: options_select
-    weight: 25
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 17
+    weight: 0
     region: content
     settings:
-      include_locked: true
+      include_locked: false
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -524,7 +556,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -540,6 +572,7 @@ hidden:
   field_date_withdrawn: true
   field_member_of: true
   field_model: true
+  field_research_methods: true
   path: true
   promote: true
   status: true
