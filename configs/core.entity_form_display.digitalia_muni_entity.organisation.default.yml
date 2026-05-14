@@ -53,8 +53,7 @@ content:
     weight: 2
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      org_name: field_corporate_body_name
     third_party_settings: {  }
 hidden:
   langcode: true
