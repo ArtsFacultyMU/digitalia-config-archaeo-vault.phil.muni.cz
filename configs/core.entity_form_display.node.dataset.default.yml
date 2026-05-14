@@ -235,41 +235,50 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_date_accepted:
-    type: datetime_timestamp
+  field_edtf_date_accepted:
+    type: edtf_default
     weight: 6
     region: content
-    settings: {  }
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
-  field_date_available:
-    type: datetime_datelist
+  field_edtf_date_available:
+    type: edtf_default
     weight: 7
     region: content
     settings:
-      increment: 15
-      date_order: YMD
-      time_type: '24'
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
-  field_date_issued:
-    type: datetime_datelist
+  field_edtf_date_issued:
+    type: edtf_default
     weight: 8
     region: content
     settings:
-      increment: 15
-      date_order: YMD
-      time_type: '24'
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
-  field_date_submitted:
-    type: datetime_timestamp
+  field_edtf_date_submitted:
+    type: edtf_default
     weight: 9
     region: content
-    settings: {  }
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
-  field_date_updated:
-    type: datetime_timestamp
+  field_edtf_date_updated:
+    type: edtf_default
     weight: 10
     region: content
-    settings: {  }
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
   field_date_valid:
     type: edtf_default
@@ -280,11 +289,14 @@ content:
       intervals: true
       sets: false
     third_party_settings: {  }
-  field_date_withdrawn:
-    type: datetime_timestamp
+  field_edtf_date_withdrawn:
+    type: edtf_default
     weight: 12
     region: content
-    settings: {  }
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
     third_party_settings: {  }
   field_doi:
     type: string_textfield
@@ -565,12 +577,6 @@ hidden:
   field_date_updated: true
   field_date_withdrawn: true
   field_download_url: true
-  field_edtf_date_accepted: true
-  field_edtf_date_available: true
-  field_edtf_date_issued: true
-  field_edtf_date_submitted: true
-  field_edtf_date_updated: true
-  field_edtf_date_withdrawn: true
   field_endpoint_url: true
   field_frascati_subject_category: true
   field_member_of: true
