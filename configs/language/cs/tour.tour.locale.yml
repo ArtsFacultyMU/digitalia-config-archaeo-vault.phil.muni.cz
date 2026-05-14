@@ -11,8 +11,6 @@ tips:
   locale-submit:
     label: 'Použít vaše vyhledavací kritéria.'
     body: 'Pro použití vyhledavacích kritérií, klikněte na tlačítko<em>Filtrovat</em>.'
-  locale-language:
-    label: 'Jazyk překladu'
   locale-translate:
     label: Přeložit
   locale-validate:

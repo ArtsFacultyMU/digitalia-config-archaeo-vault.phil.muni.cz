@@ -55,10 +55,6 @@ content:
     region: content
     settings:
       org_name: field_corporate_body_name
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden:
   langcode: true

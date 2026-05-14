@@ -94,7 +94,6 @@ third_party_settings:
     group_time_reference:
       children:
         - field_date_accepted
-<<<<<<< HEAD
         - field_edtf_date_accepted
         - field_date_available
         - field_edtf_date_available
@@ -570,6 +569,15 @@ hidden:
   field_date_submitted: true
   field_date_updated: true
   field_date_withdrawn: true
+  field_download_url: true
+  field_edtf_date_accepted: true
+  field_edtf_date_available: true
+  field_edtf_date_issued: true
+  field_edtf_date_submitted: true
+  field_edtf_date_updated: true
+  field_edtf_date_withdrawn: true
+  field_endpoint_url: true
+  field_frascati_subject_category: true
   field_member_of: true
   field_model: true
   field_research_methods: true
