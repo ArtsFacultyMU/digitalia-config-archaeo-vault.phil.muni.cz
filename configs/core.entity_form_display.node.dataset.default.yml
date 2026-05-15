@@ -234,6 +234,23 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_date_valid:
+    type: edtf_default
+    weight: 11
+    region: content
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
+    third_party_settings: {  }
+  field_doi:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_edtf_date_accepted:
     type: edtf_default
     weight: 6
@@ -250,6 +267,33 @@ content:
     settings:
       strict_dates: false
       intervals: true
+      sets: false
+    third_party_settings: {  }
+  field_edtf_date_collected:
+    type: edtf_default
+    weight: 16
+    region: content
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
+    third_party_settings: {  }
+  field_edtf_date_coverage:
+    type: edtf_default
+    weight: 15
+    region: content
+    settings:
+      strict_dates: false
+      intervals: true
+      sets: false
+    third_party_settings: {  }
+  field_edtf_date_created:
+    type: edtf_default
+    weight: 13
+    region: content
+    settings:
+      strict_dates: false
+      intervals: false
       sets: false
     third_party_settings: {  }
   field_edtf_date_issued:
@@ -279,15 +323,6 @@ content:
       intervals: true
       sets: false
     third_party_settings: {  }
-  field_date_valid:
-    type: edtf_default
-    weight: 11
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
   field_edtf_date_withdrawn:
     type: edtf_default
     weight: 12
@@ -295,41 +330,6 @@ content:
     settings:
       strict_dates: false
       intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_doi:
-    type: string_textfield
-    weight: 17
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_edtf_date_collected:
-    type: edtf_default
-    weight: 16
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_coverage:
-    type: edtf_default
-    weight: 15
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_created:
-    type: edtf_default
-    weight: 13
-    region: content
-    settings:
-      strict_dates: false
-      intervals: false
       sets: false
     third_party_settings: {  }
   field_feature_specification:
