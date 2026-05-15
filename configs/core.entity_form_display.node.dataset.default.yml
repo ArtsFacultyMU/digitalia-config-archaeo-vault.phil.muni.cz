@@ -93,14 +93,13 @@ third_party_settings:
         required_fields: true
     group_time_reference:
       children:
-        - field_date_accepted
         - field_edtf_date_accepted
-        - field_date_available
-        - field_date_issued
-        - field_date_submitted
-        - field_date_updated
+        - field_edtf_date_available
+        - field_edtf_date_issued
+        - field_edtf_date_submitted
+        - field_edtf_date_updated
         - field_date_valid
-        - field_date_withdrawn
+        - field_edtf_date_withdrawn
         - field_edtf_date_created
         - field_temporal_subject
         - field_edtf_date_coverage
