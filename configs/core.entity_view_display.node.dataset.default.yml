@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.dataset.field_alternative_title
     - field.field.node.dataset.field_appropriate_reuse
     - field.field.node.dataset.field_assessment_type
+    - field.field.node.dataset.field_contributor
+    - field.field.node.dataset.field_creator
     - field.field.node.dataset.field_creators_and_contributors
     - field.field.node.dataset.field_data_service
     - field.field.node.dataset.field_date_accepted
@@ -59,6 +61,7 @@ dependencies:
   module:
     - controlled_access_terms
     - datetime
+    - digitalia_muni_nfield_agent
     - field_group
     - link
     - text
@@ -204,6 +207,22 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_contributor:
+    type: dm_field_agent_default
+    label: above
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_creator:
+    type: dm_field_agent_default
+    label: above
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 39
     region: content
   field_creators_and_contributors:
     type: entity_reference_entity_view

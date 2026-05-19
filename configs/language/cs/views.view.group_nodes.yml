@@ -6,6 +6,10 @@ display:
       fields:
         title:
           label: Název
+          separator: ', '
+        type:
+          label: Typ
+          separator: ', '
         status:
           label: Stav
           settings:
