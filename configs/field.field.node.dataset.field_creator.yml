@@ -1,0 +1,22 @@
+uuid: 09ea2b0e-8a16-4d4c-8740-083f5c27fafa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creator
+    - node.type.dataset
+  module:
+    - digitalia_muni_nfield_agent
+id: node.dataset.field_creator
+field_name: field_creator
+entity_type: node
+bundle: dataset
+label: Creator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  bar: example
+field_type: dm_field_agent

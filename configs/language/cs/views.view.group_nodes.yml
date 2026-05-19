@@ -8,7 +8,7 @@ display:
           label: Název
           separator: ', '
         type:
-          label: 'Typ obsahu'
+          label: Typ
           separator: ', '
         status:
           label: Stav

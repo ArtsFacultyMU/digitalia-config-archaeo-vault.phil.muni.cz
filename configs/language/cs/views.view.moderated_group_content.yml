@@ -10,7 +10,7 @@ display:
           label: Název
           separator: ', '
         type:
-          label: 'Typ obsahu'
+          label: Typ
           separator: ', '
         name:
           label: Autor
@@ -50,7 +50,7 @@ display:
             label: Název
         type:
           expose:
-            label: 'Typ obsahu'
+            label: Typ
         langcode:
           expose:
             label: Jazyk

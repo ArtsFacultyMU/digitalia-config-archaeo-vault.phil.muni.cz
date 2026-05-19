@@ -1,0 +1,20 @@
+uuid: e558c1f8-3690-4831-900d-93f95bda3378
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_nfield_agent
+    - node
+id: node.field_contributor
+field_name: field_contributor
+entity_type: node
+type: dm_field_agent
+settings:
+  foo: example
+module: digitalia_muni_nfield_agent
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

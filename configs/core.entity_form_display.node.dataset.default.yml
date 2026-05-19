@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.dataset.field_alternative_title
     - field.field.node.dataset.field_appropriate_reuse
     - field.field.node.dataset.field_assessment_type
+    - field.field.node.dataset.field_contributor
+    - field.field.node.dataset.field_creator
     - field.field.node.dataset.field_creators_and_contributors
     - field.field.node.dataset.field_data_service
     - field.field.node.dataset.field_date_accepted
@@ -60,7 +62,7 @@ dependencies:
   module:
     - content_moderation
     - controlled_access_terms
-    - datetime
+    - digitalia_muni_nfield_agent
     - field_group
     - ief_table_view_mode
     - link
@@ -95,16 +97,20 @@ third_party_settings:
       children:
         - field_edtf_date_accepted
         - field_edtf_date_available
-        - field_edtf_date_issued
         - field_edtf_date_submitted
         - field_edtf_date_updated
         - field_date_valid
-        - field_edtf_date_withdrawn
         - field_edtf_date_created
         - field_temporal_subject
         - field_edtf_date_coverage
         - field_edtf_date_collected
         - field_publication_year
+        - field_date_accepted
+        - field_date_available
+        - field_date_issued
+        - field_date_submitted
+        - field_date_updated
+        - field_date_withdrawn
       label: 'Time Reference'
       region: content
       parent_name: ''
@@ -159,8 +165,8 @@ third_party_settings:
     group_distribution:
       children:
         - field_data_service
-        - field_endpoint_url
         - field_download_url
+        - field_endpoint_url
       label: Distribution
       region: content
       parent_name: ''
@@ -207,6 +213,20 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_contributor:
+    type: dm_field_agent
+    weight: 28
+    region: content
+    settings:
+      role: Contributor
+    third_party_settings: {  }
+  field_creator:
+    type: dm_field_agent
+    weight: 27
+    region: content
+    settings:
+      role: Creator
     third_party_settings: {  }
   field_creators_and_contributors:
     type: inline_entity_form_complex_table_view_mode
@@ -578,7 +598,6 @@ hidden:
   field_download_url: true
   field_endpoint_url: true
   field_frascati_subject_category: true
-  field_member_of: true
   field_model: true
   field_research_methods: true
   path: true

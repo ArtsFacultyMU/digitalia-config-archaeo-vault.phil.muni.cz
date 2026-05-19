@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.dataset.field_alternative_title
     - field.field.node.dataset.field_appropriate_reuse
     - field.field.node.dataset.field_assessment_type
+    - field.field.node.dataset.field_contributor
+    - field.field.node.dataset.field_creator
     - field.field.node.dataset.field_creators_and_contributors
     - field.field.node.dataset.field_data_service
     - field.field.node.dataset.field_date_accepted
@@ -421,6 +423,8 @@ hidden:
   did_image: true
   field_agent_relationship: true
   field_appropriate_reuse: true
+  field_contributor: true
+  field_creator: true
   field_creators_and_contributors: true
   field_download_url: true
   field_edtf_date_accepted: true

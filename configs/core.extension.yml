@@ -44,6 +44,7 @@ module:
   digitalia_muni_autocomplete_remote: 0
   digitalia_muni_dataset_ccmm: 0
   digitalia_muni_entity: 0
+  digitalia_muni_nfield_agent: 0
   digitalia_muni_token: 0
   digitalia_muni_workbench_ingest: 0
   doi_datacite: 0
@@ -125,6 +126,7 @@ module:
   jsonld: 0
   jwt: 0
   key: 0
+  kint: 0
   language: 0
   leaflet: 0
   link: 0

@@ -8,11 +8,11 @@ display:
       fields:
         title:
           label: Název
+        type:
+          label: Typ
+          separator: ', '
         name:
           label: Autor
-        type:
-          label: 'Typ obsahu'
-          separator: ', '
         status:
           label: Stav
           settings:
@@ -45,7 +45,7 @@ display:
             label: Název
         type:
           expose:
-            label: 'Typ obsahu'
+            label: Typ
         status:
           expose:
             label: Stav
