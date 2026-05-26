@@ -5,21 +5,10 @@ display:
       fields:
         name:
           label: Název
-          separator: ', '
-        created:
-          separator: ', '
-        gid:
-          separator: ', '
-        id:
-          label: ID
-          separator: ', '
         dropbutton:
           label: Operace
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
@@ -27,7 +16,6 @@ display:
       exposed_form:
         options:
           submit_button: Použít
-          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
