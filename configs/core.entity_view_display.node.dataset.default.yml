@@ -46,6 +46,7 @@ dependencies:
     - field.field.node.dataset.field_object_specification
     - field.field.node.dataset.field_object_type
     - field.field.node.dataset.field_publication_year
+    - field.field.node.dataset.field_publisher_dm
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_research_methods
@@ -90,7 +91,6 @@ third_party_settings:
         open: false
     group_time_reference:
       children:
-        - field_publication_year
         - field_temporal_subject
         - field_edtf_date_coverage
         - field_edtf_date_collected
@@ -102,6 +102,7 @@ third_party_settings:
         - field_date_updated
         - field_date_valid
         - field_date_withdrawn
+        - field_publication_year
         - field_edtf_date_accepted
         - field_edtf_date_available
         - field_edtf_date_submitted
@@ -140,8 +141,9 @@ third_party_settings:
         description: ''
     group_creators_and_contributors:
       children:
-        - field_related_people
-        - field_creators_and_contributors
+        - field_creator
+        - field_contributor
+        - field_publisher_dm
       label: 'Creators and Contributors'
       parent_name: ''
       region: content
@@ -161,7 +163,7 @@ third_party_settings:
       label: Distribution
       parent_name: ''
       region: content
-      weight: 20
+      weight: 16
       format_type: fieldset
       format_settings:
         classes: ''
@@ -198,7 +200,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 32
+    weight: 20
     region: content
   field_assessment_type:
     type: entity_reference_label
@@ -209,29 +211,18 @@ content:
     weight: 10
     region: content
   field_contributor:
-    type: dm_field_agent_default
+    type: dm_field_agent_key_value
     label: above
-    settings:
-      foo: bar
+    settings: {  }
     third_party_settings: {  }
     weight: 40
     region: content
   field_creator:
-    type: dm_field_agent_default
+    type: dm_field_agent_key_value
     label: above
-    settings:
-      foo: bar
+    settings: {  }
     third_party_settings: {  }
     weight: 39
-    region: content
-  field_creators_and_contributors:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: true
-    third_party_settings: {  }
-    weight: 16
     region: content
   field_data_service:
     type: link_separate
@@ -529,7 +520,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 33
+    weight: 21
     region: content
   field_instrument:
     type: entity_reference_entity_view
@@ -546,7 +537,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 17
+    weight: 13
     region: content
   field_license:
     type: entity_reference_label
@@ -554,7 +545,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 19
+    weight: 15
     region: content
   field_member_of:
     type: entity_reference_label
@@ -596,14 +587,12 @@ content:
     third_party_settings: {  }
     weight: 29
     region: content
-  field_related_people:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: true
+  field_publisher_dm:
+    type: dm_field_agent_key_value
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    weight: 15
+    weight: 41
     region: content
   field_related_resource:
     type: entity_reference_entity_view
@@ -612,7 +601,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 18
+    weight: 14
     region: content
   field_research_methods:
     type: entity_reference_label
@@ -620,14 +609,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 31
+    weight: 19
     region: content
   field_research_questions:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 30
+    weight: 18
     region: content
   field_resource_type:
     type: entity_reference_label
@@ -685,14 +674,16 @@ content:
   media_of_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 21
+    weight: 17
     region: content
 hidden:
   body: true
   did_image: true
   field_agent_relationship: true
+  field_creators_and_contributors: true
   field_gemini_uri: true
   field_model: true
+  field_related_people: true
   islandora_fits_checksum: true
   langcode: true
   links: true
