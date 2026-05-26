@@ -127,7 +127,10 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+	"audit": {
+            "ignore": ["CVE-2026-46644"]
+	}
     },
     "extra": {
         "drupal-scaffold": {
