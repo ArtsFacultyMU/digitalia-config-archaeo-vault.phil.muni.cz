@@ -18,5 +18,5 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  bar: example
+  role: Contributor
 field_type: dm_field_agent

@@ -9,8 +9,7 @@ id: node.field_creator
 field_name: field_creator
 entity_type: node
 type: dm_field_agent
-settings:
-  foo: example
+settings: {  }
 module: digitalia_muni_nfield_agent
 locked: false
 cardinality: -1

@@ -47,6 +47,7 @@ dependencies:
     - field.field.node.dataset.field_object_specification
     - field.field.node.dataset.field_object_type
     - field.field.node.dataset.field_publication_year
+    - field.field.node.dataset.field_publisher_dm
     - field.field.node.dataset.field_related_people
     - field.field.node.dataset.field_related_resource
     - field.field.node.dataset.field_research_methods
@@ -137,6 +138,7 @@ hidden:
   field_object_specification: true
   field_object_type: true
   field_publication_year: true
+  field_publisher_dm: true
   field_related_people: true
   field_related_resource: true
   field_research_methods: true

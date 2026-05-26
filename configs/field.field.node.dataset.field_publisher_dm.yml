@@ -1,0 +1,41 @@
+uuid: 9d695485-13c2-4ac8-b03d-bd70ce4317b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publisher_dm
+    - node.type.dataset
+  module:
+    - digitalia_muni_nfield_agent
+id: node.dataset.field_publisher_dm
+field_name: field_publisher_dm
+entity_type: node
+bundle: dataset
+label: Publisher
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    role: null
+    agent_type: organisation
+    agent_tid: null
+    name: 'Masaryk University'
+    orcid: null
+    first_names: null
+    last_names: null
+    ror: 'https://ror.org/02j46qs45'
+    institution_affiliation: 'Masaryk University'
+    department_tid: null
+    department: null
+    contact: null
+    alternative_id: null
+    alternative_id_type: null
+    link: null
+    note: null
+    private_note: null
+    extra: null
+default_value_callback: ''
+settings:
+  role: Publisher
+field_type: dm_field_agent
