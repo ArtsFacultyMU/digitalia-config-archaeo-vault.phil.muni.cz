@@ -7,18 +7,12 @@ display:
       fields:
         title:
           label: Název
-          separator: ', '
         type:
           label: 'Typ obsahu'
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
-        moderation_state:
-          separator: ', '
         changed:
           label: Aktualizováno
-          separator: ', '
         operations:
           label: Operace
       pager:
@@ -35,7 +29,6 @@ display:
       exposed_form:
         options:
           submit_button: Filtr
-          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
@@ -45,7 +38,7 @@ display:
             label: Název
         type:
           expose:
-            label: Typ
+            label: 'Typ obsahu'
         langcode:
           expose:
             label: Jazyk
