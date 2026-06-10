@@ -1,7 +1,7 @@
 _core:
   default_config_hash: XgeYJpPmZIOwE_nA73tYvFw-Rcj-HtlbNwfktqSVsaQ
 broker_url: 'tcp://activemq:61613'
-jwt_expiry: '+2 hour'
+jwt_expiry: '+1 week'
 allow_header_links: true
 delete_media_and_files: true
 fast_term_queries: false

@@ -1,0 +1,27 @@
+uuid: a7f71db2-231a-44b5-aedc-4724c2108f8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_crs
+field_name: field_crs
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: wgs84
+      label: 'WGS 84'
+    -
+      value: sjtsk
+      label: S-JTSK
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

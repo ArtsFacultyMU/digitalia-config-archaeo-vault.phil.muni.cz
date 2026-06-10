@@ -11,7 +11,7 @@ entity_type: node
 bundle: dataset
 label: 'Record Type'
 description: 'The internal category of the resource. Affects how the item is displayed/viewed in the repository.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

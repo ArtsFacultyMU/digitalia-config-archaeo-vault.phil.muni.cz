@@ -1,0 +1,14 @@
+uuid: 7af1f7de-8bbb-4f96-8979-059f75f5f367
+langcode: en
+status: true
+dependencies: {  }
+id: geospatial_data
+label: 'Geospatial Data'
+description: 'Points, lines, polygons, GIS layers, vector outputs of analyses, e.g. GPKG'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: name

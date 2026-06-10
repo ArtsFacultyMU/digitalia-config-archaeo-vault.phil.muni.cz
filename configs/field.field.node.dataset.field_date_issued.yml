@@ -13,7 +13,7 @@ entity_type: node
 bundle: dataset
 label: 'Date Issued'
 description: 'The date that the resource is published or distributed, e.g., to a data centre.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

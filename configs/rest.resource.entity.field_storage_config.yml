@@ -5,6 +5,7 @@ dependencies:
   module:
     - basic_auth
     - field
+    - jwt
     - serialization
 _core:
   default_config_hash: qsoK5HymO7sZOeYV8TBPHZk3xMyye6eAg8Jd8D_p79U
@@ -17,4 +18,5 @@ configuration:
   formats:
     - json
   authentication:
+    - jwt_auth
     - basic_auth

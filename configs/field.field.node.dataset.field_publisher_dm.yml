@@ -24,7 +24,7 @@ default_value:
     orcid: null
     first_names: null
     last_names: null
-    ror: 'https://ror.org/02j46qs45'
+    ror: 02j46qs45
     institution_affiliation: 'Masaryk University'
     department_tid: null
     department: null

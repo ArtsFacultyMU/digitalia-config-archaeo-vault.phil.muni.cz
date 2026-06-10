@@ -1,0 +1,17 @@
+uuid: 3e4db55a-a477-41c0-9dd4-4010802f071d
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - islandora_workbench_integration
+    - taxonomy
+id: workbench_minimum
+label: 'Workbench minimum'
+weight: 11
+is_admin: null
+permissions:
+  - 'administer taxonomy'
+  - 'manage media'
+  - 'use islandora workbench'
+  - 'view checksums'

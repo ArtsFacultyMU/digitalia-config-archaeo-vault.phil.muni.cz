@@ -1,0 +1,10 @@
+status: 1
+pattern: '[digitalia_muni_entity:field_location_relation] [digitalia_muni_entity:field_location_name]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - digitalia_muni_entity.digitalia_muni_entity_type.location
+new_content_behavior: 0

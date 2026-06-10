@@ -1,0 +1,21 @@
+uuid: 8f7fca30-e244-49c6-b7ea-9031fa1b60e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_crs
+    - media.type.geospatial_data
+  module:
+    - options
+id: media.geospatial_data.field_crs
+field_name: field_crs
+entity_type: media
+bundle: geospatial_data
+label: 'Coordinate reference system'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

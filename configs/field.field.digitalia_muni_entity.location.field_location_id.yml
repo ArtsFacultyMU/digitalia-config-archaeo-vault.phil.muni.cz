@@ -1,0 +1,45 @@
+uuid: d9845a49-ec1d-4884-8241-6e35675a047e
+langcode: en
+status: true
+dependencies:
+  config:
+    - digitalia_muni_entity.digitalia_muni_entity_type.location
+    - field.storage.digitalia_muni_entity.field_location_id
+  module:
+    - double_field
+id: digitalia_muni_entity.location.field_location_id
+field_name: field_location_id
+entity_type: digitalia_muni_entity
+bundle: location
+label: 'Location ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: 'ID Type'
+    list: true
+    allowed_values:
+      -
+        label: 'AMČR achaeological site'
+        value: amcr
+      -
+        label: GeoNames
+        value: geonames
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: ID
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

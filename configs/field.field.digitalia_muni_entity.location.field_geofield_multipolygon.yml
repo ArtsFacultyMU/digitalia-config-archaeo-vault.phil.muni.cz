@@ -11,7 +11,7 @@ id: digitalia_muni_entity.location.field_geofield_multipolygon
 field_name: field_geofield_multipolygon
 entity_type: digitalia_muni_entity
 bundle: location
-label: geofield_multipolygon
+label: MultiPolygon
 description: ''
 required: false
 translatable: false

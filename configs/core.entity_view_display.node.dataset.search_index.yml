@@ -41,6 +41,7 @@ dependencies:
     - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
+    - field.field.node.dataset.field_location
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
     - field.field.node.dataset.field_model
@@ -438,6 +439,7 @@ hidden:
   field_gemini_uri: true
   field_inappropriate_reuse: true
   field_instrument: true
+  field_location: true
   field_publication_year: true
   field_publisher_dm: true
   field_related_people: true

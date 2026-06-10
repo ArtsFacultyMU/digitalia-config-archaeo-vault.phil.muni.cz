@@ -40,6 +40,7 @@ dependencies:
     - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
+    - field.field.node.dataset.field_location
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
     - field.field.node.dataset.field_model
@@ -66,6 +67,7 @@ dependencies:
     - digitalia_muni_nfield_agent
     - field_group
     - ief_table_view_mode
+    - inline_entity_form
     - link
     - text
 third_party_settings:
@@ -96,18 +98,11 @@ third_party_settings:
         required_fields: true
     group_time_reference:
       children:
-        - field_edtf_date_accepted
-        - field_edtf_date_available
-        - field_edtf_date_submitted
-        - field_edtf_date_updated
-        - field_date_valid
-        - field_edtf_date_created
-        - field_temporal_subject
-        - field_edtf_date_coverage
-        - field_edtf_date_collected
         - field_publication_year
-        - field_edtf_date_withdrawn
-        - field_edtf_date_issued
+        - field_edtf_date_created
+        - field_edtf_date_collected
+        - field_edtf_date_coverage
+        - field_temporal_subject
         - field_date_accepted
         - field_date_available
         - field_date_issued
@@ -117,7 +112,7 @@ third_party_settings:
       label: 'Time Reference'
       region: content
       parent_name: ''
-      weight: 11
+      weight: 10
       format_type: details
       format_settings:
         classes: ''
@@ -138,7 +133,7 @@ third_party_settings:
       label: Subject
       region: content
       parent_name: ''
-      weight: 13
+      weight: 12
       format_type: details
       format_settings:
         classes: ''
@@ -174,7 +169,7 @@ third_party_settings:
       label: Distribution
       region: content
       parent_name: ''
-      weight: 20
+      weight: 19
       format_type: fieldset
       format_settings:
         classes: ''
@@ -238,69 +233,15 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_date_valid:
-    type: edtf_default
-    weight: 10
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
   field_doi:
     type: string_textfield
-    weight: 19
+    weight: 18
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_edtf_date_accepted:
-    type: edtf_default
-    weight: 6
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_available:
-    type: edtf_default
-    weight: 7
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
   field_edtf_date_collected:
-    type: edtf_default
-    weight: 14
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_coverage:
-    type: edtf_default
-    weight: 13
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_created:
-    type: edtf_default
-    weight: 11
-    region: content
-    settings:
-      strict_dates: false
-      intervals: false
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_issued:
     type: edtf_default
     weight: 17
     region: content
@@ -309,36 +250,27 @@ content:
       intervals: true
       sets: false
     third_party_settings: {  }
-  field_edtf_date_submitted:
+  field_edtf_date_coverage:
     type: edtf_default
-    weight: 8
+    weight: 18
     region: content
     settings:
       strict_dates: false
       intervals: true
       sets: false
     third_party_settings: {  }
-  field_edtf_date_updated:
-    type: edtf_default
-    weight: 9
-    region: content
-    settings:
-      strict_dates: false
-      intervals: true
-      sets: false
-    third_party_settings: {  }
-  field_edtf_date_withdrawn:
+  field_edtf_date_created:
     type: edtf_default
     weight: 16
     region: content
     settings:
       strict_dates: false
-      intervals: true
+      intervals: false
       sets: false
     third_party_settings: {  }
   field_feature_specification:
     type: options_select
-    weight: 23
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -350,7 +282,7 @@ content:
     third_party_settings: {  }
   field_funding_reference:
     type: inline_entity_form_complex_table_view_mode
-    weight: 12
+    weight: 13
     region: content
     settings:
       form_mode: default
@@ -376,7 +308,7 @@ content:
     third_party_settings: {  }
   field_instrument:
     type: inline_entity_form_complex_table_view_mode
-    weight: 10
+    weight: 9
     region: content
     settings:
       form_mode: default
@@ -394,15 +326,33 @@ content:
     third_party_settings: {  }
   field_language:
     type: options_select
-    weight: 18
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   field_license:
     type: options_select
-    weight: 17
+    weight: 16
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Location
+      label_plural: Locations
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: keep
     third_party_settings: {  }
   field_member_of:
     type: entity_reference_autocomplete
@@ -424,13 +374,13 @@ content:
     third_party_settings: {  }
   field_object_specification:
     type: options_select
-    weight: 25
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   field_object_type:
     type: options_select
-    weight: 24
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -449,7 +399,7 @@ content:
     third_party_settings: {  }
   field_related_resource:
     type: inline_entity_form_complex_table_view_mode
-    weight: 15
+    weight: 14
     region: content
     settings:
       form_mode: default
@@ -474,14 +424,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_resource_type:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 6
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_series_information:
     type: text_textarea
@@ -509,7 +455,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 26
+    weight: 25
     region: content
     settings:
       match_operator: CONTAINS
@@ -527,7 +473,7 @@ content:
     third_party_settings: {  }
   field_temporal_subject:
     type: options_select
-    weight: 12
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -553,7 +499,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 16
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -567,8 +513,15 @@ hidden:
   field_date_issued: true
   field_date_submitted: true
   field_date_updated: true
+  field_date_valid: true
   field_date_withdrawn: true
   field_download_url: true
+  field_edtf_date_accepted: true
+  field_edtf_date_available: true
+  field_edtf_date_issued: true
+  field_edtf_date_submitted: true
+  field_edtf_date_updated: true
+  field_edtf_date_withdrawn: true
   field_endpoint_url: true
   field_frascati_subject_category: true
   field_model: true

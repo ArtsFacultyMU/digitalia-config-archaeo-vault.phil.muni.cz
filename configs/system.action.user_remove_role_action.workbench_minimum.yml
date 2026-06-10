@@ -1,0 +1,14 @@
+uuid: 784776c1-8d5f-4285-b26e-269a16a35c95
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.workbench_minimum
+  module:
+    - user
+id: user_remove_role_action.workbench_minimum
+label: 'Remove the Workbench minimum role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: workbench_minimum
