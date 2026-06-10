@@ -11,9 +11,9 @@ id: digitalia_muni_entity.location.field_location_relation
 field_name: field_location_relation
 entity_type: digitalia_muni_entity
 bundle: location
-label: 'Location Relation'
+label: 'Location relation type'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

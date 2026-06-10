@@ -41,6 +41,7 @@ dependencies:
     - field.field.node.dataset.field_instrument
     - field.field.node.dataset.field_language
     - field.field.node.dataset.field_license
+    - field.field.node.dataset.field_location
     - field.field.node.dataset.field_member_of
     - field.field.node.dataset.field_methods
     - field.field.node.dataset.field_model
@@ -132,6 +133,7 @@ hidden:
   field_instrument: true
   field_language: true
   field_license: true
+  field_location: true
   field_member_of: true
   field_methods: true
   field_model: true

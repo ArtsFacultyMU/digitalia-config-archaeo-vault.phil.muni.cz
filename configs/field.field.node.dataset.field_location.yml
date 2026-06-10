@@ -1,0 +1,29 @@
+uuid: d209163e-9ebf-46bf-8bbc-70d6ab4bc2f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - digitalia_muni_entity.digitalia_muni_entity_type.location
+    - field.storage.node.field_location
+    - node.type.dataset
+id: node.dataset.field_location
+field_name: field_location
+entity_type: node
+bundle: dataset
+label: Location
+description: 'Any location related to the dataset, can be represented as a controlled value or using geojson'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:digitalia_muni_entity'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

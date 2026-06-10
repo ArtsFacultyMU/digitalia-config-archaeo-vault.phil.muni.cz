@@ -263,6 +263,7 @@ display:
       path: term_from_uri
       auth:
         - basic_auth
+        - jwt_auth
     cache_metadata:
       max-age: -1
       contexts:
@@ -339,6 +340,7 @@ display:
       path: term_from_authority_link
       auth:
         - basic_auth
+        - jwt_auth
     cache_metadata:
       max-age: -1
       contexts:

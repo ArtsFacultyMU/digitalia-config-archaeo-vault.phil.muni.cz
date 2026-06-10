@@ -1,0 +1,11 @@
+uuid: 265e5f4c-ab72-47c8-a863-6033e9f82e37
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.geospatial_data
+id: media.geospatial_data
+target_entity_type_id: media
+target_bundle: geospatial_data
+default_langcode: site_default
+language_alterable: false

@@ -4,34 +4,159 @@ status: true
 dependencies:
   config:
     - digitalia_muni_entity.digitalia_muni_entity_type.location
+    - field.field.digitalia_muni_entity.location.field_broader_locations
     - field.field.digitalia_muni_entity.location.field_geofield_multipolygon
     - field.field.digitalia_muni_entity.location.field_geolocation_multipolygon
+    - field.field.digitalia_muni_entity.location.field_location_id
+    - field.field.digitalia_muni_entity.location.field_location_name
     - field.field.digitalia_muni_entity.location.field_location_relation
   module:
-    - geofield
-    - geolocation_geometry
+    - double_field
+    - leaflet
+    - options
 id: digitalia_muni_entity.location.default
 targetEntityType: digitalia_muni_entity
 bundle: location
 mode: default
 content:
   field_geofield_multipolygon:
-    type: geofield_default
+    type: leaflet_formatter_default
     label: above
     settings:
-      output_format: wkt
-      output_escape: true
+      multiple_map: false
+      leaflet_map: openstreetmap
+      height: 400
+      height_unit: px
+      hide_empty_map: false
+      disable_wheel: false
+      gesture_handling: false
+      fitbounds_options: '{"padding":[0,0]}'
+      reset_map:
+        control: false
+        options: '{"position": "topleft", "title": "Reset View"}'
+      map_scale:
+        control: false
+        options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
+      locate:
+        control: false
+        options: '{"position": "topright", "setView": "untilPanOrZoom", "returnToPrevBounds":true, "keepCurrentZoomLevel": true, "strings": {"title": "Locate my position"}}'
+        automatic: false
+      leaflet_tooltip:
+        value: ''
+        options: '{"permanent":false,"direction":"center"}'
+      popup: false
+      popup_content: ''
+      leaflet_popup:
+        control: ''
+        content: ''
+        options: '{"maxWidth":"300","minWidth":"50", "autoPan": true}'
+        value: ''
+        view_mode: full
+      map_position:
+        force: false
+        center:
+          lat: 0.0
+          lon: 0.0
+        zoomControlPosition: topleft
+        zoom: 5
+        minZoom: 1
+        maxZoom: 18
+        zoomFiner: 0
+      weight: '0'
+      icon:
+        iconType: marker
+        iconUrl: ''
+        shadowUrl: ''
+        className: ''
+        iconSize:
+          x: null
+          'y': null
+        iconAnchor:
+          x: null
+          'y': null
+        shadowSize:
+          x: null
+          'y': null
+        shadowAnchor:
+          x: null
+          'y': null
+        popupAnchor:
+          x: null
+          'y': null
+        html: '<div></div>'
+        html_class: leaflet-map-divicon
+        circle_marker_options: '{"radius": 100, "color": "red", "fillColor": "#f03", "fillOpacity": 0.5}'
+      leaflet_markercluster:
+        control: false
+        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
+        include_path: false
+        excluded: false
+      fullscreen:
+        control: false
+        options: '{"position":"topleft","pseudoFullscreen":false}'
+      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+      feature_properties:
+        values: ''
+      geocoder:
+        control: false
+        settings:
+          popup: false
+          autocomplete:
+            placeholder: 'Search Address'
+            title: 'Search an Address on the Map'
+          position: topright
+          input_size: 20
+          providers: {  }
+          min_terms: 4
+          delay: 800
+          zoom: 16
+          options: ''
+          set_marker: false
+      map_lazy_load:
+        lazy_load: false
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
-  field_geolocation_multipolygon:
-    type: geolocation_geometry_wkt
+  field_location_id:
+    type: double_field_unformatted_list
     label: above
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location_name:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
+  field_location_relation:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  field_location_relation: true
+  field_broader_locations: true
+  field_geolocation_multipolygon: true
   langcode: true
   search_api_excerpt: true

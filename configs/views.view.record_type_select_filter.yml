@@ -5,10 +5,12 @@ dependencies:
   config:
     - taxonomy.vocabulary.islandora_models
   content:
-    - 'taxonomy_term:islandora_models:46179ffe-e944-475e-8708-c532e1062428'
-    - 'taxonomy_term:islandora_models:a73d6b11-7d16-4eaf-a86b-105387cec1de'
-    - 'taxonomy_term:islandora_models:ad985fcc-3876-4fc5-9412-53ab5def3d7e'
+    - 'taxonomy_term:assessment_type:0f1ce07d-e82a-4d3a-9f07-dc3152665a23'
+    - 'taxonomy_term:assessment_type:8bf9adc4-bfc9-4aac-9868-6dc5d00ec213'
+    - 'taxonomy_term:assessment_type:d7a5a237-a898-4563-b28f-f0f0f0b0c4ae'
   module:
+    - rest
+    - serialization
     - taxonomy
     - user
 id: record_type_select_filter
@@ -238,5 +240,163 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
+  rest_export_1:
+    id: rest_export_1
+    display_title: 'REST export'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          value:
+            islandora_models: islandora_models
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            17: 17
+            15: 15
+            16: 16
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: islandora_models
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: Name
+            description: ''
+            use_operator: false
+            operator: name_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              content_editor_junior: '0'
+              data_curator: '0'
+              contributor: '0'
+              workbench_user: '0'
+              workbench_minimum: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: taxonomy/record_type
+      auth:
+        - basic_auth
+        - jwt_auth
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
         - user.permissions
       tags: {  }

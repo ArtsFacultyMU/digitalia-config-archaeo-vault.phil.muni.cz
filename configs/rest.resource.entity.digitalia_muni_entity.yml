@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - digitalia_muni_entity
+    - jwt
     - serialization
     - user
 _core:
@@ -17,22 +18,26 @@ configuration:
       - json
       - xml
     supported_auth:
+      - jwt_auth
       - cookie
   POST:
     supported_formats:
       - json
       - xml
     supported_auth:
+      - jwt_auth
       - cookie
   DELETE:
     supported_formats:
       - json
       - xml
     supported_auth:
+      - jwt_auth
       - cookie
   PATCH:
     supported_formats:
       - json
       - xml
     supported_auth:
+      - jwt_auth
       - cookie

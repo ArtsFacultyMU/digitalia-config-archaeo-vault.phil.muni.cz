@@ -1,0 +1,19 @@
+uuid: 25f18fc6-3ddf-40d3-a16e-5313ab042476
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_entity
+id: digitalia_muni_entity.field_broader_locations
+field_name: field_broader_locations
+entity_type: digitalia_muni_entity
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

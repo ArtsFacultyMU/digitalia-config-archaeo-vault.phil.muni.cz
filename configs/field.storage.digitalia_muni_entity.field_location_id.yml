@@ -1,0 +1,32 @@
+uuid: ad917786-e1c3-490f-999d-845671b0f86d
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_entity
+    - double_field
+id: digitalia_muni_entity.field_location_id
+field_name: field_location_id
+entity_type: digitalia_muni_entity
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
