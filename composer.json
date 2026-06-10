@@ -197,6 +197,9 @@
             "drupal/csvfile_formatter": {
                 "Add dynamic csv file parameters": "./patches/CSVFileFormatter.patch",
                 "Add dynamic csv file parameters 2": "./patches/DataTablesSettingsForm.patch"
+            },
+            "drupal/gin": {
+                "Fix missing help text icon": "./patches/gin_form-element.html.twig.patch"
             }
         }
     },
