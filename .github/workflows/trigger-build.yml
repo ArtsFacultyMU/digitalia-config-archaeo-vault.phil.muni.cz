@@ -1,19 +1,16 @@
-# This is a basic workflow to help you get started with Actions
-
 name: 
 
-# Controls when the workflow will run
+env:
+  TAG: "${{ GITHUB_REF_NAME }}-dev"
+
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "agent_nfield", "0.1.5" ]
   #pull_request:
   #  branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   trigger-build:
@@ -29,5 +26,5 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.TEST_TRIGGER_BUILD }}" \
           -H "X-GitHub-Api-Version: 2026-03-10" \
           "https://api.github.com/repos/ArtsFacultyMU/digitalia-image-archaeo-vault.phil.muni.cz/actions/workflows/docker-image-auto.yml/dispatches" \
-          -d '{"ref": "prod-current", "tags": "cerit.io/xadler/archaeo-vault-drupal:${{ GITHUB_REF_NAME }}-dev"}'
+          -d '{"ref": "prod-current", "tags": "cerit.io/xadler/archaeo-vault-drupal:$TAG"}'
 
