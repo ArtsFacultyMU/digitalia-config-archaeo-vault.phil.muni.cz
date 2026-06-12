@@ -1,7 +1,7 @@
 name: 
 
 env:
-  TAG: "${{ GITHUB_REF_NAME }}-dev"
+  TAG: "${{ github.ref_name }}-dev"
 
 on:
   push:
