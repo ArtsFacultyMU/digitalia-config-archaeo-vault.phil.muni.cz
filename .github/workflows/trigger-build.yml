@@ -6,7 +6,7 @@ name:
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "agent_nfield" ]
+    branches: [ "agent_nfield", "0.1.5" ]
   #pull_request:
   #  branches: [ "main" ]
 
