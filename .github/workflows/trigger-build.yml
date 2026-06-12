@@ -1,7 +1,7 @@
 name: 
 
 env:
-  TAG: "${{ github.ref_name }}-dev"
+  TAG: github.ref_type == "branch" && "${{ github.ref_name }}-dev" || github.ref_name
 
 on:
   push:
@@ -11,6 +11,7 @@ on:
 
   workflow_dispatch:
 
+
 jobs:
   # This workflow contains a single job called "build"
   trigger-build:
@@ -19,6 +20,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # if no tag exists, use "dev" as suffix
       - name: trigger build
         run: |
           curl -L -X POST \
@@ -26,5 +28,5 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.TEST_TRIGGER_BUILD }}" \
           -H "X-GitHub-Api-Version: 2026-03-10" \
           "https://api.github.com/repos/ArtsFacultyMU/digitalia-image-archaeo-vault.phil.muni.cz/actions/workflows/docker-image-auto.yml/dispatches" \
-          -d '{"ref": "prod-current", "inputs": {"tags": "cerit.io/xadler/archaeo-vault-drupal:$TAG"}}'
+          -d '{"ref":"prod-current","inputs":{"tags":"cerit.io/xadler/archaeo-vault-drupal:$TAG"}}'
 
