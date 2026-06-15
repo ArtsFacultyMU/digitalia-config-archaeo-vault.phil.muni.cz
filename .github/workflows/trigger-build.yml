@@ -24,12 +24,11 @@ jobs:
     steps:
       - name: trigger build
         run: |
-           echo ${{ env.TAG }}
-#          jq -n --arg tag "${{ env.TAG }}" '{ref: "prod-current", inputs:{tag: $tag}}' |
-#          curl -L -X POST \
-#          -H "Accept: application/vnd.github+json" \
-#          -H "Authorization: Bearer ${{ secrets.TEST_TRIGGER_BUILD }}" \
-#          -H "X-GitHub-Api-Version: 2026-03-10" \
-#          "https://api.github.com/repos/ArtsFacultyMU/digitalia-image-archaeo-vault.phil.muni.cz/actions/workflows/docker-image-auto.yml/dispatches" \
-#          -d @-
+          jq -n --arg tag "${{ env.TAG }}" '{ref: "prod-current", inputs:{tag: $tag}}' |
+          curl -L -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.TEST_TRIGGER_BUILD }}" \
+          -H "X-GitHub-Api-Version: 2026-03-10" \
+          "https://api.github.com/repos/ArtsFacultyMU/digitalia-image-archaeo-vault.phil.muni.cz/actions/workflows/docker-image-auto.yml/dispatches" \
+          -d @-
 
