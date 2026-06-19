@@ -758,6 +758,66 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_member_of:
+          id: field_member_of
+          table: search_api_index_archaeovault_index
+          field: field_member_of
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: empty
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_member_of_op
+            label: 'Top-level datasets only'
+            description: ''
+            use_operator: false
+            operator: field_member_of_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_has_parent
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              content_editor_junior: '0'
+              data_curator: '0'
+              contributor: '0'
+              workbench_user: '0'
+              workbench_minimum: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_has_parent
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: '1'
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Top-level dataset collections'
+                operator: empty
+                value:
+                  min: ''
+                  max: ''
+                  value: ''
       filter_groups:
         operator: AND
         groups:

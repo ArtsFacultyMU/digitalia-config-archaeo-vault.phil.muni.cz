@@ -201,7 +201,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 20
+    weight: 19
     region: content
   field_assessment_type:
     type: entity_reference_label
@@ -521,7 +521,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 21
+    weight: 20
     region: content
   field_instrument:
     type: entity_reference_entity_view
@@ -554,7 +554,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 42
+    weight: 21
     region: content
   field_member_of:
     type: entity_reference_label
@@ -618,14 +618,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 19
+    weight: 18
     region: content
   field_research_questions:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 18
+    weight: 17
     region: content
   field_resource_type:
     type: entity_reference_label
@@ -680,10 +680,15 @@ content:
     third_party_settings: {  }
     weight: 18
     region: content
+  has_part_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 23
+    region: content
   media_of_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    weight: 22
     region: content
 hidden:
   body: true
