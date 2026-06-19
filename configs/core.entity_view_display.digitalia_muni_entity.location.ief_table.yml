@@ -1,0 +1,66 @@
+uuid: aef554dd-22cc-46cf-a7fa-99479e41f029
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.digitalia_muni_entity.ief_table
+    - digitalia_muni_entity.digitalia_muni_entity_type.location
+    - field.field.digitalia_muni_entity.location.field_broader_locations
+    - field.field.digitalia_muni_entity.location.field_geofield_multipolygon
+    - field.field.digitalia_muni_entity.location.field_geolocation_multipolygon
+    - field.field.digitalia_muni_entity.location.field_location_id
+    - field.field.digitalia_muni_entity.location.field_location_name
+    - field.field.digitalia_muni_entity.location.field_location_relation
+  module:
+    - double_field
+    - options
+id: digitalia_muni_entity.location.ief_table
+targetEntityType: digitalia_muni_entity
+bundle: location
+mode: ief_table
+content:
+  field_location_id:
+    type: double_field_unformatted_list
+    label: hidden
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_location_name:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_location_relation:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_broader_locations: true
+  field_geofield_multipolygon: true
+  field_geolocation_multipolygon: true
+  label: true
+  langcode: true
+  search_api_excerpt: true

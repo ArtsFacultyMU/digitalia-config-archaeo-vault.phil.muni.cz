@@ -1,4 +1,4 @@
-status: 1
+status: 0
 pattern: '[digitalia_muni_entity:field_location_relation] [digitalia_muni_entity:field_location_name]'
 escape: false
 preserve_titles: false
