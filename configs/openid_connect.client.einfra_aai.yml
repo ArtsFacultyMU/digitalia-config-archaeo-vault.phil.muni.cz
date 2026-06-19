@@ -6,7 +6,7 @@ id: einfra_aai
 label: e-INFRA
 plugin: generic
 settings:
-  client_id: 3e0de858-f659-4b30-9c5a-686b8779a8a3
+  client_id: null
   client_secret: null
   iss_allowed_domains: "archaeo-vault.cz\r\narchaeo-vault-devel.phil.muni.cz"
   prompt:
