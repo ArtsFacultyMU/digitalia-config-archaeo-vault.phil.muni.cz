@@ -31,6 +31,7 @@ dependencies:
     - field.storage.node.field_frascati_subject_category
     - field.storage.node.field_language
     - field.storage.node.field_license
+    - field.storage.node.field_member_of
     - field.storage.node.field_methods
     - field.storage.node.field_model
     - field.storage.node.field_object_specification
@@ -306,6 +307,14 @@ field_settings:
         - field.storage.node.field_license
       module:
         - taxonomy
+  field_member_of:
+    label: 'Is Part of Dataset Collection'
+    datasource_id: 'entity:node'
+    property_path: field_member_of
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
   field_methods:
     label: Methods
     datasource_id: 'entity:node'
@@ -495,6 +504,16 @@ field_settings:
       module:
         - digitalia_muni_entity
         - taxonomy
+  title_1:
+    label: 'Is Part of Dataset Collection » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_member_of:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
+      module:
+        - node
   type:
     label: 'Content type'
     datasource_id: 'entity:node'

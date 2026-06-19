@@ -1,0 +1,10 @@
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: Název
+        field_subtitle:
+          label: Podnázev
+        field_media_file:
+          label: Soubor
