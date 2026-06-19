@@ -67,7 +67,6 @@ dependencies:
     - digitalia_muni_nfield_agent
     - field_group
     - ief_table_view_mode
-    - inline_entity_form
     - link
     - text
 third_party_settings:
@@ -337,7 +336,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_location:
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     weight: 11
     region: content
     settings:
