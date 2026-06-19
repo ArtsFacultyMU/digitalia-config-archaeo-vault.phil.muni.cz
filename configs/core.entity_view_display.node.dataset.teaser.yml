@@ -150,6 +150,7 @@ hidden:
   field_table_of_contents: true
   field_technical_info: true
   field_temporal_subject: true
+  has_part_entity_view_1: true
   islandora_fits_checksum: true
   langcode: true
   links: true
