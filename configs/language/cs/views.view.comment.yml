@@ -9,22 +9,14 @@ display:
           action_title: Akce
         subject:
           label: Předmět
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: Příspěvek
-          separator: ', '
         changed:
           label: Aktualizováno
-          separator: ', '
         operations:
           label: Operace
-        name_1:
-          separator: ', '
       pager:
         options:
           expose:
@@ -34,7 +26,6 @@ display:
       exposed_form:
         options:
           submit_button: Filtr
-          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
@@ -45,18 +36,9 @@ display:
         subject:
           expose:
             label: Předmět
-        combine:
-          expose:
-            label: 'Jméno autora'
         langcode:
           expose:
             label: Jazyk
-      use_more_text: více
-  page_published:
-    display_title: 'Zveřejněné komentáře'
-    display_options:
-      menu:
-        title: Komentáře
   page_unapproved:
     display_title: 'Neschválené komentáře'
     display_options:
@@ -65,22 +47,14 @@ display:
           action_title: Akce
         subject:
           label: Předmět
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: Příspěvek
-          separator: ', '
         changed:
           label: Aktualizováno
-          separator: ', '
         operations:
           label: Operace
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:
@@ -88,5 +62,3 @@ display:
         langcode:
           expose:
             label: Jazyk
-      menu:
-        title: 'Neschválené komentáře'

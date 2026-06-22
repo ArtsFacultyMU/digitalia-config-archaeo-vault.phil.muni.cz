@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.storage.digitalia_muni_entity.field_agent_role
+    - field.storage.digitalia_muni_entity.field_contact
+    - field.storage.digitalia_muni_entity.field_first_names
+    - field.storage.digitalia_muni_entity.field_last_names
+    - field.storage.digitalia_muni_entity.field_orcid
+    - field.storage.digitalia_muni_entity.field_related_person
+    - field.storage.digitalia_muni_entity.field_ror
     - field.storage.node.body
     - field.storage.node.field_alternative_title
     - field.storage.node.field_assessment_type
@@ -21,23 +28,30 @@ dependencies:
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_feature_specification
     - field.storage.node.field_feature_type
+    - field.storage.node.field_frascati_subject_category
     - field.storage.node.field_language
     - field.storage.node.field_license
+    - field.storage.node.field_member_of
     - field.storage.node.field_methods
     - field.storage.node.field_model
     - field.storage.node.field_object_specification
     - field.storage.node.field_object_type
+    - field.storage.node.field_related_people
     - field.storage.node.field_related_resource
+    - field.storage.node.field_resource_type
     - field.storage.node.field_series_information
     - field.storage.node.field_subtitle
     - field.storage.node.field_table_of_contents
     - field.storage.node.field_tags
     - field.storage.node.field_technical_info
     - field.storage.node.field_temporal_subject
+    - field.storage.taxonomy_term.field_authority_link
+    - field.storage.taxonomy_term.field_external_uri
     - search_api.server.default_solr_server
   module:
     - controlled_access_terms
     - dgi_image_discovery
+    - digitalia_muni_entity
     - node
     - search_api_solr
     - taxonomy
@@ -110,6 +124,18 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_alternative_title
+  field_contact:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » Contact'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_related_person:entity:field_contact'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_contact
+        - field.storage.digitalia_muni_entity.field_related_person
+        - field.storage.node.field_related_people
+      module:
+        - digitalia_muni_entity
   field_data_service:
     label: 'Data Service'
     datasource_id: 'entity:node'
@@ -206,6 +232,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_edtf_date_created
+  field_external_uri:
+    label: 'License » Taxonomy term » External URI'
+    datasource_id: 'entity:node'
+    property_path: 'field_license:entity:field_external_uri'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_license
+        - field.storage.taxonomy_term.field_external_uri
+      module:
+        - taxonomy
   field_feature_specification_name:
     label: 'Feature Specification » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -226,6 +263,18 @@ field_settings:
         - field.storage.node.field_feature_type
       module:
         - taxonomy
+  field_first_names:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » First names'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_related_person:entity:field_first_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_first_names
+        - field.storage.digitalia_muni_entity.field_related_person
+        - field.storage.node.field_related_people
+      module:
+        - digitalia_muni_entity
   field_language_name:
     label: 'Language » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -236,6 +285,18 @@ field_settings:
         - field.storage.node.field_language
       module:
         - taxonomy
+  field_last_names:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » Last names'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_related_person:entity:field_last_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_last_names
+        - field.storage.digitalia_muni_entity.field_related_person
+        - field.storage.node.field_related_people
+      module:
+        - digitalia_muni_entity
   field_license_name:
     label: 'License » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -246,6 +307,14 @@ field_settings:
         - field.storage.node.field_license
       module:
         - taxonomy
+  field_member_of:
+    label: 'Is Part of Dataset Collection'
+    datasource_id: 'entity:node'
+    property_path: field_member_of
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
   field_methods:
     label: Methods
     datasource_id: 'entity:node'
@@ -284,6 +353,18 @@ field_settings:
         - field.storage.node.field_object_type
       module:
         - taxonomy
+  field_orcid:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » ORCID'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_related_person:entity:field_orcid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_orcid
+        - field.storage.digitalia_muni_entity.field_related_person
+        - field.storage.node.field_related_people
+      module:
+        - digitalia_muni_entity
   field_related_resource:
     label: 'Related Resource'
     datasource_id: 'entity:node'
@@ -292,6 +373,18 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_related_resource
+  field_ror:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Person » Digitalia muni custom entity » ROR'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_related_person:entity:field_ror'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_related_person
+        - field.storage.digitalia_muni_entity.field_ror
+        - field.storage.node.field_related_people
+      module:
+        - digitalia_muni_entity
   field_series_information:
     label: 'Series Information'
     datasource_id: 'entity:node'
@@ -377,12 +470,48 @@ field_settings:
         'entity:node':
           ':default': search_index
           dataset: ':default'
+  source:
+    label: 'Creators and Contributors (people) » Digitalia » Agent Role » term » Authority sources » Source Authority'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_agent_role:entity:field_authority_link:source'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_agent_role
+        - field.storage.node.field_related_people
+        - field.storage.taxonomy_term.field_authority_link
+      module:
+        - digitalia_muni_entity
+        - taxonomy
   status:
     label: Published
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
     dependencies:
+      module:
+        - node
+  title:
+    label: 'Creators and Contributors (people) » Digitalia muni custom entity » Agent Role » Taxonomy term » Authority sources » Link text'
+    datasource_id: 'entity:node'
+    property_path: 'field_related_people:entity:field_agent_role:entity:field_authority_link:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.digitalia_muni_entity.field_agent_role
+        - field.storage.node.field_related_people
+        - field.storage.taxonomy_term.field_authority_link
+      module:
+        - digitalia_muni_entity
+        - taxonomy
+  title_1:
+    label: 'Is Part of Dataset Collection » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_member_of:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
       module:
         - node
   type:
@@ -421,7 +550,8 @@ processor_settings:
     ignore_open_start: null
     ignore_open_end: null
   edtf_year_only:
-    fields: {  }
+    fields:
+      node|dataset|field_edtf_date_created: node|dataset|field_edtf_date_created
     ignore_undated: 1
     ignore_open_start: 0
     open_start_year: '0'

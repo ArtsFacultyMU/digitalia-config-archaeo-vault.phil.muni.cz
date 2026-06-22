@@ -1,0 +1,29 @@
+uuid: 509a7943-aae5-4987-8412-187d8f07f7c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_methods
+    - node.type.dataset
+    - taxonomy.vocabulary.research_methods
+id: node.dataset.field_research_methods
+field_name: field_research_methods
+entity_type: node
+bundle: dataset
+label: Methods
+description: 'The research methods used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      research_methods: research_methods
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

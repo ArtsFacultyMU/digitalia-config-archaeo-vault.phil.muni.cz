@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - controlled_access_terms
     - node
 _core:
   default_config_hash: ritH1OPE0hTgDD73edW6V2e7JjZ5bT5LMbwHQHqWfWs
@@ -16,7 +17,7 @@ settings:
   is_ascii: false
 module: controlled_access_terms
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

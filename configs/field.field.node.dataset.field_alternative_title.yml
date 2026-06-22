@@ -12,7 +12,7 @@ bundle: dataset
 label: 'Alternative Title'
 description: 'Alternative dataset title - could be abbreviations, transcribing numerical values, etc.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

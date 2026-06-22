@@ -7,10 +7,9 @@ display:
       title: Obsah
       fields:
         title:
-          label: Nadpis
+          label: Název
         type:
-          label: 'Typ obsahu'
-          separator: ', '
+          label: Typ
         name:
           label: Autor
         status:
@@ -32,7 +31,6 @@ display:
       exposed_form:
         options:
           submit_button: Filtr
-          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
@@ -42,27 +40,13 @@ display:
       filters:
         title:
           expose:
-            label: Nadpis
+            label: Název
         type:
           expose:
-            label: 'Typ obsahu'
+            label: Typ
         status:
           expose:
             label: Stav
-          group_info:
-            label: 'Status zveřejnění'
-            group_items:
-              1:
-                title: Zveřejněno
-              2:
-                title: Skryto
         langcode:
           expose:
             label: Jazyk
-  page_1:
-    display_title: Stránka
-    display_options:
-      menu:
-        title: Obsah
-      tab_options:
-        title: Obsah

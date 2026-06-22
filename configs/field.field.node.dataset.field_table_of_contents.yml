@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_table_of_contents
     - filter.format.basic_html
-    - filter.format.plain_text
-    - filter.format.restricted_html
     - node.type.dataset
   module:
     - text
@@ -14,15 +12,13 @@ id: node.dataset.field_table_of_contents
 field_name: field_table_of_contents
 entity_type: node
 bundle: dataset
-label: 'Table of Contents'
-description: 'A listing of the Table of Contents.'
+label: 'Dataset Contents and Structure'
+description: 'What files the dataset contains and how they are structured.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
     - basic_html
-    - restricted_html
-    - plain_text
 field_type: text_long

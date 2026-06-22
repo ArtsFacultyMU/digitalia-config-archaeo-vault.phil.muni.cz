@@ -1,0 +1,31 @@
+name: Trigger image build
+
+env:
+  # if no tag exists, use "-dev" as suffix
+  TAG: ${{ github.ref_name }}${{ case(github.ref_type == 'branch', '-dev', '') }}
+
+on:
+  push:
+    branches:
+      - "dev_*"
+  pull_request:
+    branches: [ "main", "0.1.3", "0.1.4", "0.1.5" ]
+
+  workflow_dispatch:
+
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: trigger build
+        run: |
+          jq -n --arg tag "${{ env.TAG }}" --arg branch_conf "${{ github.ref_name }}" '{ref: "prod-current", inputs:{tag: $tag, branch_conf: $branch_conf}}' |
+          curl -L -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.TEST_TRIGGER_BUILD }}" \
+          -H "X-GitHub-Api-Version: 2026-03-10" \
+          "https://api.github.com/repos/ArtsFacultyMU/digitalia-image-archaeo-vault.phil.muni.cz/actions/workflows/docker-image-auto.yml/dispatches" \
+          -d @-
+

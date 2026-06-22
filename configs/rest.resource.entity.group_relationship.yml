@@ -1,0 +1,23 @@
+uuid: c857b677-1224-41c8-b3a2-c3ce912e4732
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - group
+    - jwt
+    - serialization
+id: entity.group_relationship
+plugin_id: 'entity:group_relationship'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - jwt_auth
+    - basic_auth

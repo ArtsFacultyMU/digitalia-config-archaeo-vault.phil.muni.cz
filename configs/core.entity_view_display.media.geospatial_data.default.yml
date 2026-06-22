@@ -1,0 +1,38 @@
+uuid: 4338e167-c7d4-48bb-be2b-2255f0709983
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.geospatial_data.field_crs
+    - field.field.media.geospatial_data.field_media_file
+    - media.type.geospatial_data
+  module:
+    - file
+    - options
+id: media.geospatial_data.default
+targetEntityType: media
+bundle: geospatial_data
+mode: default
+content:
+  field_crs:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

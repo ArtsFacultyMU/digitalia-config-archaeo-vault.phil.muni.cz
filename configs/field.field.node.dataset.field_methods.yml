@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_methods
     - filter.format.basic_html
-    - filter.format.plain_text
-    - filter.format.restricted_html
     - node.type.dataset
   module:
     - text
@@ -17,12 +15,10 @@ bundle: dataset
 label: Methods
 description: 'The methodology employed for the study or research.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
     - basic_html
-    - restricted_html
-    - plain_text
 field_type: text_long

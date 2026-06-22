@@ -41,9 +41,13 @@ module:
   devel: 0
   devel_generate: 0
   dgi_image_discovery: 0
+  digitalia_muni_dataset_ccmm: 0
   digitalia_muni_entity: 0
+  digitalia_muni_nfield_agent: 0
+  digitalia_muni_token: 0
   digitalia_muni_workbench_ingest: 0
   doi_datacite: 0
+  double_field: 0
   download_file: 0
   dynamic_page_cache: 0
   eca: 0
@@ -121,6 +125,7 @@ module:
   js_cookie: 0
   jsonld: 0
   jwt: 0
+  jwt_auth_issuer: 0
   key: 0
   language: 0
   leaflet: 0
@@ -131,6 +136,8 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_dc: 0
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
@@ -180,6 +187,7 @@ module:
   update: 0
   user: 0
   view_unpublished: 0
+  views_bulk_edit: 0
   views_bulk_operations: 0
   views_data_export: 0
   views_field_view: 0

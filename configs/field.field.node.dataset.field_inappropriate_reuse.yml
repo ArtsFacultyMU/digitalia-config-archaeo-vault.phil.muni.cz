@@ -1,0 +1,24 @@
+uuid: 2fcc032c-2192-416a-8a94-b0ca8496c35b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inappropriate_reuse
+    - filter.format.basic_html
+    - node.type.dataset
+  module:
+    - text
+id: node.dataset.field_inappropriate_reuse
+field_name: field_inappropriate_reuse
+entity_type: node
+bundle: dataset
+label: 'Dataset limitations and inappropriate reuse'
+description: 'For which research purposes is this dataset not appropriate?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long
