@@ -212,16 +212,18 @@ content:
     weight: 10
     region: content
   field_contributor:
-    type: dm_field_agent_key_value
-    label: above
-    settings: {  }
+    type: dm_field_agent_brief
+    label: inline
+    settings:
+      name_format: simple_name
     third_party_settings: {  }
     weight: 40
     region: content
   field_creator:
-    type: dm_field_agent_key_value
-    label: above
-    settings: {  }
+    type: dm_field_agent_brief
+    label: inline
+    settings:
+      name_format: last_first
     third_party_settings: {  }
     weight: 39
     region: content
@@ -549,10 +551,11 @@ content:
     weight: 15
     region: content
   field_location:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 21
     region: content
@@ -589,7 +592,7 @@ content:
     region: content
   field_publication_year:
     type: number_integer
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -597,9 +600,10 @@ content:
     weight: 29
     region: content
   field_publisher_dm:
-    type: dm_field_agent_key_value
-    label: above
-    settings: {  }
+    type: dm_field_agent_brief
+    label: inline
+    settings:
+      name_format: simple_name
     third_party_settings: {  }
     weight: 41
     region: content

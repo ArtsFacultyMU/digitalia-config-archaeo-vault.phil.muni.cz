@@ -36,9 +36,18 @@ display:
         subject:
           expose:
             label: Předmět
+        combine:
+          expose:
+            label: 'Jméno autora'
         langcode:
           expose:
             label: Jazyk
+      use_more_text: více
+  page_published:
+    display_title: 'Zveřejněné komentáře'
+    display_options:
+      menu:
+        title: Komentáře
   page_unapproved:
     display_title: 'Neschválené komentáře'
     display_options:
@@ -62,3 +71,5 @@ display:
         langcode:
           expose:
             label: Jazyk
+      menu:
+        title: 'Neschválené komentáře'
