@@ -14,5 +14,5 @@ For more information, please contact us at: info@eosc.cz
 ---
 
 <p align="left">
-  <img src="https://webcentrum.muni.cz/media/3830728/seda_eu-msmt_eng-safespace.png" alt="EU and MŠMT Logos" height="150">
+  <img src="https://archaeo-vault.cz/themes/custom/islandora_muni/platform_specific/images/EU+MSMT_en.svg" alt="EU and MŠMT Logos" height="150">
 </p>
