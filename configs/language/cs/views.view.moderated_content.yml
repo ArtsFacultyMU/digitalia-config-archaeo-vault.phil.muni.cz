@@ -42,3 +42,5 @@ display:
         langcode:
           expose:
             label: Jazyk
+  moderated_content:
+    display_title: 'Moderovaný obsah'
