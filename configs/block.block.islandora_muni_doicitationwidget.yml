@@ -1,0 +1,28 @@
+uuid: aff5b7f6-35f6-46bf-8759-479738426dff
+langcode: en
+status: true
+dependencies:
+  module:
+    - digitalia_muni_dataset_doi
+    - node
+  theme:
+    - islandora_muni
+id: islandora_muni_doicitationwidget
+theme: islandora_muni
+region: content
+weight: 0
+provider: null
+plugin: digitalia_muni_dataset_doi_citation_widget
+settings:
+  id: digitalia_muni_dataset_doi_citation_widget
+  label: 'DOI citation widget'
+  label_display: '0'
+  provider: digitalia_muni_dataset_doi
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      dataset: dataset

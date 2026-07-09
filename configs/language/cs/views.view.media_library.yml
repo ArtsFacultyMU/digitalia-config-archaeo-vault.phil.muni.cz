@@ -79,6 +79,8 @@ display:
           label: Název
         uid:
           label: Autor
+        changed:
+          label: Aktualizováno
       arguments:
         bundle:
           exception:
