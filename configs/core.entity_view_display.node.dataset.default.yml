@@ -77,6 +77,10 @@ third_party_settings:
         - field_series_information
         - field_table_of_contents
         - field_technical_info
+        - field_research_questions
+        - field_research_methods
+        - field_appropriate_reuse
+        - field_inappropriate_reuse
       label: Description
       parent_name: ''
       region: content
@@ -164,7 +168,49 @@ third_party_settings:
       label: Distribution
       parent_name: ''
       region: content
-      weight: 16
+      weight: 17
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_location:
+      children:
+        - field_location
+      label: Location
+      parent_name: ''
+      region: content
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_funding:
+      children:
+        - field_funding_reference
+      label: Funding
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_instrument:
+      children:
+        - field_instrument
+      label: Instrument
+      parent_name: ''
+      region: content
+      weight: 12
       format_type: fieldset
       format_settings:
         classes: ''
@@ -371,7 +417,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 16
+    weight: 18
     region: content
   field_edtf_date_accepted:
     type: edtf_default
@@ -519,12 +565,12 @@ content:
     region: content
   field_funding_reference:
     type: entity_reference_entity_view
-    label: inline
+    label: hidden
     settings:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_inappropriate_reuse:
     type: text_default
@@ -535,12 +581,12 @@ content:
     region: content
   field_instrument:
     type: entity_reference_entity_view
-    label: inline
+    label: hidden
     settings:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_language:
     type: entity_reference_label
@@ -548,7 +594,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 15
     region: content
   field_license:
     type: entity_reference_label
@@ -556,16 +602,16 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_location:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
-    weight: 21
+    weight: 14
     region: content
   field_member_of:
     type: entity_reference_label
@@ -699,12 +745,12 @@ content:
   has_part_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 19
     region: content
   media_of_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 22
+    weight: 18
     region: content
 hidden:
   body: true
