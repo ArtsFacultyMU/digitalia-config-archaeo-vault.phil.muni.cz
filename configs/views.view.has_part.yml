@@ -374,7 +374,7 @@ display:
           admin_label: field_member_of
           entity_type: node
           plugin_id: entity_reverse
-          required: false
+          required: true
         reverse__media__field_media_of:
           id: reverse__media__field_media_of
           table: node_field_data
@@ -384,7 +384,7 @@ display:
           admin_label: field_media_of
           entity_type: node
           plugin_id: entity_reverse
-          required: false
+          required: true
       header: {  }
       footer: {  }
       display_extenders: {  }
