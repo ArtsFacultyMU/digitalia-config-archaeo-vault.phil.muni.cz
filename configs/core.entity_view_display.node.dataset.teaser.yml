@@ -62,6 +62,7 @@ dependencies:
     - field.field.node.dataset.field_temporal_subject
     - node.type.dataset
   module:
+    - digitalia_muni_nfield_agent
     - text
     - user
 id: node.dataset.teaser
@@ -73,7 +74,19 @@ content:
     type: text_trimmed
     label: visually_hidden
     settings:
-      trim_length: 250
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_creator:
+    type: dm_field_agent_brief
+    label: visually_hidden
+    settings:
+      name_format: simple_name
+      affiliation: false
+      contact: false
+      link: false
+      note: false
     third_party_settings: {  }
     weight: 1
     region: content
@@ -91,7 +104,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   body: true
@@ -102,7 +115,6 @@ hidden:
   field_appropriate_reuse: true
   field_assessment_type: true
   field_contributor: true
-  field_creator: true
   field_creators_and_contributors: true
   field_data_service: true
   field_date_accepted: true

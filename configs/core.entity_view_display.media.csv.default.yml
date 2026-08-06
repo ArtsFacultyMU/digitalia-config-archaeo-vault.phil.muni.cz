@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.csv.field_file_size
     - field.field.media.csv.field_has_header
     - field.field.media.csv.field_is_derived_from
+    - field.field.media.csv.field_is_documentation
     - field.field.media.csv.field_media_file
     - field.field.media.csv.field_media_of
     - field.field.media.csv.field_media_use
@@ -54,6 +55,16 @@ content:
       link: true
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_is_documentation:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_media_file:
     type: csvfile_formatter

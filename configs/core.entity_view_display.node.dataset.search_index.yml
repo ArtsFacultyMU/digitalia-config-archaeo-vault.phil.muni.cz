@@ -64,6 +64,7 @@ dependencies:
   module:
     - controlled_access_terms
     - datetime
+    - digitalia_muni_nfield_agent
     - link
     - text
     - user
@@ -77,7 +78,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_abstract:
     type: text_default
@@ -91,7 +92,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
+    region: content
+  field_appropriate_reuse:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
     region: content
   field_assessment_type:
     type: entity_reference_label
@@ -99,7 +107,23 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 9
+    weight: 10
+    region: content
+  field_contributor:
+    type: dm_field_agent_default
+    label: hidden
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_creator:
+    type: dm_field_agent_default
+    label: hidden
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 37
     region: content
   field_data_service:
     type: link
@@ -111,7 +135,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_date_accepted:
     type: timestamp
@@ -130,7 +154,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 11
+    weight: 14
     region: content
   field_date_available:
     type: datetime_default
@@ -139,7 +163,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 12
+    weight: 15
     region: content
   field_date_issued:
     type: datetime_default
@@ -148,7 +172,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 14
+    weight: 17
     region: content
   field_date_submitted:
     type: timestamp
@@ -167,7 +191,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 13
+    weight: 16
     region: content
   field_date_updated:
     type: timestamp
@@ -186,7 +210,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 15
+    weight: 18
     region: content
   field_date_valid:
     type: edtf_default
@@ -217,7 +241,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 16
+    weight: 19
     region: content
   field_doi:
     type: string
@@ -225,7 +249,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 22
     region: content
   field_edtf_date_collected:
     type: edtf_default
@@ -237,7 +261,7 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 17
+    weight: 20
     region: content
   field_edtf_date_coverage:
     type: edtf_default
@@ -249,7 +273,7 @@ content:
       day_format: dd
       year_format: 'y'
     third_party_settings: {  }
-    weight: 18
+    weight: 21
     region: content
   field_edtf_date_created:
     type: edtf_default
@@ -281,7 +305,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 20
+    weight: 23
     region: content
   field_feature_type:
     type: entity_reference_label
@@ -289,7 +313,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 21
+    weight: 24
     region: content
   field_frascati_subject_category:
     type: entity_reference_label
@@ -297,7 +321,30 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 34
+    weight: 36
+    region: content
+  field_funding_reference:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_inappropriate_reuse:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_instrument:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 43
     region: content
   field_language:
     type: entity_reference_label
@@ -305,7 +352,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_license:
     type: entity_reference_label
@@ -313,7 +360,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 22
+    weight: 26
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 45
     region: content
   field_member_of:
     type: entity_reference_label
@@ -328,7 +383,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 27
     region: content
   field_model:
     type: entity_reference_label
@@ -336,7 +391,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 24
+    weight: 28
     region: content
   field_object_specification:
     type: entity_reference_label
@@ -344,7 +399,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 25
+    weight: 29
     region: content
   field_object_type:
     type: entity_reference_label
@@ -352,7 +407,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 26
+    weight: 30
+    region: content
+  field_publisher_dm:
+    type: dm_field_agent_default
+    label: hidden
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 38
     region: content
   field_related_resource:
     type: entity_reference_label
@@ -360,7 +423,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 27
+    weight: 31
+    region: content
+  field_research_questions:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
     region: content
   field_resource_type:
     type: entity_reference_label
@@ -368,14 +438,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 21
+    weight: 25
     region: content
   field_series_information:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 28
+    weight: 32
     region: content
   field_subtitle:
     type: string
@@ -383,7 +453,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 29
+    weight: 33
     region: content
   field_table_of_contents:
     type: text_default
@@ -398,14 +468,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 30
+    weight: 34
     region: content
   field_technical_info:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 31
+    weight: 35
     region: content
   field_temporal_subject:
     type: entity_reference_label
@@ -413,25 +483,22 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   has_part_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 12
     region: content
   media_of_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 13
     region: content
 hidden:
   content_moderation_control: true
   did_image: true
   field_agent_relationship: true
-  field_appropriate_reuse: true
-  field_contributor: true
-  field_creator: true
   field_creators_and_contributors: true
   field_download_url: true
   field_edtf_date_accepted: true
@@ -440,16 +507,10 @@ hidden:
   field_edtf_date_updated: true
   field_edtf_date_withdrawn: true
   field_endpoint_url: true
-  field_funding_reference: true
   field_gemini_uri: true
-  field_inappropriate_reuse: true
-  field_instrument: true
-  field_location: true
   field_publication_year: true
-  field_publisher_dm: true
   field_related_people: true
   field_research_methods: true
-  field_research_questions: true
   islandora_fits_checksum: true
   langcode: true
   links: true
