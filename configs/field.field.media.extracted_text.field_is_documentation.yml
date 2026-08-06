@@ -1,0 +1,21 @@
+uuid: fe2fa6bc-c631-4f1d-af26-6806dff74d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_is_documentation
+    - media.type.extracted_text
+id: media.extracted_text.field_is_documentation
+field_name: field_is_documentation
+entity_type: media
+bundle: extracted_text
+label: 'Is documentation'
+description: 'Check if the file describes the data in the dataset and provides additional information, such as a README.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

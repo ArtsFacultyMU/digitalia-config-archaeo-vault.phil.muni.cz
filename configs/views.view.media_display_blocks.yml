@@ -79,7 +79,7 @@ display:
           pagination_heading_level: h3
           items_per_page: 1
           total_pages: null
-          id: 1
+          id: 2
           tags:
             next: 'Next ›'
             previous: '‹ Previous'

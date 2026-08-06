@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.extracted_text.field_edited_text
+    - field.field.media.extracted_text.field_is_documentation
     - field.field.media.extracted_text.field_media_file
     - field.field.media.extracted_text.field_media_of
     - field.field.media.extracted_text.field_media_use
@@ -26,6 +27,7 @@ content:
 hidden:
   created: true
   field_edited_text: true
+  field_is_documentation: true
   field_media_file: true
   field_media_of: true
   field_media_use: true

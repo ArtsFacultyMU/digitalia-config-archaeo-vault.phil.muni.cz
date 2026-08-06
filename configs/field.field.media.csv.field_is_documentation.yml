@@ -1,0 +1,21 @@
+uuid: b207405a-d020-429d-b09a-03afcc770f23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_is_documentation
+    - media.type.csv
+id: media.csv.field_is_documentation
+field_name: field_is_documentation
+entity_type: media
+bundle: csv
+label: 'Is documentation'
+description: 'Check if the file describes the data in the dataset and provides additional information, such as a README.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

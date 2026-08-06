@@ -74,7 +74,19 @@ content:
     type: text_trimmed
     label: visually_hidden
     settings:
-      trim_length: 250
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_creator:
+    type: dm_field_agent_brief
+    label: visually_hidden
+    settings:
+      name_format: simple_name
+      affiliation: false
+      contact: false
+      link: false
+      note: false
     third_party_settings: {  }
     weight: 2
     region: content
