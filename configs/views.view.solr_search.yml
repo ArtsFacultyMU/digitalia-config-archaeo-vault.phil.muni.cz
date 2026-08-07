@@ -378,68 +378,6 @@ display:
                 weights:
                   build: 100
                 settings: {  }
-        facets_field_edtf_date_coverage:
-          id: facets_field_edtf_date_coverage
-          table: search_api_index_archaeovault_index
-          field: facets_field_edtf_date_coverage
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: facets_filter
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Date Coverage'
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_edtf_date_coverage
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            hard_limit: 0
-            min_count: 1
-            show_numbers: false
-            processor_configs:
-              date_item:
-                processor_id: date_item
-                weights:
-                  build: 35
-                settings:
-                  date_display: actual_date
-                  granularity: 5
-                  date_format: ''
-                  hierarchy: false
         facets_field_feature_specification_name:
           id: facets_field_feature_specification_name
           table: search_api_index_archaeovault_index

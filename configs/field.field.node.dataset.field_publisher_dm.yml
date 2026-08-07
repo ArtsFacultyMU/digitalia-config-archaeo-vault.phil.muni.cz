@@ -20,11 +20,11 @@ default_value:
     role: null
     agent_type: organisation
     agent_tid: null
-    name: 'Masaryk University'
+    name: ArchaeoVault
     orcid: null
     first_names: null
     last_names: null
-    ror: 02j46qs45
+    ror: null
     institution_affiliation: 'Masaryk University'
     department_tid: null
     department: null
@@ -35,6 +35,12 @@ default_value:
     note: null
     private_note: null
     extra: null
+    identifiers:
+      orcid: null
+      ror: null
+    names:
+      first_names: null
+      last_names: null
 default_value_callback: ''
 settings:
   role: Publisher

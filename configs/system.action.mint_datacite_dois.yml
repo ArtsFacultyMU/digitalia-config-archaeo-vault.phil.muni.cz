@@ -11,5 +11,5 @@ plugin: doi_datacite_mint_doi
 configuration:
   doi_datacite_creator: 'Masaryk University'
   doi_datacite_publication_year: '2026'
-  doi_datacite_publisher: 'Masaryk University'
+  doi_datacite_publisher: ArchaeoVault
   doi_datacite_resource_type: Dataset
