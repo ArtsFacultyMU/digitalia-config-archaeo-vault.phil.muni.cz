@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.media.3d_model.field_description
+    - field.field.media.3d_model.field_file_size
     - field.field.media.3d_model.field_fits_file
     - field.field.media.3d_model.field_is_derived_from
     - field.field.media.3d_model.field_media_file
     - field.field.media.3d_model.field_media_of
     - field.field.media.3d_model.field_media_use
+    - field.field.media.3d_model.field_mime_type
     - media.type.3d_model
   module:
     - download_file
@@ -25,6 +27,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_file_size:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_fits_file:
     type: fits_formatter
@@ -65,6 +76,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_mime_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
   name:
     type: string

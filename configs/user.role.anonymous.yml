@@ -30,6 +30,8 @@ permissions:
   - 'use text format restricted_html'
   - 'view dataset revisions'
   - 'view digitalia_muni_entity'
+  - 'view field_edtf_date_issued'
   - 'view field_publisher_dm'
   - 'view media'
+  - 'view own field_edtf_date_issued'
   - 'view own field_publisher_dm'
