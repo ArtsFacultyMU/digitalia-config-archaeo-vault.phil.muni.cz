@@ -14,6 +14,7 @@ dependencies:
     - filter
     - media
     - node
+    - openapi
     - rest
     - system
 _core:
@@ -25,6 +26,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access openapi api docs'
   - 'access site-wide contact form'
   - 'restful get oai_pmh'
   - 'use text format restricted_html'

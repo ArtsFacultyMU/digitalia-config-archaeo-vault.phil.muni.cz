@@ -36,11 +36,15 @@
                     "type": "zip"
                 }
             }
-        }
+        },
+	{
+		"type": "composer",
+		"url": "https://asset-packagist.org"
+	}
     ],
     "require": {
         "php": "^7.4 || ^8",
-        "composer/installers": "^1.9",
+        "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "discoverygarden/dgi_image_discovery": "^1",
         "drupal/admin_toolbar": "^3.1",
@@ -87,6 +91,9 @@
         "drupal/metatag": "^2.2",
         "drupal/migrate_tools": "^6.0",
         "drupal/nodeaccess": "^2.0@alpha",
+        "drupal/openapi": "^2.3",
+        "drupal/openapi_rest": "^2.0",
+        "drupal/openapi_ui_swagger": "^1.2",
         "drupal/openid_connect": "^3.0@alpha",
         "drupal/openseadragon": "^3",
         "drupal/pathauto": "^1.12",
@@ -113,6 +120,7 @@
         "islandora/views_nested_details": "^1.0",
         "library/pdf.js": "^2.4",
         "mjordan/islandora_workbench_integration": "dev-main",
+        "mnsami/composer-custom-directory-installer": "^2.2",
         "noli42/chosen": "3.0.0"
     },
     "conflict": {
@@ -126,8 +134,9 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "mnsami/composer-custom-directory-installer": true
         },
         "sort-packages": true,
 	"audit": {
@@ -152,7 +161,9 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -174,7 +185,11 @@
             ],
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
-            ]
+            ],
+	    "web/libraries/swagger-ui": [
+                "npm-asset/swagger-ui-dist",
+                "swagger-api/swagger-ui"
+	    ]
         },
         "patches": {
             "twistor/flysystem-stream-wrapper": {
