@@ -6,6 +6,8 @@ display:
           tags:
             first: '« První'
             last: 'Poslední »'
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
@@ -16,16 +18,22 @@ display:
       exposed_form:
         options:
           submit_button: Použít
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
       fields:
         name:
           label: Název
+          separator: ', '
+        bundle:
+          separator: ', '
         field_mime_type:
           label: 'Typ MIME'
+          separator: ', '
         changed:
           label: Změněno
+          separator: ', '
       arguments:
         field_media_of_target_id:
           exception:
@@ -51,16 +59,28 @@ display:
           action_title: Akce
         name:
           label: Název
+          separator: ', '
+        bundle:
+          separator: ', '
         field_mime_type:
           label: 'Typ MIME'
+          separator: ', '
+        field_media_use:
+          separator: ', '
         changed:
           label: Změněno
+          separator: ', '
   rest_export_1:
     display_options:
       fields:
         name:
           label: Název
+          separator: ', '
+        bundle:
+          separator: ', '
         field_mime_type:
           label: 'Typ MIME'
+          separator: ', '
         changed:
           label: Změněno
+          separator: ', '

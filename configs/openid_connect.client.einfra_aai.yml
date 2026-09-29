@@ -8,6 +8,7 @@ plugin: generic
 settings:
   client_id: null
   client_secret: null
+  provider_slug: ''
   iss_allowed_domains: "archaeo-vault.cz\r\narchaeo-vault-devel.phil.muni.cz"
   prompt:
     - login
@@ -20,4 +21,3 @@ settings:
     - openid
     - email
     - eduperson_entitlement
-  provider_slug: ''
