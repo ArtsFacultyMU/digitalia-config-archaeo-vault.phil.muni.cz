@@ -11,7 +11,7 @@ dependencies:
     - field.field.media.3d_model.field_media_use
     - media.type.3d_model
   module:
-    - file
+    - download_file
     - islandora_fits
     - text
 id: media.3d_model.default
@@ -42,10 +42,11 @@ content:
     weight: 5
     region: content
   field_media_file:
-    type: file_default
+    type: direct_download
     label: visually_hidden
     settings:
-      use_description_as_link_text: true
+      class: ''
+      styles: ''
     third_party_settings: {  }
     weight: 1
     region: content

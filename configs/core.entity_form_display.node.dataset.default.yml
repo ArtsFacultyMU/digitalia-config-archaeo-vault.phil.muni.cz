@@ -128,7 +128,6 @@ third_party_settings:
         - field_object_type
         - field_object_specification
         - field_tags
-        - field_frascati_subject_category
       label: Subject
       region: content
       parent_name: ''

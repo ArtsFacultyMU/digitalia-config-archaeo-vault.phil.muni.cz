@@ -3,7 +3,7 @@ _core:
 langcode: en
 media_fields: 'image:field_media_image;file:field_media_file'
 reference_fields: field_member_of
-media_delimiter: ;
+media_delimiter: ^
 reference_delimiter: ^
 double_fields: ''
 triple_fields: ''
