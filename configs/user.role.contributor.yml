@@ -61,6 +61,7 @@ permissions:
   - 'revert dataset revisions'
   - 'update media'
   - 'use dataset_workflow transition create_new_draft'
+  - 'use dataset_workflow transition return_to_draft'
   - 'use dataset_workflow transition submit_to_review'
   - 'use research_group_workflow transition edit_request'
   - 'use research_group_workflow transition publish'
