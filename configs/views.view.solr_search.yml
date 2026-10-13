@@ -666,7 +666,8 @@ display:
           plugin_id: search_api_language
           operator: in
           value:
-            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            en: en
+            cs: cs
           group: 1
           exposed: false
           expose:

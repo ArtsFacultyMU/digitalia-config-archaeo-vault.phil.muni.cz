@@ -191,6 +191,8 @@ module:
   toolbar: 0
   tour: 0
   tracer: 0
+  turnstile: 0
+  turnstile_protect: 0
   twig_tweak: 0
   update: 0
   user: 0

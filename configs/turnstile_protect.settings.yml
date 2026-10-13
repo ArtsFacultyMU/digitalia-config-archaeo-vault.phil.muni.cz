@@ -1,0 +1,34 @@
+_core:
+  default_config_hash: PlbvEXJrz7J96ihnKOzFsNtP1SgH8dbW2LM3xegjzA0
+routes:
+  - flysystem.files
+  - flysystem.serve
+  - entity.node.version_history
+  - entity.node.revision
+  - '<front>'
+  - view.solr_search.search
+  - entity.media.canonical
+  - entity.node.canonical
+  - entity.taxonomy_term.canonical
+bots:
+  - duckduckgo.com
+  - kagibot.org
+  - googleusercontent.com
+  - google.com
+  - googlebot.com
+  - msn.com
+  - openalex.org
+  - archive.org
+  - linkedin.com
+  - facebook.com
+  - instagram.com
+  - twitter.com
+  - x.com
+  - apple.com
+  - o-seznam.cz
+protect_parameters: true
+rate_limit: false
+threshold: 5
+window: 86400
+max_challenges: 5
+history_enabled: true
