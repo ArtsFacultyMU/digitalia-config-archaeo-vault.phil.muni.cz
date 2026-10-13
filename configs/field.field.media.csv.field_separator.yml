@@ -10,10 +10,12 @@ field_name: field_separator
 entity_type: media
 bundle: csv
 label: Separator
-description: "Defaults to ','"
+description: "Defaults to ';'"
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: ;
 default_value_callback: ''
 settings: {  }
 field_type: string

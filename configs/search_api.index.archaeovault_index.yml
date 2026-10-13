@@ -14,6 +14,8 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_alternative_title
     - field.storage.node.field_assessment_type
+    - field.storage.node.field_contributor
+    - field.storage.node.field_creator
     - field.storage.node.field_data_service
     - field.storage.node.field_date_accepted
     - field.storage.node.field_date_available
@@ -36,6 +38,7 @@ dependencies:
     - field.storage.node.field_model
     - field.storage.node.field_object_specification
     - field.storage.node.field_object_type
+    - field.storage.node.field_publisher_dm
     - field.storage.node.field_related_people
     - field.storage.node.field_related_resource
     - field.storage.node.field_resource_type
@@ -108,6 +111,22 @@ name: 'ArchaeoVault Index'
 description: ''
 read_only: false
 field_settings:
+  agent_type:
+    label: 'Creator » Agent type'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:agent_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  agent_type_1:
+    label: 'Contributor » Agent type'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:agent_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -116,6 +135,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  contact:
+    label: 'Creator » Contact'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:contact'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  contact_1:
+    label: 'Contributor » Contact'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:contact'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
   field_alternative_title:
     label: 'Alternative Title'
     datasource_id: 'entity:node'
@@ -459,6 +494,54 @@ field_settings:
         - field.storage.node.field_temporal_subject
       module:
         - taxonomy
+  first_names:
+    label: 'Creator » First names'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:first_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  first_names_1:
+    label: 'Contributor » First names'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:first_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+  institution_affiliation:
+    label: 'Creator » Institution (Affiliation if person)'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:institution_affiliation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  institution_affiliation_1:
+    label: 'Contributor » Institution (Affiliation if person)'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:institution_affiliation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+  last_names:
+    label: 'Creator » Last names'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:last_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  last_names_1:
+    label: 'Contributor » Last names'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:last_names'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
   name:
     label: 'Assessment Type » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -469,6 +552,46 @@ field_settings:
         - field.storage.node.field_assessment_type
       module:
         - taxonomy
+  name_1:
+    label: 'Creator » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  name_2:
+    label: 'Contributor » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+  name_3:
+    label: 'Publisher » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_publisher_dm:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publisher_dm
+  orcid:
+    label: 'Creator » ORCID'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:orcid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  orcid_1:
+    label: 'Contributor » ORCID'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:orcid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
@@ -492,6 +615,38 @@ field_settings:
         'entity:node':
           ':default': search_index
           dataset: ':default'
+  role_1:
+    label: 'Contributor » Role'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:role'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+  ror:
+    label: 'Creator » ROR'
+    datasource_id: 'entity:node'
+    property_path: 'field_creator:ror'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  ror_1:
+    label: 'Contributor » ROR'
+    datasource_id: 'entity:node'
+    property_path: 'field_contributor:ror'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+  ror_2:
+    label: 'Publisher » ROR'
+    datasource_id: 'entity:node'
+    property_path: 'field_publisher_dm:ror'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publisher_dm
   source:
     label: 'Creators and Contributors (people) » Digitalia » Agent Role » term » Authority sources » Source Authority'
     datasource_id: 'entity:node'

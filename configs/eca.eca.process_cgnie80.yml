@@ -1,0 +1,47 @@
+uuid: 8d907cb0-87bf-4fef-90e1-b0f09fbbc1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset.field_edtf_date_issued
+    - field.field.node.islandora_object.field_edtf_date_issued
+    - field.storage.node.field_edtf_date_issued
+    - node.type.dataset
+  module:
+    - eca_content
+id: process_cgnie80
+modeller: bpmn_io
+label: 'Fill in date_issued on publishing'
+version: ''
+weight: 0
+events:
+  Event_1ee790d:
+    plugin: 'content_entity:update'
+    label: 'Dataset is published'
+    configuration:
+      type: 'node dataset'
+    successors:
+      -
+        id: Activity_1t0pegf
+        condition: Flow_1ruyv2d
+conditions:
+  Flow_1ruyv2d:
+    plugin: eca_entity_field_value_changed
+    configuration:
+      negate: false
+      field_name: status
+      entity: node
+gateways: {  }
+actions:
+  Activity_1t0pegf:
+    plugin: eca_set_field_value
+    label: Activity_1t0pegf
+    configuration:
+      field_name: field_edtf_date_issued
+      field_value: '[node:changed:html_datetime]'
+      method: 'set:clear'
+      strip_tags: false
+      trim: true
+      save_entity: true
+      object: node
+    successors: {  }

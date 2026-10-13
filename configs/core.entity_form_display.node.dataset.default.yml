@@ -102,6 +102,7 @@ third_party_settings:
         - field_edtf_date_collected
         - field_edtf_date_coverage
         - field_temporal_subject
+        - field_edtf_date_issued
         - field_date_accepted
         - field_date_available
         - field_date_issued
@@ -264,6 +265,15 @@ content:
     settings:
       strict_dates: false
       intervals: false
+      sets: false
+    third_party_settings: {  }
+  field_edtf_date_issued:
+    type: edtf_default
+    weight: 0
+    region: content
+    settings:
+      strict_dates: false
+      intervals: true
       sets: false
     third_party_settings: {  }
   field_feature_specification:
@@ -516,7 +526,6 @@ hidden:
   field_download_url: true
   field_edtf_date_accepted: true
   field_edtf_date_available: true
-  field_edtf_date_issued: true
   field_edtf_date_submitted: true
   field_edtf_date_updated: true
   field_edtf_date_withdrawn: true

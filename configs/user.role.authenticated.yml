@@ -14,6 +14,7 @@ dependencies:
     - filter
     - media
     - node
+    - openapi
     - rest
     - shortcut
     - system
@@ -26,6 +27,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access openapi api docs'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'post comments'

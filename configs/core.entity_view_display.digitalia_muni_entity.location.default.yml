@@ -21,7 +21,7 @@ mode: default
 content:
   field_geofield_multipolygon:
     type: leaflet_formatter_default
-    label: visually_hidden
+    label: hidden
     settings:
       multiple_map: false
       leaflet_map: openstreetmap
