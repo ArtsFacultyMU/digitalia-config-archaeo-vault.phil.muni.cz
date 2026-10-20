@@ -704,8 +704,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: false
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               type:
                 plugin_id: default
                 advanced:
@@ -717,8 +717,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: false
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               field_model_target_id:
                 plugin_id: default
                 advanced:
@@ -730,8 +730,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: false
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               status:
                 plugin_id: default
                 advanced:
@@ -743,8 +743,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: false
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               langcode:
                 plugin_id: default
                 advanced:
@@ -756,8 +756,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: false
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               field_member_of_target_id:
                 plugin_id: default
                 advanced:
@@ -766,8 +766,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: true
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               nid:
                 plugin_id: default
                 advanced:
@@ -776,8 +776,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: true
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
               mid:
                 plugin_id: default
                 advanced:
@@ -786,8 +786,8 @@ display:
                   collapsible: false
                   open_by_default: false
                   is_secondary: true
-                  field_classes: ''
                   no_reset: false
+                  field_classes: ''
       access:
         type: perm
         options:

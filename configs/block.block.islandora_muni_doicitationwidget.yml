@@ -3,7 +3,6 @@ langcode: en
 status: false
 dependencies:
   module:
-    - digitalia_muni_dataset_doi
     - node
   theme:
     - islandora_muni

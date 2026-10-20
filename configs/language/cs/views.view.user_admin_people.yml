@@ -22,6 +22,8 @@ display:
           label: 'Poslední přístup'
         operations:
           label: Operace
+        mail:
+          separator: ', '
       pager:
         options:
           tags:
@@ -36,6 +38,7 @@ display:
       exposed_form:
         options:
           submit_button: Filtr
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
@@ -51,6 +54,9 @@ display:
                 title: Aktivní
               2:
                 title: Zablokován
+        roles_target_id:
+          expose:
+            label: Role
         permission:
           expose:
             label: Oprávnění
