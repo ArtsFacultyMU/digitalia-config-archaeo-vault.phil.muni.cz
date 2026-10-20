@@ -1,8 +1,8 @@
 _core:
   default_config_hash: 81xu-CnNysjK01ordcTN8eylPQLdhaN-P3ErYKgw3UM
-keys: digitalia_key
-testing_site_key: 1x00000000000000000000BB
-testing_secret_key: 1x0000000000000000000000000000000AA
+keys: digitalia_turnstile_key
+testing_site_key: ''
+testing_secret_key: ''
 turnstile_src: 'https://challenges.cloudflare.com/turnstile/v0/api.js'
 widget:
   theme: auto

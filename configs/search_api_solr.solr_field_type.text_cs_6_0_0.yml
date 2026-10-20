@@ -390,8 +390,7 @@ text_files:
     pro
     je
     na
-  protwords: |
-
+  protwords: ''
   accents: |
     # À => A
     "\u00C0" => "A"

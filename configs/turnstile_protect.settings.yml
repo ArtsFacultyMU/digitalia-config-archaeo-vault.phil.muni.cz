@@ -6,9 +6,16 @@ routes:
   - entity.node.version_history
   - entity.node.revision
   - '<front>'
+  - view.frontpage.page_1
   - view.solr_search.search
   - entity.media.canonical
+  - entity.media.version_history
+  - entity.media.revision
   - entity.node.canonical
+  - entity.node.latest_version
+  - entity.taxonomy_term.version_history
+  - entity.taxonomy_term.revision
+  - entity.taxonomy_term.latest_version
   - entity.taxonomy_term.canonical
 bots:
   - duckduckgo.com

@@ -8,7 +8,7 @@ description: 'This question is for testing whether or not you are a human visito
 title: CAPTCHA
 administration_mode: false
 administration_mode_on_admin_routes: false
-whitelist_ips: "147.251.0.0-147.251.255.255\r\n100.64.0.0-100.127.255.255"
+whitelist_ips: ''
 wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
 default_validation: 1
 persistence: 0

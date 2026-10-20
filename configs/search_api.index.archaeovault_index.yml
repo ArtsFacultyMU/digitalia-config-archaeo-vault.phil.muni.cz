@@ -576,6 +576,24 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_publisher_dm
+  name_4:
+    label: 'Resource Type » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_resource_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_resource_type
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
   orcid:
     label: 'Creator » ORCID'
     datasource_id: 'entity:node'
