@@ -218,6 +218,9 @@
             },
             "drupal/gin": {
                 "Fix missing help text icon": "./patches/gin_form-element.html.twig.patch"
+            },
+            "drupal/search_api_solr": {
+                "Fix statistics reporting (solr 10)": "./patches/core-admin-mbeans-endpoint-replaced.patch"
             }
         }
     },
