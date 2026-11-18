@@ -45,6 +45,7 @@ permissions:
   - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access user profiles'
+  - 'bypass node access'
   - 'create 3d_model media'
   - 'create audio media'
   - 'create content translations'
