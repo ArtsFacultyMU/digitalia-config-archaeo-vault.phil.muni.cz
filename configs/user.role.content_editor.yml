@@ -10,7 +10,6 @@ dependencies:
     - node.type.test_complex_type
     - node.type.test_subfield_type
     - node.type.test_type
-    - rest.resource.ingest_progress
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -22,11 +21,9 @@ dependencies:
     - media
     - node
     - path
-    - rest
     - system
     - taxonomy
     - toolbar
-    - tour
     - view_unpublished
 _core:
   default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
@@ -43,7 +40,6 @@ permissions:
   - 'access help pages'
   - 'access media overview'
   - 'access toolbar'
-  - 'access tour'
   - 'administer url aliases'
   - 'create article content'
   - 'create islandora_object content'
@@ -68,7 +64,6 @@ permissions:
   - 'edit terms in tags'
   - 'manage media'
   - 'manage members'
-  - 'restful get ingest_progress'
   - 'revert all revisions'
   - 'revert islandora_object revisions'
   - 'view all revisions'

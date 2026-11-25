@@ -47,7 +47,6 @@ module:
   digitalia_muni_entity: 0
   digitalia_muni_nfield_agent: 0
   digitalia_muni_token: 0
-  digitalia_muni_workbench_ingest: 0
   doi_datacite: 0
   double_field: 0
   download_file: 0
@@ -84,6 +83,7 @@ module:
   field_report: 0
   field_ui: 0
   field_validation: 0
+  field_validation_legacy: 0
   file: 0
   file_delete: 0
   file_replace: 0
@@ -190,12 +190,12 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   tracer: 0
   turnstile: 0
   turnstile_protect: 0
   twig_tweak: 0
   update: 0
+  upgrade_status: 0
   user: 0
   view_unpublished: 0
   views_bulk_edit: 0

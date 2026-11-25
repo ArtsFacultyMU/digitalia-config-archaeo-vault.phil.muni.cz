@@ -293,13 +293,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
@@ -347,14 +340,6 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
-              0: '0'
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -408,13 +393,6 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -468,13 +446,6 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -528,13 +499,6 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -588,13 +552,6 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -730,15 +687,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
-              workbench_user: '0'
-              workbench_minimum: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -921,13 +869,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              content_editor_junior: '0'
-              data_curator: '0'
-              contributor: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields

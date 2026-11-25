@@ -2,6 +2,8 @@ uuid: 9dd76af2-0710-4b80-8e38-68dbf6087d2e
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.group_relationship.group_roles
   module:
     - group
     - user
@@ -683,6 +685,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
         options:

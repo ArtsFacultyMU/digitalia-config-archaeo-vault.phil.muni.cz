@@ -6,6 +6,6 @@ dependencies:
     - node
 id: node.subfield_1
 label: 'Subfield 1'
-description: ''
+description: null
 targetEntityType: node
 cache: true

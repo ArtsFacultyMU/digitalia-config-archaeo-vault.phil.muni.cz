@@ -5,6 +5,7 @@ dependencies:
   module:
     - grequest
     - group
+    - state_machine
     - user
   enforced:
     module:
@@ -612,6 +613,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:
