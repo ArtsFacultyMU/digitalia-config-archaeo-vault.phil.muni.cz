@@ -12,6 +12,11 @@ settings:
   iss_allowed_domains: "archaeo-vault.cz\r\narchaeo-vault-devel.phil.muni.cz"
   prompt:
     - login
+  verify_id_token: warn
+  issuer: ''
+  jwks_uri: ''
+  id_token_signing_algorithms:
+    - RS256
   issuer_url: ''
   authorization_endpoint: 'https://login.e-infra.cz/oidc/authorize'
   token_endpoint: 'https://login.e-infra.cz/oidc/token'
